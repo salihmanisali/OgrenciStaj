@@ -12,12 +12,14 @@
     	<div layout:fragment="content">
     	
 		     <p sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></p>
-	         <p><a th:href="@{/home}">User Home</a></p>
+	         <p style="margin-top: 100px;"><a th:href="@{/home}">User Home</a></p>
 		     <p><a th:href="@{/admin/home}">Admin Home</a></p>
 			 <p><a th:href="@{/ogrenci}">Öğrenci Kayıt Formu</a></p>
+			 <p><a th:href="@{/ogretmen}">Öğretmen Kayıt Formu</a></p>
+			 <p><a th:href="@{/firma}">Firma Kayıt Formu</a></p>
 		     <p sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></p>
     	</div>
     	
     </body>
-    
+
 </html>

@@ -1,0 +1,40 @@
+package net.javaguides.springbootsecurity.web;
+
+import net.javaguides.springbootsecurity.entities.Ogretmen;
+import net.javaguides.springbootsecurity.repositories.FirmaRepository;
+import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+/**
+ * @author Salih Efe
+ *
+ */
+@Controller
+public class OgretmenController
+{
+	@Autowired
+	private OgretmenRepository ogretmenRepository;
+	
+	@GetMapping("/ogretmenler")
+	public String ogretmenler(Model model)
+	{
+		model.addAttribute("ogretmenler", ogretmenRepository.findAll());
+		return "ogretmenler";
+	}
+
+	@GetMapping("/ogretmen")
+	public String ogretmen(Model model)	{
+		return "ogretmen";
+	}
+
+	@PostMapping("/ogretmen")
+	public String saveFirma(Ogretmen ogretmen)
+	{
+		ogretmenRepository.save(ogretmen);
+		return "redirect:/ogretmenler";
+	}
+}

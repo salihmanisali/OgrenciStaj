@@ -22,14 +22,12 @@ public class Ogrenci
 	private String adi;
 
 	@Column(length = 100)
-
 	private String soyadi;
+
 	@Column(length = 200)
-
-
 	private String email;
-	@Column(length = 11)
 
+	@Column(length = 11)
 	private Long tcKimlikNo;
 
 	@Enumerated(EnumType.STRING)
@@ -139,46 +137,7 @@ public class Ogrenci
 	@Temporal(TemporalType.DATE)
 	private Date mezuniyetTarihi4;
 
-	// Dil Becerileri
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Dil dil1;
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri dil1beceri;
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri dil2;
-
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri dil2beceri;
-
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri dil3;
-
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri dil3beceri;
-
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri dil4;
-
-
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri dil4beceri;
-
-	// Bilgisayar Becerileri
+// Bilgisayar Becerileri
 
 	@Enumerated(EnumType.STRING)
 	@Column(length = 30)
@@ -225,7 +184,48 @@ public class Ogrenci
 	@Column
 	private Long lisansDerecesi;
 
-	// Proje ve Etkinlikler
+	//region  Dil Becerileri
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Dil dil1;
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Beceri dil1beceri;
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Beceri dil2;
+
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Beceri dil2beceri;
+
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Beceri dil3;
+
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Beceri dil3beceri;
+
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Beceri dil4;
+
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
+	private Beceri dil4beceri;
+
+	//endregion
+
+	//region Proje ve Etkinlikler
 
 	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	@Column
@@ -281,8 +281,9 @@ public class Ogrenci
 
 	@Column(length = 500)
 	private String projedekiGorevi5;
+	//endregion
 
-	// İlişkiler
+	// Relations
 
 
 	@ManyToOne(fetch = FetchType.LAZY)

@@ -37,6 +37,10 @@
 				</ul>
 
 				<ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/ogretmen}"  class="fa fa-user">Öğretmen Kayıt Formu</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav">
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/firma}" class="fa fa-university">Firma Kayıt Formu</a></li>
 				</ul>
 

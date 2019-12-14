@@ -18,59 +18,59 @@
                 </div>
                 <div class="signup-form">
                     <form  th:action="@{/ogrenci}" method="POST" class="register-form" id="register-form">
-                        <h2>Öğrenci Kayıt Formu</h2>
+                        <div>
+                            <h2>Öğrenci Kayıt Formu</h2>
 
-                        <div class="form-group">
-                            <label for="tcKimlikNo">TC Kimlik No :</label>
-                            <input type="number" name="tcKimlikNo" id="tcKimlikNo" />
-                        </div>
-
-                        <div class="form-row">
                             <div class="form-group">
-                                <label for="adi">Adı :</label>
-                                <input type="text" name="adi" id="adi"/>
+                                <label for="tcKimlikNo">TC Kimlik No :</label>
+                                <input type="number" name="tcKimlikNo" id="tcKimlikNo" />
                             </div>
-                            <div class="form-group">
-                                <label for="soyadi">Soyadı :</label>
-                                <input type="text" name="soyadi" id="soyadi"/>
-                            </div>
-                        </div>
 
-                        <div class="form-radio">
-                            <label for="ERKEK" class="radio-label">Cinsiyet :</label>
-                            <div class="form-radio-item">
-                                <input type="radio" name="cinsiyet" id="ERKEK" value="ERKEK" checked>
-                                <label for="ERKEK">Erkek</label>
-                                <span class="check"></span>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adi">Adı :</label>
+                                    <input type="text" name="adi" id="adi"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="soyadi">Soyadı :</label>
+                                    <input type="text" name="soyadi" id="soyadi"/>
+                                </div>
                             </div>
-                            <div class="form-radio-item">
-                                <input type="radio" name="cinsiyet" id="KADIN" value="KADIN">
-                                <label for="KADIN">Kadın</label>
-                                <span class="check"></span>
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="dogumTarihi">Doğum Tarihi :</label>
-                            <input type="date" name="dogumTarihi" id="dogumTarihi">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email :</label>
-                                <input type="email" name="email" id="email" />
+                            <div class="form-radio">
+                                <label for="ERKEK" class="radio-label">Cinsiyet :</label>
+                                <div class="form-radio-item">
+                                    <input type="radio" name="cinsiyet" id="ERKEK" value="ERKEK" checked>
+                                    <label for="ERKEK">Erkek</label>
+                                    <span class="check"></span>
+                                </div>
+                                <div class="form-radio-item">
+                                    <input type="radio" name="cinsiyet" id="KADIN" value="KADIN">
+                                    <label for="KADIN">Kadın</label>
+                                    <span class="check"></span>
+                                </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="cepTelefonu">Cep Telefonu :</label>
-                                <input type="number" name="cepTelefonu" id="cepTelefonu">
+                                <label for="dogumTarihi">Doğum Tarihi :</label>
+                                <input type="date" name="dogumTarihi" id="dogumTarihi">
                             </div>
-                        </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email :</label>
+                                    <input type="email" name="email" id="email" />
+                                </div>
 
-                        <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cepTelefonu">Cep Telefonu :</label>
+                                    <input type="number" name="cepTelefonu" id="cepTelefonu">
+                                </div>
+                            </div>
 
-                            <div class="form-group">
-                                <label for="ilce">İlçe :</label>
-                                <div class="form-select">
+                            <div class="form-row">
+
+                                <div class="form-group">
+                                    <label for="ilce">İlçe :</label>
                                     <select name="ilce" id="ilce">
                                         <option disabled selected value> İlçe Seçin </option>
                                         <option value="İZMİT">İzmit</option>
@@ -82,69 +82,192 @@
                                         <option value="GEBZE">Gebze</option>
                                         <option value="GÖLCÜK">Gölcük</option>
                                         <option value="KANDIRA">Kandıra</option>
-                                        <option value="KARAMÜRSEL">Karamürsel</option>
                                         <option value="KARTEPE">Kartepe</option>
                                         <option value="KÖRFEZ">Körfez</option>
                                     </select>
                                     <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
                                 </div>
-                            </div>
 
-
-                            <div class="form-group">
-                                <label for="semt">Semt/Mahalle :</label>
-                                <input type="text" name="semt" id="semt"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="adres">Adres :</label>
-                            <textarea id="adres" name="adres" cols="80" rows="5"></textarea>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="veliAdi">Veli Adı :</label>
-                                <input type="text" name="veliAdi" id="veliAdi" />
-                            </div>
-                            <div class="form-group">
-                                <label for="veliCepTelefonu">Veli Telefonu :</label>
-                                <input type="text" name="veliCepTelefonu" id="veliCepTelefonu" />
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="ehliyet">Ehliyet :</label>
-                                <input type="text" name="ehliyet" id="ehliyet"/>
+                                <div class="form-group">
+                                    <label for="semt">Semt/Mahalle :</label>
+                                    <input type="text" name="semt" id="semt"/>
+                                </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="askerlikDurumu">Askerlik Durumu :</label>
-                                <div class="form-select">
-                                    <select name="askerlikDurumu" id="askerlikDurumu">
-                                        <option disabled selected value> Askerlik Durumu Seçin </option>
-                                        <option value="TECİL">Tecil</option>
-                                        <option value="YAPTI">Yaptı</option>
-                                        <option value="YAPMADI">Yapmadı</option>
+                                <label for="adres">Adres :</label>
+                                <textarea id="adres" name="adres" cols="80" rows="5"></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="veliAdi">Veli Adı :</label>
+                                    <input type="text" name="veliAdi" id="veliAdi" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="veliCepTelefonu">Veli Telefonu :</label>
+                                    <input type="text" name="veliCepTelefonu" id="veliCepTelefonu" />
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ehliyet">Ehliyet :</label>
+                                    <input type="text" name="ehliyet" id="ehliyet"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="askerlikDurumu">Askerlik Durumu :</label>
+                                    <div class="select-list">
+                                        <select name="askerlikDurumu" id="askerlikDurumu">
+                                            <option disabled selected value> Askerlik Durumu Seçin </option>
+                                            <option value="TECİL">Tecil</option>
+                                            <option value="YAPTI">Yaptı</option>
+                                            <option value="YAPMADI">Yapmadı</option>
+                                        </select>
+                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="stajYapacagiGun">Staj Yapacağı Gün :</label>
+                                <div class="select-list">
+                                    <select name="stajYapacagiGun" id="stajYapacagiGun">
+                                        <option disabled selected value> Staj Yapacağı Günü Seçin </option>
+                                        <option value="PAZARTESİ_SALI_ÇARŞAMBA">Pazartesi-Salı-Çarşamba</option>
+                                        <option value="ÇARŞAMBA_PERŞEMBE_CUMA">Çarşamba-Perşembe-Cuma</option>
+                                        <option value="YAZ_STAJI_4_HAFTA">Yaz Stajı 4 Hafta</option>
+                                        <option value="YAZ_STAJI_3_HAFTA">Yaz Stajı 3 Hafta</option>
+                                        <option value="DİĞER">Diğer</option>
                                     </select>
                                     <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
                                 </div>
                             </div>
+
                         </div>
-                        <div class="form-group">
-                            <label for="stajYapacagiGun">Staj Yapacağı Gün :</label>
-                            <div class="form-select">
-                                <select name="stajYapacagiGun" id="stajYapacagiGun">
-                                    <option disabled selected value> Staj Yapacağı Günü Seçin </option>
-                                    <option value="PAZARTESİ_SALI_ÇARŞAMBA">Pazartesi-Salı-Çarşamba</option>
-                                    <option value="ÇARŞAMBA_PERŞEMBE_CUMA">Çarşamba-Perşembe-Cuma</option>
-                                    <option value="YAZ_STAJI_4_HAFTA">Yaz Stajı 4 Hafta</option>
-                                    <option value="YAZ_STAJI_3_HAFTA">Yaz Stajı 3 Hafta</option>
-                                    <option value="DİĞER">Diğer</option>
-                                </select>
-                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+
+                        <div>
+                            <h3>Okul Bilgileri</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="okulAdi">Okul Adı :</label>
+                                    <input type="text" name="okulAdi" id="okulAdi" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="okulAlani">Alanı :</label>
+                                    <input type="text" name="okulAlani" id="okulAlani" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="okulDali">Dalı :</label>
+                                    <input type="text" name="okulDali" id="okulDali" />
+                                </div>
                             </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <label for="notOrtalamasi">Okul Adı :</label>
+                                <input type="number" name="notOrtalamasi" id="notOrtalamasi" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="okuduguKitaplar">Alanı :</label>
+                                <input type="text" name="okuduguKitaplar" id="okuduguKitaplar" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="gorevAldigiEtkinlikler">Görev Aldığı Etkinliker :</label>
+                                <input type="number" name="gorevAldigiEtkinlikler" id="gorevAldigiEtkinlikler" />
+                            </div>
+
+                            <h3>Referans Öğretmen </h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="referansOgretmenAdi"> Adı Soyadı :</label>
+                                    <input type="number" name="referansOgretmenAdi" id="referansOgretmenAdi" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="referansOgretmenTelefon">Telefonu :</label>
+                                    <input type="text" name="referansOgretmenTelefon" id="referansOgretmenTelefon" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="referansOgretmenEmail">Email :</label>
+                                    <input type="text" name="referansOgretmenEmail" id="referansOgretmenEmail" />
+                                </div>
+                            </div>
+
+
+                            <h3>Lisans Bilgileri</h3>
+                            <div class="form-row">
+
+                                <div class="form-group">
+                                    <label for="lisansTuru">Lisans Türü :</label>
+                                    <div class="select-list">
+                                        <select name="lisansTuru" id="lisansTuru">
+                                            <option disabled selected value> Lisans Türü Seçin </option>
+                                            <option value="LİSANS">Lisans</option>
+                                            <option value="ÖNLİSANS">Ön Lisans</option>
+                                        </select>
+                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lisansTarihi">Lisans Tarihi :</label>
+                                    <input type="date" name="lisansTarihi" id="lisansTarihi">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lisansDerecesi">Lisans Derecesi :</label>
+                                    <input type="number" name="lisansDerecesi" id="lisansDerecesi" />
+                                </div>
+                            </div>
+
+                            <h2>Beceriler </h2>
+                            <h3>Bilgisayar Becerileri </h3>
+
+                            <div class="form-group">
+                                <label for="onParmakbeceri">On Parmak :</label>
+                                <input type="number" name="onParmakbeceri" id="onParmakbeceri" />
+                            </div>
+                            <div class="form-group">
+                                <label for="yazilimBeceri">Yazılım :</label>
+                                <input type="text" name="yazilimBeceri" id="yazilimBeceri" />
+                            </div>
+                            <div class="form-group">
+                                <label for="ofisBeceri">Ofis Yazılımı :</label>
+                                <input type="text" name="ofisBeceri" id="ofisBeceri" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="donanimBeceri"> Donanım :</label>
+                                <input type="number" name="donanimBeceri" id="donanimBeceri" />
+                            </div>
+                            <div class="form-group">
+                                <label for="cizimBeceri">Çizim :</label>
+                                <input type="text" name="cizimBeceri" id="cizimBeceri" />
+                            </div>
+
+                            <h3>Diğer </h3>
+
+                            <div class="form-group">
+                                <label for="digerBeceriler"> Diğer Beceriler :</label>
+                                <input type="number" name="digerBeceriler" id="digerBeceriler" />
+                            </div>
+                            <div class="form-group">
+                                <label for="isIleIlgiliBeceriler">İşle İlgili Beceriler :</label>
+                                <input type="text" name="isIleIlgiliBeceriler" id="isIleIlgiliBeceriler" />
+                            </div>
+                            <div class="form-group">
+                                <label for="OrganizasyonelBeceriler">Organizasyonel Beceriler :</label>
+                                <input type="text" name="OrganizasyonelBeceriler" id="OrganizasyonelBeceriler" />
+                            </div>
+
+
                         </div>
 
                         <div class="form-submit">

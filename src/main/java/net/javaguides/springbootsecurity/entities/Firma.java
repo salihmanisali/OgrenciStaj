@@ -17,26 +17,24 @@ public class Firma
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
 
-	@Column(nullable=false,length = 300)
+	@Column(length = 300)
 	@NotNull
 	private String adi;
 
-	@Column(nullable=false,length = 300)
-	@NotNull
+	@Column(length = 40)
+	private Long sicil;
+
+	@Column(length = 500)
+	private String faaliyetAlanlari;
+
+	@Column(length = 300)
 	private String insanKaynaklariSorumlusuAdi;
 
-	@Column(nullable=false, unique=true,length = 200)
+	@Column(length = 200)
 	private String insanKaynaklariSorumlusuEmail;
 
 	@Column(length = 30)
-	@NotNull
 	private String insanKaynaklariSorumlusuTelefonu;
-
-	@Column(nullable=false,length = 40)
-	private Long sicil;
-
-	@Column(nullable=false,length = 500)
-	private String faaliyetAlanlari;
 
 	@Lob
 	@Basic(fetch = FetchType.LAZY)
