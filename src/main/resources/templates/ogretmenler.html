@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
 	layout:decorator="layout">
 
 <head>
@@ -10,22 +9,33 @@
 </head>
 <body>
 	<div layout:fragment="content">
-		<p>
-			Welcome <span sec:authentication="principal.username">User</span>
-		</p>
+
 		<p>
 			<a th:href="@{/logout}">Logout</a>
 		</p>
 
 		<div>
 		<br>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Messages
-				</div>
 
-				<p th:each="ogretmen: ${ogretmenler}" th:text="${ogretmen.adi}"></p>
-			</div>
+			<h2>Sistemde Kayıtlı Öğretmenler</h2>
+			<table class="table table-hover table-bordered">
+				<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Adı Soyadı</th>
+					<th scope="col">Email</th>
+					<th scope="col">Telefon</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr  th:each="ogretmen: ${ogretmenler}">
+						<td th:text="${ogretmen.id}"></td>
+						<td th:text="${ogretmen.adi}"></td>
+						<td th:text="${ogretmen.email}"></td>
+						<td th:text="${ogretmen.telefon}"></td>
+					</tr>
+				</tbody>
+			</table>
 
 		</div>
 	</div>

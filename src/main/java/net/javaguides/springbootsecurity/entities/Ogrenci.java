@@ -139,25 +139,20 @@ public class Ogrenci
 
 // Bilgisayar Becerileri
 
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri onParmakbeceri;
+	@Column(length = 300)
+	private String onParmakbeceri;
 
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri yazilimBeceri;
+	@Column(length = 300)
+	private String yazilimBeceri;
 
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri ofisBeceri;
+	@Column(length = 300)
+	private String ofisBeceri;
 
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri donanimBeceri;
+	@Column(length = 300)
+	private String donanimBeceri;
 
-	@Enumerated(EnumType.STRING)
-	@Column(length = 30)
-	private Beceri cizimBeceri;
+	@Column(length = 300)
+	private String cizimBeceri;
 
 	// Diger Beceriler
 
@@ -196,7 +191,7 @@ public class Ogrenci
 
 	@Enumerated(EnumType.STRING)
 	@Column(length = 30)
-	private Beceri dil2;
+	private Dil dil2;
 
 
 	@Enumerated(EnumType.STRING)
@@ -206,7 +201,7 @@ public class Ogrenci
 
 	@Enumerated(EnumType.STRING)
 	@Column(length = 30)
-	private Beceri dil3;
+	private Dil dil3;
 
 
 	@Enumerated(EnumType.STRING)
@@ -216,7 +211,7 @@ public class Ogrenci
 
 	@Enumerated(EnumType.STRING)
 	@Column(length = 30)
-	private Beceri dil4;
+	private Dil dil4;
 
 
 	@Enumerated(EnumType.STRING)

@@ -1,16 +1,16 @@
 package net.javaguides.springbootsecurity.enums;
 
 public enum Ilce {
-    İZMİT,
+    IZMIT,
     KANDIRA,
-    DERİNCE,
+    DERINCE,
     DARICA,
-    DİLOVASI,
+    DILOVASI,
     GEBZE,
-    GÖLCÜK,
-    KARAMÜRSEL,
-    KÖRFEZ,
-    BAŞİSKELE,
-    ÇAYIROVA,
+    GOLCUK,
+    KARAMURSEL,
+    KORFEZ,
+    BASISKELE,
+    CAYIROVA,
     KARTEPE
 }

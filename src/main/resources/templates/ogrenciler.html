@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
 	layout:decorator="layout">
 
 <head>
@@ -10,26 +9,40 @@
 </head>
 <body>
 	<div layout:fragment="content">
-		<p>
-			Welcome <span sec:authentication="principal.username">User</span>
-		</p>
+
 		<p>
 			<a th:href="@{/logout}">Logout</a>
 		</p>
 
 		<div>
 		<br>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Messages
-				</div>
-
-				<p th:each="ogrenci: ${ogrenciler}" th:text="${ogrenci.adi}"></p>
-			</div>
-
+			<h2>Sistemde Kayıtlı Öğrenciler</h2>
+			<table class="table table-hover table-bordered">
+				<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Adı</th>
+					<th scope="col">Soyadı</th>
+					<th scope="col">TC Kimlik No</th>
+					<th scope="col">İlçe</th>
+					<th scope="col">Okul Adı</th>
+					<th scope="col">Okul Alanı</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr th:each="ogrenci: ${ogrenciler}"  >
+					<td th:text="${ogrenci.id}"></td>
+					<td th:text="${ogrenci.adi}"></td>
+					<td th:text="${ogrenci.soyadi}"></td>
+					<td th:text="${ogrenci.tcKimlikNo}"></td>
+					<td th:text="${ogrenci.ilce}"></td>
+					<td th:text="${ogrenci.okulAdi}"></td>
+					<td th:text="${ogrenci.okulAlani}"></td>
+				</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
-
 </body>
 
 </html>

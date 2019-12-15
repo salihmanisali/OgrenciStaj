@@ -12,36 +12,35 @@
 <div layout:fragment="content">
     <div class="main">
         <div class="container">
-            <div class="signup-content">
-                <div class="signup-img">
-                    <img src="assets/images/ogretmen.jpg" th:src="@{/assets/images/ogretmen.jpg}"  alt="">
-                </div>
-                <div class="signup-form">
+            <div>
+                <div>
                     <form  th:action="@{/ogretmen}" method="POST" class="register-form" id="register-form">
                         <div>
                             <h2>Öğretmen Kayıt Formu</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adi">Adı Soyadı:</label>
+                                    <input type="text" name="adi" id="adi" th:value="${ogretmen.adi}"/>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="adi">Adı Soyadı:</label>
-                                <input type="text" name="adi" id="adi"/>
+                                <div class="form-group">
+                                    <label for="email"> Email :</label>
+                                    <input type="email" name="email" id="email"  th:value="${ogretmen.email}"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefon">Telefonu :</label>
+                                    <input type="number" name="telefon" id="telefon"  th:value="${ogretmen.telefon}"/>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="email"> Email :</label>
-                                <input type="email" name="email" id="email" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="telefon">Telefonu :</label>
-                                <input type="number" name="telefon" id="telefon">
-                            </div>
-
                         </div>
 
                         <div class="form-submit">
                             <input type="reset" value="Temizle" class="submit" name="reset" id="reset" />
                             <input type="submit" value="Kaydet" class="submit" name="submit" id="submit" />
                         </div>
+
+                        <input type="hidden" name="id" id="id" th:value="${ogretmen.id}"/>
                     </form>
                 </div>
             </div>

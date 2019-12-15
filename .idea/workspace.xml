@@ -2,34 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5111e5e-6e54-4e8e-b04e-18991baad1cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/burc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/ogretmen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/firma.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/text.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AskerlikDurumu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AskerlikDurumu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Beceri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Beceri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Dil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Dil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Ilce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Ilce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/LisansTuru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/LisansTuru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/StajYapacagiGun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/StajYapacagiGun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery-2.1.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/firma.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/firma.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Firma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Firma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogrenci.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogrenci.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogretmen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogretmen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/AskerlikDurumu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/AskerlikDurumu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/Beceri.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/Beceri.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/Dil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/Dil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/Ilce.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/Ilce.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/LisansTuru.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/LisansTuru.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/StajYapacagiGun.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/enums/StajYapacagiGun.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/jquery-2.1.4.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ogrenci.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ogrenci.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ogrenciler.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ogrenciler.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,26 +84,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+            <state relative-caret-position="87">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenci.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="208">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firma.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="138">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -96,38 +123,53 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/home</find>
-      <find>Form with CSRF Token</find>
-      <find>thymeleaf</find>
-      <find>@NotEmpty</find>
-      <find>veli</find>
-      <find>unique=true,</find>
-      <find>Temporal</find>
-      <find>Date</find>
-      <find>user home</find>
-      <find>dog</find>
-      <find>Ramesh Fadatare</find>
-      <find>form-group form-inline</find>
       <find>&lt;div class=&quot;label-flex&quot;&gt;</find>
       <find>label-flex</find>
       <find>form-select</find>
       <find>refera</find>
       <find>date</find>
       <find>nullable=false,</find>
-      <find>ogrenci</find>
       <find>email</find>
       <find>mail</find>
       <find>firma</find>
       <find>Firma</find>
+      <find>dil1</find>
+      <find>tab</find>
+      <find>.get()</find>
+      <find>&gt;   &lt;</find>
+      <find>T(</find>
+      <find>Ö</find>
+      <find>Ğ</find>
+      <find>Ş</find>
+      <find>becer</find>
+      <find>az</find>
+      <find>Dil</find>
+      <find>dil2</find>
+      <find>telefon</find>
+      <find>&gt;</find>
+      <find>ogrenci</find>
+      <find>Ilçe</find>
+      <find>css</find>
+      <find>global.</find>
+      <find>dalı</find>
+      <find>&lt;input</find>
     </findStrings>
     <replaceStrings>
       <replace>@NotNull</replace>
       <replace>form-group</replace>
       <replace>select-list</replace>
-      <replace>firma</replace>
       <replace>ogretmenler</replace>
-      <replace>ogretmen</replace>
       <replace>Ogretmen</replace>
+      <replace>dil2</replace>
+      <replace>dil3</replace>
+      <replace>dil4</replace>
+      <replace>&gt;&lt;</replace>
+      <replace>G</replace>
+      <replace>S</replace>
+      <replace>ogretmen</replace>
+      <replace>firma</replace>
+      <replace>İlçe</replace>
+      <replace>&lt;input class=&quot;form-control&quot;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Java\Denemeler\spring-boot-tutorial-master\springboot-thymeleaf-security-demo\src\main\resources\static</dir>
@@ -145,12 +187,8 @@
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ilce.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/BeceriTuru.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Okul.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Dil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Beceri.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/StajYapacagiGun.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Mezuniyet.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AktifPasif.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/LisansTuru.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Message.java" />
@@ -158,10 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/FirmaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/OgretmenRepository.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Ilce.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AskerlikDurumu.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/MessageRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/HomeController.java" />
@@ -169,22 +203,30 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/text.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/firma.html" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Ilce.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/LisansTuru.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/StajYapacagiGun.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AskerlikDurumu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Beceri.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Dil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/layout.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/firma.html" />
       </list>
     </option>
   </component>
@@ -196,9 +238,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="1386" />
+    <option name="y" value="248" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -208,6 +251,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,6 +275,48 @@
               <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootsecurity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,14 +344,34 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,18 +384,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\scss\common" />
-      <recent name="D:\Java\Denemeler\spring-boot-tutorial-master\springboot-thymeleaf-security-demo\src\main\resources\templates" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\js" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\js" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\css" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.javaguides.springbootsecurity.web" />
@@ -297,13 +404,27 @@
       <recent name="net.javaguides.springbootsecurity.entities" />
       <recent name="net.javaguides.springbootsecurity.enums" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\images" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\js" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\scss\common" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\scss\layouts" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\scss" />
+      <recent name="D:\Java\Denemeler\spring-boot-tutorial-master\springboot-thymeleaf-security-demo\src\main\resources\templates" />
     </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 11 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 11 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="springboot-thymeleaf-security-demo" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -352,7 +473,11 @@
       <workItem from="1576067714458" duration="432000" />
       <workItem from="1576088562506" duration="87000" />
       <workItem from="1576182421254" duration="3784000" />
-      <workItem from="1576323326842" duration="6639000" />
+      <workItem from="1576323326842" duration="10239000" />
+      <workItem from="1576352264502" duration="5548000" />
+      <workItem from="1576372222220" duration="4318000" />
+      <workItem from="1576399414086" duration="1479000" />
+      <workItem from="1576410201011" duration="6619000" />
     </task>
     <task id="LOCAL-00001" summary="ilk komit">
       <created>1576066439890</created>
@@ -375,16 +500,24 @@
       <option name="project" value="LOCAL" />
       <updated>1576068044576</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="firma öğretmet kayıt formu eklendi">
+      <created>1576331665608</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576331665608</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40014000" />
+    <option name="totallyTimeSpent" value="61578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17405914" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22244623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -394,20 +527,20 @@
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32892805" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32892805" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32892805" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.40675476" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865592" visible="true" weight="0.40675476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32892805" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013441" side_tool="true" weight="0.40675476" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32892805" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32892805" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49798387" weight="0.32892805" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -418,139 +551,58 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="right" id="RestServices" order="10" />
+      <window_info anchor="right" id="RestServices" order="10" weight="0.32997313" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ilk komit" />
-    <option name="LAST_COMMIT_MESSAGE" value="ilk komit" />
+    <MESSAGE value="firma öğretmet kayıt formu eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="firma öğretmet kayıt formu eklendi" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Ilce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/StajYapacagiGun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AskerlikDurumu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/scss/layouts/main.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/css/style.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userhome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-    <entry file="file://$PROJECT_DIR$/.classpath" />
-    <entry file="file://$PROJECT_DIR$/.project" />
-    <entry file="file://$PROJECT_DIR$/.springBeans" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="14" selection-start-line="14" selection-end-line="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/MessageRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adminhome.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="496" column="1" lean-forward="true" selection-start-line="496" selection-start-column="1" selection-end-line="496" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/AuthenticatedUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -568,70 +620,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/scss/common/variables.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/vendor/jquery-validation/dist/additional-methods.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="15727" selection-start-line="3" selection-start-column="15727" selection-end-line="3" selection-end-column="15727" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/vendor/wnumb/wNumb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/vendor/jquery-validation/dist/additional-methods.min.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/vendor/wnumb/wNumb.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/text.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="55" column="60" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/LisansTuru.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenci.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="233" column="42" selection-start-line="233" selection-start-column="42" selection-end-line="233" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firmalar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firma.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -656,20 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -684,33 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="151" column="22" selection-start-line="151" selection-start-column="22" selection-end-line="151" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -718,13 +671,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -738,31 +684,266 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="39" column="81" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="42">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userhome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="39" column="62" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.9.RELEASE/spring-data-commons-2.0.9.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/LisansTuru.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Ilce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AktifPasif.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/AskerlikDurumu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Cinsiyet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/StajYapacagiGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Beceri.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/Dil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="213" column="15" selection-start-line="213" selection-start-column="15" selection-end-line="213" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="34" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" column="5" selection-start-line="30" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firmalar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-828" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.bundle.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/HELP-US-OUT.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/static/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-grid.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="486" selection-start-line="486" selection-end-line="486" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenci.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firma.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>

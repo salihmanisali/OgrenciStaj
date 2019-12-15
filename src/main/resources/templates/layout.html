@@ -12,44 +12,41 @@
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport" />
-	<link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap.min.css}" />
+	<link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap.css}" />
+	<link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap-grid.css}" />
+	<link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap-reboot.css}" />
 	<link rel="stylesheet" th:href="@{/assets/font-awesome-4.5.0/css/font-awesome.min.css}" />
 	<link rel="stylesheet" th:href="@{/assets/fonts/material-icon/css/material-design-iconic-font.min.css}" />
 	<link rel="stylesheet" th:href="@{/assets/css/style.css}" />
+
+	<script th:src="@{'/assets/js/jquery-3.4.1.min.js'}"></script>
+	<script th:src="@{'/assets/bootstrap/js/bootstrap.js'}"></script>
+	<script th:src="@{'/assets/js/main.js'}"></script>
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#" th:href="@{/}" >HayataTemasEt.com</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/ogrenci}"  class="fa fa-user">Öğrenci Kayıt Formu</a></li>
-				</ul>
-
-				<ul class="nav navbar-nav">
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/ogretmen}"  class="fa fa-user">Öğretmen Kayıt Formu</a></li>
-				</ul>
-
-				<ul class="nav navbar-nav">
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/firma}" class="fa fa-university">Firma Kayıt Formu</a></li>
-				</ul>
-
-				<ul class="nav navbar-nav">
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}" class="fa fa-sign-out">Çıkış</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="/">HayataTemasEt.com</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	<div class="collapse navbar-collapse" id="navbarsExample02">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item" sec:authorize="isAuthenticated()">
+				<a class="nav-link" th:href="@{/ogrenci}">  Öğrenci Kayıt Formu</a>
+			</li>
+			<li class="nav-item"  sec:authorize="isAuthenticated()">
+				<a class="nav-link" th:href="@{/ogretmen}" >Öğretmen Kayıt Formu</a>
+			</li>
+			<li class="nav-item"  sec:authorize="isAuthenticated()">
+				<a class="nav-link" th:href="@{/firma}" >Firma Kayıt Formu</a>
+			</li>
+			<li class="nav-item"  sec:authorize="isAuthenticated()">
+				<a class="nav-link" th:href="@{/logout}" >Çıkış</a>
+			</li>
+		</ul>
+	</div>
+</nav>
 
 	<div class="container">
 
@@ -58,10 +55,5 @@
 		</div>
 
 	</div>
-
-	<script th:src="@{'/assets/js/jquery-2.1.4.min.js'}"></script>
-	<script th:src="@{'/assets/bootstrap/js/bootstrap.min.js'}"></script>
-	<script th:src="@{'/assets/js/main.js'}"></script>
-
 </body>
 </html>

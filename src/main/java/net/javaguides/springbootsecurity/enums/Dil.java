@@ -1,5 +1,9 @@
 package net.javaguides.springbootsecurity.enums;
 
 public enum Dil {
-    İNGİLİZCE,ALMANCA,ARAPÇA,FARSÇA,KÜRTÇE,TÜRKÇE
+    INGILIZCE,
+    ALMANCA,
+    ARAPCA,
+    FARSCA,
+    RUSCA
 }

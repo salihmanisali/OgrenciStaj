@@ -1,5 +1,5 @@
 package net.javaguides.springbootsecurity.enums;
 
 public enum AskerlikDurumu {
-    TECİL,YAPTI,YAPMADI
+    TECIL,YAPTI,YAPMADI
 }

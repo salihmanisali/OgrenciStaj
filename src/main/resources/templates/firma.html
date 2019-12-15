@@ -12,53 +12,52 @@
 <div layout:fragment="content">
     <div class="main">
         <div class="container">
-            <div class="signup-content">
-                <div class="signup-img">
-                    <img src="assets/images/burc.jpg" th:src="@{/assets/images/burc.jpg}"  alt="">
-                </div>
-                <div class="signup-form">
+            <div>
+                <div>
                     <form  th:action="@{/firma}" method="POST" class="register-form" id="register-form">
                         <div>
                             <h2>Firma Kayıt Formu</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sicil">Sicil :</label>
+                                    <input type="number" name="sicil" id="sicil" th:value="${firma.sicil}" />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="sicil">Sicil :</label>
-                                <input type="number" name="sicil" id="sicil" />
+                                <div class="form-group">
+                                    <label for="adi">Adı :</label>
+                                    <input type="text" name="adi" id="adi" th:value="${firma.adi}" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="faaliyetAlanlari">Faaliyet Alanları :</label>
+                                    <input type="text" name="faaliyetAlanlari" id="faaliyetAlanlari" th:value="${firma.faaliyetAlanlari}" />
+                                </div>
                             </div>
+                            <h4>Firmanın İnsan Kaynakları Sorumlusu</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="insanKaynaklariSorumlusuAdi">Adı :</label>
+                                    <input type="text" name="insanKaynaklariSorumlusuAdi" id="insanKaynaklariSorumlusuAdi" th:value="${firma.insanKaynaklariSorumlusuAdi}" />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="adi">Adı :</label>
-                                <input type="text" name="adi" id="adi"/>
+                                <div class="form-group">
+                                    <label for="insanKaynaklariSorumlusuEmail"> Email :</label>
+                                    <input type="email" name="insanKaynaklariSorumlusuEmail" id="insanKaynaklariSorumlusuEmail" th:value="${firma.insanKaynaklariSorumlusuEmail}" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="insanKaynaklariSorumlusuTelefonu">Telefonu :</label>
+                                    <input type="number" name="insanKaynaklariSorumlusuTelefonu" id="insanKaynaklariSorumlusuTelefonu" th:value="${firma.insanKaynaklariSorumlusuTelefonu}" />
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="faaliyetAlanlari">Faaliyet Alanları :</label>
-                                <input type="text" name="faaliyetAlanlari" id="faaliyetAlanlari"/>
-                            </div>
-
-                            <h3>Firmanın İnsan Kaynakları Sorumlusu</h3>
-
-                            <div class="form-group">
-                                <label for="insanKaynaklariSorumlusuAdi">Adı :</label>
-                                <input type="text" name="insanKaynaklariSorumlusuAdi" id="insanKaynaklariSorumlusuAdi"/>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="insanKaynaklariSorumlusuEmail"> Email :</label>
-                                <input type="email" name="insanKaynaklariSorumlusuEmail" id="insanKaynaklariSorumlusuEmail" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="insanKaynaklariSorumlusuTelefonu">Telefonu :</label>
-                                <input type="number" name="insanKaynaklariSorumlusuTelefonu" id="insanKaynaklariSorumlusuTelefonu">
-                            </div>
-
                         </div>
 
                         <div class="form-submit">
                             <input type="reset" value="Temizle" class="submit" name="reset" id="reset" />
                             <input type="submit" value="Kaydet" class="submit" name="submit" id="submit" />
                         </div>
+
+                        <input type="hidden" name="id" id="id" th:value="${firma.id}"/>
                     </form>
                 </div>
             </div>

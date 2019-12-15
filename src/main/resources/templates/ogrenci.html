@@ -10,272 +10,411 @@
 </head>
 <body>
 <div layout:fragment="content">
-    <div class="main">
-        <div class="container">
-            <div class="signup-content">
-                <div class="signup-img">
-                    <img src="assets/images/signup-img.jpg" th:src="@{/assets/images/signup-img.jpg}"  alt="">
-                </div>
-                <div class="signup-form">
-                    <form  th:action="@{/ogrenci}" method="POST" class="register-form" id="register-form">
-                        <div>
-                            <h2>Öğrenci Kayıt Formu</h2>
+    <div>
+        <div>
+                <form  th:action="@{/ogrenci}" method="POST" class="register-form" id="register-form">
 
-                            <div class="form-group">
-                                <label for="tcKimlikNo">TC Kimlik No :</label>
-                                <input type="number" name="tcKimlikNo" id="tcKimlikNo" />
-                            </div>
+                    <div class="signup-content" style="width: 100%">
 
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="adi">Adı :</label>
-                                    <input type="text" name="adi" id="adi"/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="soyadi">Soyadı :</label>
-                                    <input type="text" name="soyadi" id="soyadi"/>
-                                </div>
-                            </div>
+                        <div class="signup-form" style="width: 100%">
+                            <div>
+                                <h2>Öğrenci Kayıt Formu</h2>
 
-                            <div class="form-radio">
-                                <label for="ERKEK" class="radio-label">Cinsiyet :</label>
-                                <div class="form-radio-item">
-                                    <input type="radio" name="cinsiyet" id="ERKEK" value="ERKEK" checked>
-                                    <label for="ERKEK">Erkek</label>
-                                    <span class="check"></span>
-                                </div>
-                                <div class="form-radio-item">
-                                    <input type="radio" name="cinsiyet" id="KADIN" value="KADIN">
-                                    <label for="KADIN">Kadın</label>
-                                    <span class="check"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="dogumTarihi">Doğum Tarihi :</label>
-                                <input type="date" name="dogumTarihi" id="dogumTarihi">
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email :</label>
-                                    <input type="email" name="email" id="email" />
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="tcKimlikNo">TC Kimlik No :</label>
+                                        <input type="number" name="tcKimlikNo" id="tcKimlikNo" th:value="${ogrenci.tcKimlikNo}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="adi">Adı :</label>
+                                        <input type="text" name="adi" id="adi"th:value="${ogrenci.adi}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="soyadi">Soyadı :</label>
+                                        <input type="text" name="soyadi" id="soyadi" th:value="${ogrenci.soyadi}"/>
+                                    </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="cepTelefonu">Cep Telefonu :</label>
-                                    <input type="number" name="cepTelefonu" id="cepTelefonu">
-                                </div>
-                            </div>
 
-                            <div class="form-row">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="dogumTarihi">Doğum Tarihi :</label>
+                                        <input type="date" name="dogumTarihi" id="dogumTarihi" th:value="${ogrenci.dogumTarihi}" />
+                                    </div>
 
-                                <div class="form-group">
-                                    <label for="ilce">İlçe :</label>
-                                    <select name="ilce" id="ilce">
-                                        <option disabled selected value> İlçe Seçin </option>
-                                        <option value="İZMİT">İzmit</option>
-                                        <option value="BAŞİSKELE">Başiskele</option>
-                                        <option value="ÇAYIROVA">Çayırova</option>
-                                        <option value="DARICA">Darıca</option>
-                                        <option value="DERİNCE">Derince</option>
-                                        <option value="DİLOVASI">Dilovası</option>
-                                        <option value="GEBZE">Gebze</option>
-                                        <option value="GÖLCÜK">Gölcük</option>
-                                        <option value="KANDIRA">Kandıra</option>
-                                        <option value="KARTEPE">Kartepe</option>
-                                        <option value="KÖRFEZ">Körfez</option>
-                                    </select>
-                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                    <div class="form-radio">
+                                        <label for="ERKEK" class="radio-label">Cinsiyet :</label>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="cinsiyet" id="ERKEK" value="ERKEK" th:checked="${ogrenci.cinsiyet==T(net.javaguides.springbootsecurity.enums.Cinsiyet).ERKEK}" />
+                                            <label for="ERKEK">Erkek</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                        <input type="radio" name="cinsiyet" id="KADIN" value="KADIN" th:checked="${ogrenci.cinsiyet==T(net.javaguides.springbootsecurity.enums.Cinsiyet).KADIN}" />
+                                        <label for="KADIN">Kadın</label>
+                                        <span class="check"></span>
+                                    </div>
+                                    </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="semt">Semt/Mahalle :</label>
-                                    <input type="text" name="semt" id="semt"/>
-                                </div>
-                            </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email :</label>
+                                        <input type="email" name="email" id="email" th:value="${ogrenci.email}" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label for="adres">Adres :</label>
-                                <textarea id="adres" name="adres" cols="80" rows="5"></textarea>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="veliAdi">Veli Adı :</label>
-                                    <input type="text" name="veliAdi" id="veliAdi" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="veliCepTelefonu">Veli Telefonu :</label>
-                                    <input type="text" name="veliCepTelefonu" id="veliCepTelefonu" />
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="ehliyet">Ehliyet :</label>
-                                    <input type="text" name="ehliyet" id="ehliyet"/>
+                                    <div class="form-group">
+                                        <label for="cepTelefonu">Cep Telefonu :</label>
+                                        <input type="number" name="cepTelefonu" id="cepTelefonu" th:value="${ogrenci.cepTelefonu}" />
+                                    </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="askerlikDurumu">Askerlik Durumu :</label>
-                                    <div class="select-list">
-                                        <select name="askerlikDurumu" id="askerlikDurumu">
-                                            <option disabled selected value> Askerlik Durumu Seçin </option>
-                                            <option value="TECİL">Tecil</option>
-                                            <option value="YAPTI">Yaptı</option>
-                                            <option value="YAPMADI">Yapmadı</option>
+                                <div class="form-row">
+
+                                    <div class="form-group">
+                                        <label for="ilce">İlçe :</label>
+                                        <select name="ilce" id="ilce" th:value="${ogrenci.ilce}">
+                                            <option disabled selected value> İlçe Seçin </option>
+                                            <option value="IZMIT"      th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).IZMIT}">İzmit</option>
+                                            <option value="BASISKELE"  th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).BASISKELE}">Başiskele</option>
+                                            <option value="CAYIROVA"   th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).CAYIROVA}">Çayırova</option>
+                                            <option value="DARICA"     th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DARICA}">Darıca</option>
+                                            <option value="DERINCE"    th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DERINCE}">Derince</option>
+                                            <option value="DILOVASI"   th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DILOVASI}">Dilovası</option>
+                                            <option value="GEBZE"      th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GEBZE}">Gebze</option>
+                                            <option value="GOLCUK"     th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GOLCUK}">Gölcük</option>
+                                            <option value="KANDIRA"    th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KANDIRA}">Kandıra</option>
+                                            <option value="KARAMURSEL" th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARAMURSEL}">Karamürsel</option>
+                                            <option value="KARTEPE"    th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARTEPE}">Kartepe</option>
+                                            <option value="KORFEZ"     th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KORFEZ}">Körfez</option>
                                         </select>
                                         <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label for="stajYapacagiGun">Staj Yapacağı Gün :</label>
-                                <div class="select-list">
-                                    <select name="stajYapacagiGun" id="stajYapacagiGun">
-                                        <option disabled selected value> Staj Yapacağı Günü Seçin </option>
-                                        <option value="PAZARTESİ_SALI_ÇARŞAMBA">Pazartesi-Salı-Çarşamba</option>
-                                        <option value="ÇARŞAMBA_PERŞEMBE_CUMA">Çarşamba-Perşembe-Cuma</option>
-                                        <option value="YAZ_STAJI_4_HAFTA">Yaz Stajı 4 Hafta</option>
-                                        <option value="YAZ_STAJI_3_HAFTA">Yaz Stajı 3 Hafta</option>
-                                        <option value="DİĞER">Diğer</option>
-                                    </select>
-                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div>
-                            <h3>Okul Bilgileri</h3>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="okulAdi">Okul Adı :</label>
-                                    <input type="text" name="okulAdi" id="okulAdi" />
+                                    <div class="form-group">
+                                        <label for="semt">Semt/Mahalle :</label>
+                                        <input type="text" name="semt" id="semt" th:value="${ogrenci.semt}"/>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="okulAlani">Alanı :</label>
-                                    <input type="text" name="okulAlani" id="okulAlani" />
+                                    <label for="adres">Adres :</label>
+                                    <textarea id="adres" name="adres" cols="80" rows="5" th:value="${ogrenci.adres}"></textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="veliAdi">Veli Adı :</label>
+                                        <input type="text" name="veliAdi" id="veliAdi" th:value="${ogrenci.veliAdi}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="veliCepTelefonu">Veli Telefonu :</label>
+                                        <input type="number" name="veliCepTelefonu" id="veliCepTelefonu" th:value="${ogrenci.veliCepTelefonu}"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="ehliyet">Ehliyet :</label>
+                                        <input type="text" name="ehliyet" id="ehliyet" th:value="${ogrenci.ehliyet}"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="askerlikDurumu">Askerlik Durumu :</label>
+                                        <div class="select-list">
+                                            <select name="askerlikDurumu" id="askerlikDurumu">
+                                                <option disabled selected value> Askerlik Durumu Seçin </option>
+                                                <option value="TECIL"   th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).TECIL}">Tecil</option>
+                                                <option value="YAPTI"   th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).YAPTI}">Yaptı</option>
+                                                <option value="YAPMADI" th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).YAPMADI}">Yapmadı</option>
+                                            </select>
+                                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="okulDali">Dalı :</label>
-                                    <input type="text" name="okulDali" id="okulDali" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="form-group">
-                                <label for="notOrtalamasi">Okul Adı :</label>
-                                <input type="number" name="notOrtalamasi" id="notOrtalamasi" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="okuduguKitaplar">Alanı :</label>
-                                <input type="text" name="okuduguKitaplar" id="okuduguKitaplar" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="gorevAldigiEtkinlikler">Görev Aldığı Etkinliker :</label>
-                                <input type="number" name="gorevAldigiEtkinlikler" id="gorevAldigiEtkinlikler" />
-                            </div>
-
-                            <h3>Referans Öğretmen </h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="referansOgretmenAdi"> Adı Soyadı :</label>
-                                    <input type="number" name="referansOgretmenAdi" id="referansOgretmenAdi" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="referansOgretmenTelefon">Telefonu :</label>
-                                    <input type="text" name="referansOgretmenTelefon" id="referansOgretmenTelefon" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="referansOgretmenEmail">Email :</label>
-                                    <input type="text" name="referansOgretmenEmail" id="referansOgretmenEmail" />
-                                </div>
-                            </div>
-
-
-                            <h3>Lisans Bilgileri</h3>
-                            <div class="form-row">
-
-                                <div class="form-group">
-                                    <label for="lisansTuru">Lisans Türü :</label>
+                                    <label for="stajYapacagiGun">Staj Yapacağı Gün :</label>
                                     <div class="select-list">
-                                        <select name="lisansTuru" id="lisansTuru">
-                                            <option disabled selected value> Lisans Türü Seçin </option>
-                                            <option value="LİSANS">Lisans</option>
-                                            <option value="ÖNLİSANS">Ön Lisans</option>
+                                        <select name="stajYapacagiGun" id="stajYapacagiGun">
+                                            <option disabled selected value> Staj Yapacağı Günü Seçin </option>
+                                            <option value="PAZARTESI_SALI_CARSAMBA" th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).PAZARTESI_SALI_CARSAMBA}">Pazartesi-Salı-Carşamba</option>
+                                            <option value="CARSAMBA_PERSEMBE_CUMA"  th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).CARSAMBA_PERSEMBE_CUMA}">Carşamba-Perşembe-Cuma</option>
+                                            <option value="YAZ_STAJI_4_HAFTA"       th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).YAZ_STAJI_4_HAFTA}">Yaz Stajı 4 Hafta</option>
+                                            <option value="YAZ_STAJI_3_HAFTA"       th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).YAZ_STAJI_3_HAFTA}">Yaz Stajı 3 Hafta</option>
+                                            <option value="DIGER">Diğer</option>
                                         </select>
                                         <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
                                     </div>
                                 </div>
 
+                            </div>
+
+                            <div>
+                                <h3>Okul Bilgileri</h3>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="okulAdi">Okul Adı :</label>
+                                        <input type="text" name="okulAdi" id="okulAdi" th:value="${ogrenci.okulAdi}"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="okulAlani">Alanı :</label>
+                                        <input type="text" name="okulAlani" id="okulAlani" th:value="${ogrenci.okulAlani}"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="okulDali">Dalı :</label>
+                                        <input type="text" name="okulDali" id="okulDali" th:value="${ogrenci.okulDali}"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="notOrtalamasi">Not Ortalaması :</label>
+                                        <input type="number" name="notOrtalamasi" id="notOrtalamasi" th:value="${ogrenci.notOrtalamasi}"/>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div>
+
                                 <div class="form-group">
-                                    <label for="lisansTarihi">Lisans Tarihi :</label>
-                                    <input type="date" name="lisansTarihi" id="lisansTarihi">
+                                    <label for="okuduguKitaplar">Okuduğu Kitaplar</label>
+                                    <input type="text" name="okuduguKitaplar" id="okuduguKitaplar" th:value="${ogrenci.okuduguKitaplar}"/>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="lisansDerecesi">Lisans Derecesi :</label>
-                                    <input type="number" name="lisansDerecesi" id="lisansDerecesi" />
+                                    <label for="gorevAldigiEtkinlikler">Görev Aldığı Etkinliker :</label>
+                                    <input type="text" name="gorevAldigiEtkinlikler" id="gorevAldigiEtkinlikler" th:value="${ogrenci.gorevAldigiEtkinlikler}" />
                                 </div>
-                            </div>
 
-                            <h2>Beceriler </h2>
-                            <h3>Bilgisayar Becerileri </h3>
-
-                            <div class="form-group">
-                                <label for="onParmakbeceri">On Parmak :</label>
-                                <input type="number" name="onParmakbeceri" id="onParmakbeceri" />
-                            </div>
-                            <div class="form-group">
-                                <label for="yazilimBeceri">Yazılım :</label>
-                                <input type="text" name="yazilimBeceri" id="yazilimBeceri" />
-                            </div>
-                            <div class="form-group">
-                                <label for="ofisBeceri">Ofis Yazılımı :</label>
-                                <input type="text" name="ofisBeceri" id="ofisBeceri" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="donanimBeceri"> Donanım :</label>
-                                <input type="number" name="donanimBeceri" id="donanimBeceri" />
-                            </div>
-                            <div class="form-group">
-                                <label for="cizimBeceri">Çizim :</label>
-                                <input type="text" name="cizimBeceri" id="cizimBeceri" />
-                            </div>
-
-                            <h3>Diğer </h3>
-
-                            <div class="form-group">
-                                <label for="digerBeceriler"> Diğer Beceriler :</label>
-                                <input type="number" name="digerBeceriler" id="digerBeceriler" />
-                            </div>
-                            <div class="form-group">
-                                <label for="isIleIlgiliBeceriler">İşle İlgili Beceriler :</label>
-                                <input type="text" name="isIleIlgiliBeceriler" id="isIleIlgiliBeceriler" />
-                            </div>
-                            <div class="form-group">
-                                <label for="OrganizasyonelBeceriler">Organizasyonel Beceriler :</label>
-                                <input type="text" name="OrganizasyonelBeceriler" id="OrganizasyonelBeceriler" />
-                            </div>
+                                <h3>Referans Öğretmen </h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="referansOgretmenAdi"> Adı Soyadı :</label>
+                                        <input type="text" name="referansOgretmenAdi" id="referansOgretmenAdi" th:value="${ogrenci.referansOgretmenAdi}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="referansOgretmenTelefon">Telefonu :</label>
+                                        <input type="number" name="referansOgretmenTelefon" id="referansOgretmenTelefon" th:value="${ogrenci.referansOgretmenTelefon}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="referansOgretmenEmail">Email :</label>
+                                        <input type="email" name="referansOgretmenEmail" id="referansOgretmenEmail" th:value="${ogrenci.referansOgretmenEmail}"/>
+                                    </div>
+                                </div>
 
 
+                                <h3>Lisans Bilgileri</h3>
+                                <div class="form-row">
+
+                                    <div class="form-group">
+                                        <label for="lisansTuru">Lisans Türü :</label>
+                                        <div class="select-list">
+                                            <select name="lisansTuru" id="lisansTuru" >
+                                                <option disabled selected value> Lisans Türü Seçin </option>
+                                                <option value="LISANS"   th:selected="${ogrenci.lisansTuru==T(net.javaguides.springbootsecurity.enums.LisansTuru).LISANS}">Lisans</option>
+                                                <option value="ONLISANS" th:selected="${ogrenci.lisansTuru==T(net.javaguides.springbootsecurity.enums.LisansTuru).ONLISANS}">On Lisans</option>
+                                            </select>
+                                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lisansTarihi">Lisans Tarihi :</label>
+                                        <input type="date" name="lisansTarihi" id="lisansTarihi" th:value="${ogrenci.lisansTarihi}" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lisansDerecesi">Lisans Derecesi :</label>
+                                        <input type="number" name="lisansDerecesi" id="lisansDerecesi" th:value="${ogrenci.lisansDerecesi}"/>
+                                    </div>
+                                </div>
+
+                                <h2>Beceriler </h2>
+
+                                <h3>Bilgisayar Becerileri</h3>
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">On Parmak</th>
+                                        <th scope="col">Yazılım</th>
+                                        <th scope="col">Ofis Yazılımı</th>
+                                        <th scope="col">Donanım</th>
+                                        <th scope="col">Çizim</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td> <input type="text" name="onParmakbeceri" id="onParmakbeceri" th:value="${ogrenci.onParmakbeceri}"></td>
+                                        <td> <input type="text" name="yazilimBeceri" id="yazilimBeceri"th:value="${ogrenci.yazilimBeceri}"></td>
+                                        <td> <input type="text" name="ofisBeceri" id="ofisBeceri" th:value="${ogrenci.ofisBeceri}"></td>
+                                        <td> <input type="text" name="donanimBeceri" id="donanimBeceri" th:value="${ogrenci.donanimBeceri}"></td>
+                                        <td> <input type="text" name="cizimBeceri" id="cizimBeceri" th:value="${ogrenci.cizimBeceri}"></td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <h3>Katıldığı Projeler</h3>
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Proje Tarihi</th>
+                                        <th scope="col">Proje Adı</th>
+                                        <th scope="col">Projedeki Görevi</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td> <input type="date" name="projeTarihi1" id="projeTarihi1" th:value="${ogrenci.projeTarihi1}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projeAdi1" th:value="${ogrenci.projeAdi1}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projedekiGorevi1" th:value="${ogrenci.projedekiGorevi1}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <input type="date" name="projeTarihi1" id="projeTarihi2" th:value="${ogrenci.projeTarihi2}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projeAdi2" th:value="${ogrenci.projeAdi2}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projedekiGorevi2" th:value="${ogrenci.projedekiGorevi2}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <input type="date" name="projeTarihi1" id="projeTarihi3" th:value="${ogrenci.projeTarihi3}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projeAdi3" th:value="${ogrenci.projeAdi3}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projedekiGorevi3" th:value="${ogrenci.projedekiGorevi3}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <input type="date" name="projeTarihi1" id="projeTarihi4" th:value="${ogrenci.projeTarihi4}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projeAdi4" th:value="${ogrenci.projeAdi4}"></td>
+                                        <td> <input type="text" name="projeTarihi1" id="projedekiGorevi4" th:value="${ogrenci.projedekiGorevi4}"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>Dil Becerileri</h3>
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Dil</th>
+                                        <th scope="col">Beceri</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <select name="dil1" id="dil1">
+                                                <option disabled selected value> Dil Seçin </option>
+                                                <option value="INGILIZCE" th:selected="${ogrenci.dil1==T(net.javaguides.springbootsecurity.enums.Dil).INGILIZCE}">İngilizce</option>
+                                                <option value="ALMANCA"   th:selected="${ogrenci.dil1==T(net.javaguides.springbootsecurity.enums.Dil).ALMANCA}">Almanca</option>
+                                                <option value="ARAPCA"    th:selected="${ogrenci.dil1==T(net.javaguides.springbootsecurity.enums.Dil).ARAPCA}">Arapça</option>
+                                                <option value="FARSCA"    th:selected="${ogrenci.dil1==T(net.javaguides.springbootsecurity.enums.Dil).FARSCA}">Farsça</option>
+                                                <option value="RUSCA"     th:selected="${ogrenci.dil1==T(net.javaguides.springbootsecurity.enums.Dil).RUSCA}">Rusça</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="dil1beceri" id="dil1beceri">
+                                                <option disabled selected value> Beceri Seçin </option>
+                                                <option value="AZ"       th:selected="${ogrenci.dil1beceri==T(net.javaguides.springbootsecurity.enums.Beceri).AZ}">Az</option>
+                                                <option value="ORTA"     th:selected="${ogrenci.dil1beceri==T(net.javaguides.springbootsecurity.enums.Beceri).ORTA}">Orta</option>
+                                                <option value="IYI"      th:selected="${ogrenci.dil1beceri==T(net.javaguides.springbootsecurity.enums.Beceri).IYI}">İyi</option>
+                                                <option value="MUKEMMEL" th:selected="${ogrenci.dil1beceri==T(net.javaguides.springbootsecurity.enums.Beceri).MUKEMMEL}">Mükemmel</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="dil2" id="dil2">
+                                                <option disabled selected value> Dil Seçin </option>
+                                                <option value="INGILIZCE" th:selected="${ogrenci.dil2==T(net.javaguides.springbootsecurity.enums.Dil).INGILIZCE}">İngilizce</option>
+                                                <option value="ALMANCA"   th:selected="${ogrenci.dil2==T(net.javaguides.springbootsecurity.enums.Dil).ALMANCA}">Almanca</option>
+                                                <option value="ARAPCA"    th:selected="${ogrenci.dil2==T(net.javaguides.springbootsecurity.enums.Dil).ARAPCA}">Arapça</option>
+                                                <option value="FARSCA"    th:selected="${ogrenci.dil2==T(net.javaguides.springbootsecurity.enums.Dil).FARSCA}">Farsça</option>
+                                                <option value="RUSCA"     th:selected="${ogrenci.dil2==T(net.javaguides.springbootsecurity.enums.Dil).RUSCA}">Rusça</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="dil2beceri" id="dil2beceri">
+                                                <option disabled selected value> Beceri Seçin </option>
+                                                <option value="AZ"       th:selected="${ogrenci.dil2beceri==T(net.javaguides.springbootsecurity.enums.Beceri).AZ}">Az</option>
+                                                <option value="ORTA"     th:selected="${ogrenci.dil2beceri==T(net.javaguides.springbootsecurity.enums.Beceri).ORTA}">Orta</option>
+                                                <option value="IYI"      th:selected="${ogrenci.dil2beceri==T(net.javaguides.springbootsecurity.enums.Beceri).IYI}">İyi</option>
+                                                <option value="MUKEMMEL" th:selected="${ogrenci.dil2beceri==T(net.javaguides.springbootsecurity.enums.Beceri).MUKEMMEL}">Mükemmel</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="dil3" id="dil3">
+                                                <option disabled selected value> Dil Seçin </option>
+                                                <option value="INGILIZCE" th:selected="${ogrenci.dil3==T(net.javaguides.springbootsecurity.enums.Dil).INGILIZCE}">İngilizce</option>
+                                                <option value="ALMANCA"   th:selected="${ogrenci.dil3==T(net.javaguides.springbootsecurity.enums.Dil).ALMANCA}">Almanca</option>
+                                                <option value="ARAPCA"    th:selected="${ogrenci.dil3==T(net.javaguides.springbootsecurity.enums.Dil).ARAPCA}">Arapça</option>
+                                                <option value="FARSCA"    th:selected="${ogrenci.dil3==T(net.javaguides.springbootsecurity.enums.Dil).FARSCA}">Farsça</option>
+                                                <option value="RUSCA"     th:selected="${ogrenci.dil3==T(net.javaguides.springbootsecurity.enums.Dil).RUSCA}">Rusça</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="dil3beceri" id="dil3beceri">
+                                                <option disabled selected value> Beceri Seçin </option>
+                                                <option value="AZ"       th:selected="${ogrenci.dil3beceri==T(net.javaguides.springbootsecurity.enums.Beceri).AZ}">Az</option>
+                                                <option value="ORTA"     th:selected="${ogrenci.dil3beceri==T(net.javaguides.springbootsecurity.enums.Beceri).ORTA}">Orta</option>
+                                                <option value="IYI"      th:selected="${ogrenci.dil3beceri==T(net.javaguides.springbootsecurity.enums.Beceri).IYI}">İyi</option>
+                                                <option value="MUKEMMEL" th:selected="${ogrenci.dil3beceri==T(net.javaguides.springbootsecurity.enums.Beceri).MUKEMMEL}">Mükemmel</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="dil4" id="dil4">
+                                                <option disabled selected value> Dil Seçin </option>
+                                                <option value="INGILIZCE" th:selected="${ogrenci.dil4==T(net.javaguides.springbootsecurity.enums.Dil).INGILIZCE}">İngilizce</option>
+                                                <option value="ALMANCA"   th:selected="${ogrenci.dil4==T(net.javaguides.springbootsecurity.enums.Dil).ALMANCA}">Almanca</option>
+                                                <option value="ARAPCA"    th:selected="${ogrenci.dil4==T(net.javaguides.springbootsecurity.enums.Dil).ARAPCA}">Arapça</option>
+                                                <option value="FARSCA"    th:selected="${ogrenci.dil4==T(net.javaguides.springbootsecurity.enums.Dil).FARSCA}">Farsça</option>
+                                                <option value="RUSCA"     th:selected="${ogrenci.dil4==T(net.javaguides.springbootsecurity.enums.Dil).RUSCA}">Rusça</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="dil4beceri" id="dil4beceri">
+                                                <option disabled selected value> Beceri Seçin </option>
+                                                <option value="AZ"       th:selected="${ogrenci.dil4beceri==T(net.javaguides.springbootsecurity.enums.Beceri).AZ}">Az</option>
+                                                <option value="ORTA"     th:selected="${ogrenci.dil4beceri==T(net.javaguides.springbootsecurity.enums.Beceri).ORTA}">Orta</option>
+                                                <option value="IYI"      th:selected="${ogrenci.dil4beceri==T(net.javaguides.springbootsecurity.enums.Beceri).IYI}">İyi</option>
+                                                <option value="MUKEMMEL" th:selected="${ogrenci.dil4beceri==T(net.javaguides.springbootsecurity.enums.Beceri).MUKEMMEL}">Mükemmel</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>Diğer </h3>
+
+                                <div class="form-group">
+                                    <label for="digerBeceriler"> Diğer Beceriler :</label>
+                                    <input type="number" name="digerBeceriler" id="digerBeceriler" th:value="${ogrenci.digerBeceriler}"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="isIleIlgiliBeceriler">İşle İlgili Beceriler :</label>
+                                    <input type="text" name="isIleIlgiliBeceriler" id="isIleIlgiliBeceriler" th:value="${ogrenci.isIleIlgiliBeceriler}"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="OrganizasyonelBeceriler">Organizasyonel Beceriler :</label>
+                                    <input type="text" name="OrganizasyonelBeceriler" id="OrganizasyonelBeceriler" th:value="${ogrenci.organizasyonelBeceriler}" />
+                                </div>
+
+                            </div>
+
+                            <div class="form-submit">
+                                <input type="reset" value="Temizle" class="submit" name="reset" id="reset" />
+                                <input type="submit" value="Kaydet" class="submit" name="submit" id="submit" />
+                            </div>
+
+                            <input type="hidden" name="id" id="id" th:value="${ogrenci.id}"/>
                         </div>
-
-                        <div class="form-submit">
-                            <input type="reset" value="Temizle" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Kaydet" class="submit" name="submit" id="submit" />
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
 

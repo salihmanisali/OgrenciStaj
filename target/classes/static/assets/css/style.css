@@ -490,13 +490,3 @@ select {
     margin-bottom: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
-
-body {
-  padding: 0px;
-  background: #fff;
-}
-
-.navbar-inverse {
-  background-color: #fff;
-  border-color: #fff;
-}

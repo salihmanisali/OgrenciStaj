@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
 	layout:decorator="layout">
 
 <head>
@@ -10,22 +9,51 @@
 </head>
 <body>
 	<div layout:fragment="content">
-		<p>
-			Welcome <span sec:authentication="principal.username">User</span>
-		</p>
+
 		<p>
 			<a th:href="@{/logout}">Logout</a>
 		</p>
 
 		<div>
-		<br>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Messages
-				</div>
+			<script>
+				$(function () {
+					var $table = $('#table');
 
-				<p th:each="firma: ${firmalar}" th:text="${firma.adi}"></p>
-			</div>
+					$table.on('dbl-click-row.bs.table', function (e, row, $element) {
+						console.log(row);
+						console.log($element);
+					});
+				});
+			</script>
+		<br>
+			<h2>Sistemde Kayıtlı Firmalar</h2>
+			<table id="table" class="table table-hover table-bordered">
+				<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Adı</th>
+					<th scope="col">Sicil</th>
+					<th scope="col">Faaliyet Alanları</th>
+					<th scope="col">İnsan Kaynakları Sorumlusu Adı</th>
+					<th scope="col">İnsan Kaynakları Sorumlusu Email</th>
+					<th scope="col">İnsan Kaynakları Sorumlusu Telefonu</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr th:each="firma: ${firmalar}" >
+					<td th:text="${firma.id}"></td>
+					<td th:text="${firma.adi}"></td>
+					<td th:text="${firma.sicil}"></td>
+					<td th:text="${firma.faaliyetAlanlari}"></td>
+					<td th:text="${firma.insanKaynaklariSorumlusuAdi}"></td>
+					<td th:text="${firma.insanKaynaklariSorumlusuEmail}"></td>
+					<td th:text="${firma.insanKaynaklariSorumlusuTelefonu}"></td>
+
+				</tr>
+				</tbody>
+			</table>
+
+
 
 		</div>
 	</div>
