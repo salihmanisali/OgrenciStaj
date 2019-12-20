@@ -1,6 +1,7 @@
 package net.javaguides.springbootsecurity.web;
 
 import lombok.var;
+import net.javaguides.springbootsecurity.entities.Firma;
 import net.javaguides.springbootsecurity.entities.Ogrenci;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +35,22 @@ public class OgrenciController
 
 	@GetMapping("/ogrenci/{id}")
 	public String ogrenciById(Model model, @PathVariable Integer id)	{
-		var ogrenci = ogrenciRepository.findById(id);
-		if(ogrenci.get()!=null)
-		model.addAttribute("ogrenci", ogrenci.get());
+		var ogrenci = ogrenciRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + id));
+
+		if(ogrenci!=null)
+		model.addAttribute("ogrenci", ogrenci);
 		return "ogrenci";
+	}
+
+	@GetMapping("/ogrenci/delete/{id}")
+	public String deleteOgrenci(@PathVariable("id") Integer id, Model model) {
+		Ogrenci ogrenci = ogrenciRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + id));
+
+		ogrenciRepository.delete(ogrenci);
+		model.addAttribute("ogrencilar", ogrenciRepository.findAll());
+		return "/ogrenciler";
 	}
 
 	@PostMapping("/ogrenci")

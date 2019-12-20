@@ -2,6 +2,7 @@ package net.javaguides.springbootsecurity.web;
 
 import lombok.var;
 import net.javaguides.springbootsecurity.entities.Ogretmen;
+import net.javaguides.springbootsecurity.entities.Ogretmen;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,11 +39,24 @@ public class OgretmenController
 
 	@GetMapping("/ogretmen/{id}")
 	public String ogretmenById(Model model, @PathVariable Integer id)	{
-		var ogretmen = ogretmenRepository.findById(id);
-		if(ogretmen.get()!=null)
-			model.addAttribute("ogretmen", ogretmen.get());
+		var ogretmen = ogretmenRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + id));
+
+		if(ogretmen!=null)
+			model.addAttribute("ogretmen", ogretmen);
 		return "ogretmen";
 	}
+
+	@GetMapping("/ogretmen/delete/{id}")
+	public String deleteOgretmen(@PathVariable("id") Integer id, Model model) {
+		Ogretmen ogretmen = ogretmenRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğretmen Id:" + id));
+
+		ogretmenRepository.delete(ogretmen);
+		model.addAttribute("ogretmenler", ogretmenRepository.findAll());
+		return "/ogretmenler";
+	}
+
 
 	@PostMapping("/ogretmen")
 	public String saveFirma(Ogretmen ogretmen)

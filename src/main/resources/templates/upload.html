@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      layout:decorator="layout">
+
+<head>
+    <title>Spring Boot file upload example</title>
+</head>
+    <body>
+        <div layout:fragment="content">
+            <h1>Spring Boot file upload example</h1>
+
+            <form method="POST"  th:action="@{/upload}" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    </body>
+</html>

@@ -10,6 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+
 /**
  * @author Salih Efe
  *
@@ -35,16 +39,19 @@ public class FirmaController {
 
 	@GetMapping("/firma/{id}")
 	public String firmaById(Model model, @PathVariable Integer id) {
-		var firma = firmaRepository.findById(id);
-		if (firma.get() != null)
-			model.addAttribute("firma", firma.get());
+		var firma = firmaRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + id));
+
+		if (firma != null)
+			model.addAttribute("firma", firma);
 		return "firma";
 	}
 
 	@GetMapping("/firma/delete/{id}")
 	public String deleteFirma(@PathVariable("id") Integer id, Model model) {
 		Firma firma = firmaRepository.findById(id)
-				.orElseThrow(() -> new IllegalArgumentException("Invalid Firma Id:" + id));
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + id));
+
 		firmaRepository.delete(firma);
 		model.addAttribute("firmalar", firmaRepository.findAll());
 		return "/firmalar";
@@ -56,4 +63,6 @@ public class FirmaController {
 		firmaRepository.save(firma);
 		return "redirect:/firmalar";
 	}
+
+
 }

@@ -8,7 +8,7 @@ import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
+//import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 
 /**
  * @author Salih Efe
@@ -28,6 +28,9 @@ public class WebConfig implements WebMvcConfigurer
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/admin/home").setViewName("adminhome");
 
+        registry.addViewController("/upload").setViewName("upload");
+        registry.addViewController("/uploadForm").setViewName("uploadForm");
+
         registry.addViewController("/ogrenci").setViewName("ogrenci");
         registry.addViewController("/ogrenciler").setViewName("ogrenciler");
 
@@ -45,8 +48,8 @@ public class WebConfig implements WebMvcConfigurer
         return factory;
     }
 	
-    @Bean
-	public SpringSecurityDialect securityDialect() {
-	    return new SpringSecurityDialect();
-	}
+//    @Bean
+//	public SpringSecurityDialect securityDialect() {
+//	    return new SpringSecurityDialect();
+//	}
 }

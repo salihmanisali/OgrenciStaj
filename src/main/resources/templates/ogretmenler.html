@@ -9,15 +9,14 @@
 </head>
 <body>
 	<div layout:fragment="content">
+		<h2>Sistemde Kayıtlı Öğretmenler</h2>
 
-		<p>
-			<a th:href="@{/logout}">Logout</a>
+		<p class="my-5">
+			<a class="btn btn-primary" th:href="@{/ogretmen}"><i class="fa fa-plus"> Öğretmen Ekle</i></a>
 		</p>
 
 		<div>
 		<br>
-
-			<h2>Sistemde Kayıtlı Öğretmenler</h2>
 			<table class="table table-hover table-bordered">
 				<thead>
 				<tr>
@@ -25,6 +24,7 @@
 					<th scope="col">Adı Soyadı</th>
 					<th scope="col">Email</th>
 					<th scope="col">Telefon</th>
+					<th scope="col"></th>
 				</tr>
 				</thead>
 				<tbody>
@@ -33,6 +33,10 @@
 						<td th:text="${ogretmen.adi}"></td>
 						<td th:text="${ogretmen.email}"></td>
 						<td th:text="${ogretmen.telefon}"></td>
+						<td>
+							<a th:href="@{/ogretmen/{id}(id=${ogretmen.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2"></i> Düzenle </a>
+							<a th:href="@{/ogretmen/delete/{id}(id=${ogretmen.id})}" class="btn btn-primary"><i class="fa fa-trash"></i> Sil</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
