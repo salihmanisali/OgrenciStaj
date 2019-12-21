@@ -2,7 +2,6 @@ package net.javaguides.springbootsecurity.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -29,10 +28,12 @@ public class WebConfig implements WebMvcConfigurer
         registry.addViewController("/admin/home").setViewName("adminhome");
 
         registry.addViewController("/upload").setViewName("upload");
-        registry.addViewController("/uploadForm").setViewName("uploadForm");
 
         registry.addViewController("/ogrenci").setViewName("ogrenci");
         registry.addViewController("/ogrenciler").setViewName("ogrenciler");
+
+        registry.addViewController("/okul").setViewName("okul");
+        registry.addViewController("/okullar").setViewName("okullar");
 
         registry.addViewController("/firma").setViewName("firma");
         registry.addViewController("/firmalar").setViewName("firmalar");

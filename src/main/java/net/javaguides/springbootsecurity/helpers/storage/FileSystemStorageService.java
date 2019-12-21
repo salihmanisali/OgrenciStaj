@@ -1,5 +1,6 @@
 package net.javaguides.springbootsecurity.helpers.storage;
 
+import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -15,20 +16,26 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.*;
 import java.util.stream.Stream;
 
 @Service
 public class FileSystemStorageService implements StorageService {
 
-	private final Path rootLocation;
+	private Map<DosyaTuru,Path> locations;
+
 
 	@Autowired
 	public FileSystemStorageService(StorageProperties properties) {
-		this.rootLocation = Paths.get(properties.getLocation());
+		locations=new HashMap<>();
+
+		Arrays.asList(DosyaTuru.values()).forEach(dosyaTuru ->
+				locations.put(dosyaTuru,Paths.get(properties.getLocation()+dosyaTuru+"\\"))
+				);
 	}
 
 	@Override
-	public void store(MultipartFile file) {
+	public void store(MultipartFile file, DosyaTuru dosyaTuru) {
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
 		try {
 			if (file.isEmpty()) {
@@ -41,7 +48,7 @@ public class FileSystemStorageService implements StorageService {
 								+ filename);
 			}
 			try (InputStream inputStream = file.getInputStream()) {
-				Files.copy(inputStream, this.rootLocation.resolve(filename),
+				Files.copy(inputStream,load(filename,dosyaTuru),
 					StandardCopyOption.REPLACE_EXISTING);
 			}
 		}
@@ -50,28 +57,16 @@ public class FileSystemStorageService implements StorageService {
 		}
 	}
 
-	@Override
-	public Stream<Path> loadAll() {
-		try {
-			return Files.walk(this.rootLocation, 1)
-				.filter(path -> !path.equals(this.rootLocation))
-				.map(this.rootLocation::relativize);
-		}
-		catch (IOException e) {
-			throw new StorageException("Failed to read stored files", e);
-		}
 
+	@Override
+	public Path load(String filename,DosyaTuru dosyaTuru){
+		return locations.get(dosyaTuru).resolve(filename);
 	}
 
 	@Override
-	public Path load(String filename) {
-		return rootLocation.resolve(filename);
-	}
-
-	@Override
-	public Resource loadAsResource(String filename) {
+	public Resource loadAsResource(String filename,DosyaTuru dosyaTuru) {
 		try {
-			Path file = load(filename);
+			Path file = load(filename,dosyaTuru);
 			Resource resource = new UrlResource(file.toUri());
 			if (resource.exists() || resource.isReadable()) {
 				return resource;
@@ -88,17 +83,14 @@ public class FileSystemStorageService implements StorageService {
 	}
 
 	@Override
-	public void deleteAll() {
-		FileSystemUtils.deleteRecursively(rootLocation.toFile());
-	}
-
-	@Override
 	public void init() {
-		try {
-			Files.createDirectories(rootLocation);
-		}
-		catch (IOException e) {
-			throw new StorageException("Could not initialize storage", e);
-		}
+
+			locations.entrySet().forEach(location -> {
+				try {
+					Files.createDirectories(location.getValue());
+				} catch (IOException e) {
+					throw new StorageException("Could not initialize storage", e);
+				}
+			});
 	}
 }

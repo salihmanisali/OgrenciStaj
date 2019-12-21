@@ -280,8 +280,11 @@ public class Ogrenci
 
 	// Relations
 
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_ogretmen_sorumlu")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_ogretmen")
 	private Ogretmen sorumluOgretmen;
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_okul")
+	private Okul okul;
 }

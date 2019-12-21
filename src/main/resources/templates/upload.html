@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
-      layout:decorator="layout">
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	  layout:decorator="layout">
 
 <head>
-    <title>Spring Boot file upload example</title>
+	<title>Spring Boot file upload example</title>
 </head>
-    <body>
-        <div layout:fragment="content">
-            <h1>Spring Boot file upload example</h1>
+<body>
+<div layout:fragment="content">
 
-            <form method="POST"  th:action="@{/upload}" enctype="multipart/form-data">
-                <input type="file" name="file" />
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
-    </body>
+	<div th:if="${message}">
+		<h2 th:text="${message}"/>
+	</div>
+
+	<div>
+		<form method="POST"  th:action="@{/upload}" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>File to upload:</td>
+					<td><input type="file" name="file" /></td></tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Upload" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<div>
+		<ul>
+			<li th:each="file : ${files}">
+				<a th:href="${file}" th:text="${file}" />
+			</li>
+		</ul>
+	</div>
+
+</div>
+</body>
 </html>

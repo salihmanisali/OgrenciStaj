@@ -4,16 +4,15 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 /**
  * @author Salih Efe
  *
  */
 @Entity
-@Table(name="OGRETMEN")
+@Table(name="OKUL")
 @Data
-public class Ogretmen
+public class Okul
 {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
@@ -22,18 +21,12 @@ public class Ogretmen
 	@NotNull
 	private String adi;
 
-	@Column(length = 100)
-	@NotNull
-	private String email;
-
-	@Column(length = 100)
-	private String telefon;
-
 	@Lob
 	@Basic(fetch = FetchType.LAZY)
-	private byte[] resim;
+	private byte[] logo;
 
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "id_okul")
-	private Okul okul;
+	@Override
+	public String toString() {
+		return adi;
+	}
 }

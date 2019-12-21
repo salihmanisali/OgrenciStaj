@@ -1,5 +1,6 @@
 package net.javaguides.springbootsecurity.helpers.storage;
 
+import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.multipart.MultipartFile;
@@ -12,14 +13,9 @@ public interface StorageService {
 
 	void init();
 
-	void store(MultipartFile file);
+	void store(MultipartFile file, DosyaTuru dosyaTuru);
 
-	Stream<Path> loadAll();
+	Path load(String filename,DosyaTuru dosyaTuru);
 
-	Path load(String filename);
-
-	Resource loadAsResource(String filename);
-
-	void deleteAll();
-
+	Resource loadAsResource(String filename,DosyaTuru dosyaTuru);
 }

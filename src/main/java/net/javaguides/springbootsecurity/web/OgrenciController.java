@@ -49,7 +49,7 @@ public class OgrenciController
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + id));
 
 		ogrenciRepository.delete(ogrenci);
-		model.addAttribute("ogrencilar", ogrenciRepository.findAll());
+		model.addAttribute("ogrenciler", ogrenciRepository.findAll());
 		return "/ogrenciler";
 	}
 

@@ -5,6 +5,7 @@ import net.javaguides.springbootsecurity.entities.Ogretmen;
 import net.javaguides.springbootsecurity.entities.Ogretmen;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
+import net.javaguides.springbootsecurity.repositories.OkulRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +22,10 @@ public class OgretmenController
 {
 	@Autowired
 	private OgretmenRepository ogretmenRepository;
-	
+
+	@Autowired
+	private OkulRepository okulRepository;
+
 	@GetMapping("/ogretmenler")
 	public String ogretmenler(Model model)
 	{
@@ -33,7 +37,7 @@ public class OgretmenController
 	public String ogretmen(Model model)	{
 		Ogretmen ogretmen = new Ogretmen();
 		model.addAttribute("ogretmen",ogretmen);
-
+		model.addAttribute("okullar", okulRepository.findAll());
 		return "ogretmen";
 	}
 
@@ -44,6 +48,7 @@ public class OgretmenController
 
 		if(ogretmen!=null)
 			model.addAttribute("ogretmen", ogretmen);
+		model.addAttribute("okullar", okulRepository.findAll());
 		return "ogretmen";
 	}
 

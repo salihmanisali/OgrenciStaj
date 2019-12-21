@@ -32,6 +32,22 @@
                                     <label for="telefon">Telefonu :</label>
                                     <input type="number" name="telefon" id="telefon"  th:value="${ogretmen.telefon}"/>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="okul">Okulu :</label>
+                                    <div class="select-list">
+                                        <select name="okul" id="okul">
+                                            <option disabled selected value> Okul Seçin </option>
+                                            <option
+                                                    th:each="okul: ${okullar}"
+                                                    th:value="${okul.id}"
+                                                    th:text="${okul.adi}"
+                                                    th:selected="${ogretmen.okul == null? null : okul.id==ogretmen.okul.id}"
+                                            >okul</option>
+                                        </select>
+                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
