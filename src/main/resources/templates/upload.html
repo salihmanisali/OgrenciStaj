@@ -11,16 +11,18 @@
 <body>
 <div layout:fragment="content">
 
-	<div th:if="${message}">
-		<h2 th:text="${message}"/>
+	<div th:if="${ogretmen}">
+		<img alt="Image" th:src="@{upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru=T(net.javaguides.springbootsecurity.enums.DosyaTuru).OGRETMEN)}" width="250" height="250"/>
 	</div>
 
 	<div>
-		<form method="POST"  th:action="@{/upload}" enctype="multipart/form-data">
+		<form method="POST"  th:action="@{upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru=T(net.javaguides.springbootsecurity.enums.DosyaTuru).OGRETMEN)}" enctype="multipart/form-data">
 			<table>
 				<tr>
 					<td>File to upload:</td>
 					<td><input type="file" name="file" /></td></tr>
+					<input type="hidden" name="dosyaTuru" th:value="${dosyaTuru}" />
+
 				<tr>
 					<td></td>
 					<td><input type="submit" value="Upload" /></td>
@@ -28,15 +30,6 @@
 			</table>
 		</form>
 	</div>
-
-	<div>
-		<ul>
-			<li th:each="file : ${files}">
-				<a th:href="${file}" th:text="${file}" />
-			</li>
-		</ul>
-	</div>
-
 </div>
 </body>
 </html>

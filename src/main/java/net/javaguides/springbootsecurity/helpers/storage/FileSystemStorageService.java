@@ -1,21 +1,21 @@
 package net.javaguides.springbootsecurity.helpers.storage;
 
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
+import org.apache.tomcat.jni.File;
+import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
-import org.springframework.util.FileSystemUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.MalformedURLException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -35,8 +35,8 @@ public class FileSystemStorageService implements StorageService {
 	}
 
 	@Override
-	public void store(MultipartFile file, DosyaTuru dosyaTuru) {
-		String filename = StringUtils.cleanPath(file.getOriginalFilename());
+	public void store(MultipartFile file, String filename, DosyaTuru dosyaTuru) {
+		//String filename = StringUtils.cleanPath(file.getOriginalFilename());
 		try {
 			if (file.isEmpty()) {
 				throw new StorageException("Failed to store empty file " + filename);
@@ -57,9 +57,22 @@ public class FileSystemStorageService implements StorageService {
 		}
 	}
 
+	@Override
+	public void store(byte[] stream, DosyaTuru dosyaTuru) {
+		try {
+			Path path = Paths.get(locations.get(dosyaTuru).toString()+"\\xda.jpg");
+			Files.write(path, stream);
+
+		}
+		catch (IOException e) {
+			throw new StorageException("Failed to store file ");
+		}
+	}
+
+
 
 	@Override
-	public Path load(String filename,DosyaTuru dosyaTuru){
+	public Path load(String filename, DosyaTuru dosyaTuru){
 		return locations.get(dosyaTuru).resolve(filename);
 	}
 

@@ -21,6 +21,7 @@
 				<thead>
 				<tr>
 					<th scope="col">Id</th>
+					<th scope="col">Resim</th>
 					<th scope="col">Adı Soyadı</th>
 					<th scope="col">Email</th>
 					<th scope="col">Telefon</th>
@@ -31,6 +32,11 @@
 				<tbody>
 					<tr  th:each="ogretmen: ${ogretmenler}">
 						<td th:text="${ogretmen.id}"></td>
+						<td>
+							<div th:if="${ogretmen}">
+<!--								<img alt="Image" th:src="@{upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru=T(net.javaguides.springbootsecurity.enums.DosyaTuru).OGRETMEN)}" width="250" height="250"/>-->
+							</div>
+						</td>
 						<td th:text="${ogretmen.adi}"></td>
 						<td th:text="${ogretmen.email}"></td>
 						<td th:text="${ogretmen.telefon}"></td>

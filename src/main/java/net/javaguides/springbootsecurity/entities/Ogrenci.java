@@ -13,13 +13,8 @@ import java.util.Date;
 @Entity
 @Table(name="OGRENCI")
 @Data
-public class Ogrenci
+public class Ogrenci extends BaseEntity
 {
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
-
-	@Column(length = 100)
-	private String adi;
 
 	@Column(length = 100)
 	private String soyadi;
@@ -64,10 +59,6 @@ public class Ogrenci
 	@Enumerated(EnumType.STRING)
 	@Column(length = 20)
 	private AskerlikDurumu askerlikDurumu;
-
-	@Lob
-	@Basic(fetch = FetchType.LAZY)
-	private byte[] resim;
 
 	@Enumerated(EnumType.STRING)
 	@Column(length = 30)
