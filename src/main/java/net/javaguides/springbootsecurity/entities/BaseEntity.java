@@ -27,11 +27,4 @@ public class BaseEntity
 		return adi;
 	}
 
-	@Transient
-	private MultipartFile resim;
-
-	@Transient
-	private MultipartFile dosya;
-
-
 }

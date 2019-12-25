@@ -14,16 +14,26 @@
         <div class="container">
             <div>
                 <div>
-                    <form  th:action="@{/ogretmen}" method="POST" class="register-form" id="register-form"  enctype="multipart/form-data">
+                    <form  th:action="@{/ogretmen}" th:object="${ogretmen}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
                         <div>
 
                             <h2>Öğretmen Kayıt Formu</h2>
 
 
-                            <div class="form-group">
-                                <label for="resim">Resim:</label>
-                                <input type="file" name="resim" id="resim"/>
-                            </div>
+
+                                <img id="output" src="#" alt="image" height="320" width="240" th:src="@{/upload/ogretmen/{id}(id=${ogretmen.id})}"/>
+
+                                <input type="file" name="resim" id="resim" />
+
+                                    <script>
+                                        var loadFile = function(event) {
+                                            var output = document.getElementById('output');
+                                            output.src = URL.createObjectURL(event.target.files[0]);
+                                        };
+                                    </script>
+
+
+
 
 
                             <div class="form-row">

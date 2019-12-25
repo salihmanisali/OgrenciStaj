@@ -18,7 +18,6 @@ import java.util.List;
 public class Ogretmen  extends BaseEntity
 {
 	@Column(length = 100)
-	@NotNull
 	private String email;
 
 	@Column(length = 100)
@@ -27,4 +26,10 @@ public class Ogretmen  extends BaseEntity
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_okul")
 	private Okul okul;
+
+	@Transient
+	private MultipartFile resim;
+
+	@Column(length = 300)
+	private String resimUrl;
 }

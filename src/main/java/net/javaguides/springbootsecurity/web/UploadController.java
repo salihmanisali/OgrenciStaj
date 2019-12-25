@@ -6,6 +6,7 @@ import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +15,10 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.stream.Collectors;
 
 @Controller
@@ -63,19 +67,17 @@ public class UploadController {
 		return ResponseEntity.notFound().build();
 	}
 
-//	@GetMapping("/uploadStatus")
-//	public String uploadStatus() {
 
-//		return "uploadStatus";
-//	}
-//	@RequestMapping(value = "uploads/{imageName}")
-//	@ResponseBody
-//	public ResponseEntity<byte[]> getImage(@PathVariable(value = "imageName") String imageName) throws IOException {
-//
-//		File serverFile = new File(UPLOADED_FOLDER + imageName + ".jpg");
-//
-//		byte[] image =  Files.readAllBytes(serverFile.toPath());
-//		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(image);
-//
-//	}
+	@RequestMapping(value = "upload/{id}")
+	@ResponseBody
+	public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") Long id) throws IOException {
+
+		Path path=storageService.load(id.toString(),DosyaTuru.OGRETMEN);
+
+		File serverFile = new File(path.toString());
+
+		byte[] image =  Files.readAllBytes(serverFile.toPath());
+		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(image);
+
+	}
 }

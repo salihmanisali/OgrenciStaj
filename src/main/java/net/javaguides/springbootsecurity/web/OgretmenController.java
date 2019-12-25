@@ -9,12 +9,16 @@ import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
 import net.javaguides.springbootsecurity.repositories.OkulRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Optional;
 
 /**
@@ -48,6 +52,10 @@ public class OgretmenController
 	@GetMapping("/ogretmen")
 	public String ogretmen(Model model)	{
 		Ogretmen ogretmen = new Ogretmen();
+//		ogretmen.setAdi("Salih");
+//		ogretmen.setEmail("ff");
+//		ogretmen = ogretmenRepository.save(ogretmen);
+
 		model.addAttribute("ogretmen",ogretmen);
 		model.addAttribute("okullar", okulRepository.findAll());
 		return "ogretmen";
@@ -55,7 +63,7 @@ public class OgretmenController
 
 	@GetMapping("/ogretmen/{id}")
 	public String ogretmenById(Model model, @PathVariable Integer id)	{
-		var ogretmen = ogretmenRepository.findById(id)
+		Ogretmen ogretmen = ogretmenRepository.findById(id)
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğretmen Id:" + id));
 
 		if(ogretmen!=null)
@@ -80,16 +88,38 @@ public class OgretmenController
 	@PostMapping("/ogretmen")
 	public String saveOgretmen(Ogretmen ogretmen)
 	{
-		ogretmenRepository.save(ogretmen);
+		var resim = ogretmen.getResim();
+		ogretmen = ogretmenRepository.save(ogretmen);
 
-		if(!ogretmen.getResim().getOriginalFilename().isEmpty()) {
+		ogretmen.setResim(resim);
+
+		if(ogretmen.getResim()!=null && !ogretmen.getResim().getOriginalFilename().isEmpty()) {
 			String ext = getExtension(ogretmen.getResim().getOriginalFilename());
-			storageService.store(ogretmen.getResim(), ogretmen.getId().toString() + "." + ext, DosyaTuru.OGRETMEN);
+			Path path = storageService.store(ogretmen.getResim(), ogretmen.getId().toString() + "." + ext, DosyaTuru.OGRETMEN);
+			ogretmen.setResimUrl(path.toString());
+			ogretmenRepository.save(ogretmen);
 		}
 		return "redirect:/ogretmenler";
 	}
 
 	public String getExtension(String filename) {
 		return filename.substring(filename.lastIndexOf(".") + 1);
+	}
+
+
+	@RequestMapping(value = "/upload/ogretmen/{id}")
+	@ResponseBody
+	public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") Integer id) throws IOException {
+
+		Ogretmen ogretmen = ogretmenRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğretmen Id:" + id));
+
+		Path path=storageService.load(ogretmen.getResimUrl(),DosyaTuru.OGRETMEN);
+
+		File serverFile = new File(path.toString());
+
+		byte[] image =  Files.readAllBytes(serverFile.toPath());
+		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(image);
+
 	}
 }

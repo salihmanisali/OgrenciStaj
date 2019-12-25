@@ -1,5 +1,6 @@
 package net.javaguides.springbootsecurity.helpers.storage;
 
+import lombok.var;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import org.apache.tomcat.jni.File;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
@@ -10,10 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.nio.file.*;
 import java.util.*;
@@ -35,7 +33,7 @@ public class FileSystemStorageService implements StorageService {
 	}
 
 	@Override
-	public void store(MultipartFile file, String filename, DosyaTuru dosyaTuru) {
+	public Path store(MultipartFile file, String filename, DosyaTuru dosyaTuru) {
 		//String filename = StringUtils.cleanPath(file.getOriginalFilename());
 		try {
 			if (file.isEmpty()) {
@@ -50,26 +48,13 @@ public class FileSystemStorageService implements StorageService {
 			try (InputStream inputStream = file.getInputStream()) {
 				Files.copy(inputStream,load(filename,dosyaTuru),
 					StandardCopyOption.REPLACE_EXISTING);
+				return load(filename,dosyaTuru);
 			}
 		}
 		catch (IOException e) {
 			throw new StorageException("Failed to store file " + filename, e);
 		}
 	}
-
-	@Override
-	public void store(byte[] stream, DosyaTuru dosyaTuru) {
-		try {
-			Path path = Paths.get(locations.get(dosyaTuru).toString()+"\\xda.jpg");
-			Files.write(path, stream);
-
-		}
-		catch (IOException e) {
-			throw new StorageException("Failed to store file ");
-		}
-	}
-
-
 
 	@Override
 	public Path load(String filename, DosyaTuru dosyaTuru){

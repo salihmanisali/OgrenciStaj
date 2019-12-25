@@ -13,9 +13,7 @@ public interface StorageService {
 
 	void init();
 
-	void store(MultipartFile file, String filename, DosyaTuru dosyaTuru);
-
-	void store(byte[] stream, DosyaTuru dosyaTuru);
+	Path store(MultipartFile file, String filename, DosyaTuru dosyaTuru);
 
 	Path load(String filename,DosyaTuru dosyaTuru);
 
