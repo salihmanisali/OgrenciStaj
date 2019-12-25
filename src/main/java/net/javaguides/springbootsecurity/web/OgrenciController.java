@@ -3,11 +3,16 @@ package net.javaguides.springbootsecurity.web;
 import lombok.var;
 import net.javaguides.springbootsecurity.entities.Firma;
 import net.javaguides.springbootsecurity.entities.Ogrenci;
+import net.javaguides.springbootsecurity.entities.Ogretmen;
+import net.javaguides.springbootsecurity.enums.DosyaTuru;
+import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.nio.file.Path;
 
 /**
  * @author Salih Efe
@@ -18,6 +23,9 @@ public class OgrenciController
 {
 	@Autowired
 	private OgrenciRepository ogrenciRepository;
+
+	@Autowired
+	private StorageService storageService;
 	
 	@GetMapping("/ogrenciler")
 	public String ogrenciler(Model model)
@@ -56,7 +64,22 @@ public class OgrenciController
 	@PostMapping("/ogrenci")
 	public String saveOgrenci(Ogrenci ogrenci)
 	{
-		ogrenciRepository.save(ogrenci);
+		var resim = ogrenci.getResim();
+		ogrenci = ogrenciRepository.save(ogrenci);
+
+		ogrenci.setResim(resim);
+
+		if(ogrenci.getResim()!=null && !ogrenci.getResim().getOriginalFilename().isEmpty()) {
+			String ext = getExtension(ogrenci.getResim().getOriginalFilename());
+			Path path = storageService.store(ogrenci.getResim(), ogrenci.getId().toString() + "." + ext, DosyaTuru.OGRENCI);
+			ogrenci.setResimUrl(path.toString());
+			ogrenciRepository.save(ogrenci);
+		}
 		return "redirect:/ogrenciler";
 	}
+
+	public String getExtension(String filename) {
+		return filename.substring(filename.lastIndexOf(".") + 1);
+	}
+
 }

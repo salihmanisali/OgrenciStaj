@@ -3,6 +3,8 @@ package net.javaguides.springbootsecurity.web;
 import lombok.var;
 import net.javaguides.springbootsecurity.entities.Firma;
 import net.javaguides.springbootsecurity.entities.Ogrenci;
+import net.javaguides.springbootsecurity.enums.DosyaTuru;
+import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * @author Salih Efe
@@ -22,6 +25,9 @@ import java.nio.file.Files;
 public class FirmaController {
 	@Autowired
 	private FirmaRepository firmaRepository;
+
+	@Autowired
+	private StorageService storageService;
 
 	@GetMapping("/firmalar")
 	public String firmalar(Model model) {
@@ -59,10 +65,24 @@ public class FirmaController {
 
 
 	@PostMapping("/firma")
-	public String saveFirma(Firma firma) {
-		firmaRepository.save(firma);
+	public String saveFirma(Firma firma)
+	{
+		var resim = firma.getResim();
+		firma = firmaRepository.save(firma);
+
+		firma.setResim(resim);
+
+		if(firma.getResim()!=null && !firma.getResim().getOriginalFilename().isEmpty()) {
+			String ext = getExtension(firma.getResim().getOriginalFilename());
+			Path path = storageService.store(firma.getResim(), firma.getId().toString() + "." + ext, DosyaTuru.FIRMA);
+			firma.setResimUrl(path.toString());
+			firmaRepository.save(firma);
+		}
 		return "redirect:/firmalar";
 	}
 
+	public String getExtension(String filename) {
+		return filename.substring(filename.lastIndexOf(".") + 1);
+	}
 
 }

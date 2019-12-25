@@ -12,13 +12,25 @@
 <div layout:fragment="content">
     <div>
         <div>
-                <form  th:action="@{/ogrenci}" method="POST" class="register-form" id="register-form">
+                <form  th:action="@{/ogrenci}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
 
-                    <div class="signup-content" style="width: 100%">
-
-                        <div class="signup-form" style="width: 100%">
+                    <div>
+                        <div>
                             <div>
                                 <h2>Öğrenci Kayıt Formu</h2>
+
+                                <img id="output" src="#" alt="image" height="320" width="240" th:src="@{/upload/{dosyaTuru}/{id}(id=${ogrenci.id},dosyaTuru='OGRENCI')}"/>
+
+                                <input type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
+
+                                <input type="hidden" name="resimUrl" id="resimUrl" th:value="${ogrenci.resimUrl}"/>
+
+                                <script>
+                                    var loadFile = function(event) {
+                                        var output = document.getElementById('output');
+                                        output.src = URL.createObjectURL(event.target.files[0]);
+                                    };
+                                </script>
 
                                 <div class="form-row">
                                     <div class="form-group">
@@ -26,15 +38,10 @@
                                         <input type="number" name="tcKimlikNo" id="tcKimlikNo" th:value="${ogrenci.tcKimlikNo}"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="adi">Adı :</label>
+                                        <label for="adi">Adı Soyadı :</label>
                                         <input type="text" name="adi" id="adi"th:value="${ogrenci.adi}"/>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="soyadi">Soyadı :</label>
-                                        <input type="text" name="soyadi" id="soyadi" th:value="${ogrenci.soyadi}"/>
-                                    </div>
                                 </div>
-
 
                                 <div class="form-row">
                                     <div class="form-group">

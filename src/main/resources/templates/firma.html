@@ -14,9 +14,23 @@
         <div class="container">
             <div>
                 <div>
-                    <form  th:action="@{/firma}" method="POST" class="register-form" id="register-form">
+                    <form  th:action="@{/firma}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
                         <div>
                             <h2>Firma Kayıt Formu</h2>
+
+                            <img id="output" src="#" alt="image" height="320" width="240" th:src="@{/upload/{dosyaTuru}/{id}(id=${firma.id},dosyaTuru='FIRMA')}"/>
+
+                            <input type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
+
+                            <input type="hidden" name="resimUrl" id="resimUrl" th:value="${firma.resimUrl}"/>
+
+                            <script>
+                                var loadFile = function(event) {
+                                    var output = document.getElementById('output');
+                                    output.src = URL.createObjectURL(event.target.files[0]);
+                                };
+                            </script>
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="sicil">Sicil :</label>

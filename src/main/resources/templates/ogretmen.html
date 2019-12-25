@@ -21,20 +21,16 @@
 
 
 
-                                <img id="output" src="#" alt="image" height="320" width="240" th:src="@{/upload/ogretmen/{id}(id=${ogretmen.id})}"/>
+                            <img id="output" src="#" alt="image" height="320" width="240" th:src="@{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}"/>
 
-                                <input type="file" name="resim" id="resim" />
-
+                                <input type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
+                                <input type="hidden" name="resimUrl" id="resimUrl" th:value="${ogretmen.resimUrl}"/>
                                     <script>
                                         var loadFile = function(event) {
                                             var output = document.getElementById('output');
                                             output.src = URL.createObjectURL(event.target.files[0]);
                                         };
                                     </script>
-
-
-
-
 
                             <div class="form-row">
                                 <div class="form-group">

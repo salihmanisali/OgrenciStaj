@@ -27,4 +27,9 @@ public class BaseEntity
 		return adi;
 	}
 
+	@Transient
+	private MultipartFile resim;
+
+	@Column(length = 300)
+	private String resimUrl;
 }

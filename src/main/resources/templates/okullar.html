@@ -14,7 +14,7 @@
 			<h2>Sistemde Kayıtlı Okullar</h2>
 
 			<p class="my-5">
-				<a class="btn btn-primary" th:href="@{/okul}"><i class="fa fa-plus"> Okul Ekle</i></a>
+				<a class="btn btn-success" th:href="@{/okul}"><i class="fa fa-plus"> Okul Ekle</i></a>
 			</p>
 			<br>
 			<table id="table" class="table table-hover table-bordered">
@@ -34,7 +34,7 @@
 					<td th:text="${okul.adi}"></td>
 					<td>
 						<a th:href="@{/okul/{id}(id=${okul.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2"></i> Düzenle </a>
-						<a th:href="@{/okul/delete/{id}(id=${okul.id})}" class="btn btn-primary"><i class="fa fa-trash"></i> Sil</a>
+						<a th:href="@{/okul/delete/{id}(id=${okul.id})}" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</a>
 					</td>
 				</tr>
 				</tbody>

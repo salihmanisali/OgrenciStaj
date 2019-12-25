@@ -1,11 +1,13 @@
 package net.javaguides.springbootsecurity.web;
 
 import lombok.var;
+import net.javaguides.springbootsecurity.entities.BaseEntity;
 import net.javaguides.springbootsecurity.entities.Ogretmen;
 import net.javaguides.springbootsecurity.entities.Ogretmen;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
+import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
 import net.javaguides.springbootsecurity.repositories.OkulRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,13 +36,9 @@ public class OgretmenController
 	@Autowired
 	private OkulRepository okulRepository;
 
-
-	private final StorageService storageService;
-
 	@Autowired
-	public OgretmenController(StorageService storageService) {
-		this.storageService = storageService;
-	}
+	private StorageService storageService;
+
 
 	@GetMapping("/ogretmenler")
 	public String ogretmenler(Model model)
@@ -104,22 +102,5 @@ public class OgretmenController
 
 	public String getExtension(String filename) {
 		return filename.substring(filename.lastIndexOf(".") + 1);
-	}
-
-
-	@RequestMapping(value = "/upload/ogretmen/{id}")
-	@ResponseBody
-	public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") Integer id) throws IOException {
-
-		Ogretmen ogretmen = ogretmenRepository.findById(id)
-				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğretmen Id:" + id));
-
-		Path path=storageService.load(ogretmen.getResimUrl(),DosyaTuru.OGRETMEN);
-
-		File serverFile = new File(path.toString());
-
-		byte[] image =  Files.readAllBytes(serverFile.toPath());
-		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(image);
-
 	}
 }

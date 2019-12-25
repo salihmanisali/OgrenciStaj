@@ -27,9 +27,4 @@ public class Ogretmen  extends BaseEntity
 	@JoinColumn(name = "id_okul")
 	private Okul okul;
 
-	@Transient
-	private MultipartFile resim;
-
-	@Column(length = 300)
-	private String resimUrl;
 }

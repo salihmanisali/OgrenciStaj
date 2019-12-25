@@ -12,7 +12,7 @@
 		<h2>Sistemde Kayıtlı Öğrenciler</h2>
 
 		<p class="my-5">
-			<a class="btn btn-primary" th:href="@{/ogrenci}"><i class="fa fa-plus"> Öğrenci Ekle</i></a>
+			<a class="btn btn-success" th:href="@{/ogrenci}"><i class="fa fa-plus"> Öğrenci Ekle</i></a>
 		</p>
 
 		<div>
@@ -21,8 +21,8 @@
 				<thead>
 				<tr>
 					<th scope="col">Id</th>
-					<th scope="col">Adı</th>
-					<th scope="col">Soyadı</th>
+					<th scope="col">Resim</th>
+					<th scope="col">Adı Soyadı</th>
 					<th scope="col">TC Kimlik No</th>
 					<th scope="col">İlçe</th>
 					<th scope="col">Okul Adı</th>
@@ -33,16 +33,19 @@
 				<tbody>
 				<tr th:each="ogrenci: ${ogrenciler}"  >
 					<td th:text="${ogrenci.id}"></td>
+					<td>
+						<div th:if="${ogrenci}">
+							<img id="output" src="#" alt="image" height="160" width="120" th:src="@{/upload/{dosyaTuru}/{id}(id=${ogrenci.id},dosyaTuru='OGRENCI')}"/>
+						</div>
+					</td>
 					<td th:text="${ogrenci.adi}"></td>
-					<td th:text="${ogrenci.soyadi}"></td>
 					<td th:text="${ogrenci.tcKimlikNo}"></td>
 					<td th:text="${ogrenci.ilce}"></td>
 					<td th:text="${ogrenci.okulAdi}"></td>
 					<td th:text="${ogrenci.okulAlani}"></td>
 					<td>
 						<a th:href="@{/ogrenci/{id}(id=${ogrenci.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2"></i> Düzenle </a>
-
-						<a th:href="@{/ogrenci/delete/{id}(id=${ogrenci.id})}" class="btn btn-primary"><i class="fa fa-trash"></i> Sil</a>
+						<a th:href="@{/ogrenci/delete/{id}(id=${ogrenci.id})}" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</a>
 					</td>
 				</tr>
 				</tbody>

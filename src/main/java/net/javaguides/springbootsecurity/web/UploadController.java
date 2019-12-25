@@ -1,8 +1,12 @@
 package net.javaguides.springbootsecurity.web;
 
+import net.javaguides.springbootsecurity.entities.BaseEntity;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageFileNotFoundException;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
+import net.javaguides.springbootsecurity.repositories.FirmaRepository;
+import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
+import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -27,19 +31,18 @@ public class UploadController {
 	private final StorageService storageService;
 
 	@Autowired
+	private OgretmenRepository ogretmenRepository;
+
+	@Autowired
+	private OgrenciRepository ogrenciRepository;
+
+	@Autowired
+	private FirmaRepository firmaRepository;
+
+
+	@Autowired
 	public UploadController(StorageService storageService) {
 		this.storageService = storageService;
-	}
-
-	@GetMapping("/upload")
-	public String listUploadedFiles(Model model) throws IOException {
-
-//		model.addAttribute("files", storageService.loadAll().map(
-//				path -> MvcUriComponentsBuilder.fromMethodName(UploadController.class,
-//						"serveFile", path.getFileName().toString()).build().toString())
-//				.collect(Collectors.toList()));
-
-		return "upload";
 	}
 
 	@GetMapping("/files/{filename:.+}")
@@ -51,28 +54,44 @@ public class UploadController {
 				"attachment; filename=\"" + file.getFilename() + "\"").body(file);
 	}
 
-	@PostMapping("/upload")
-	public String handleFileUpload(@RequestParam("file") MultipartFile file,
-			RedirectAttributes redirectAttributes) {
-
-//		storageService.store(file, DosyaTuru.OGRETMEN);
-//		redirectAttributes.addFlashAttribute("message",
-//				"You successfully uploaded " + file.getOriginalFilename() + "!");
-
-		return "redirect:/upload";
-	}
 
 	@ExceptionHandler(StorageFileNotFoundException.class)
 	public ResponseEntity<?> handleStorageFileNotFound(StorageFileNotFoundException exc) {
 		return ResponseEntity.notFound().build();
 	}
 
+//
+//	@RequestMapping(value = "upload/{id}")
+//	@ResponseBody
+//	public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") Long id) throws IOException {
+//
+//		Path path=storageService.load(id.toString(),DosyaTuru.OGRETMEN);
+//
+//		File serverFile = new File(path.toString());
+//
+//		byte[] image =  Files.readAllBytes(serverFile.toPath());
+//		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(image);
+//
+//	}
 
-	@RequestMapping(value = "upload/{id}")
+
+	@RequestMapping(value = "/upload/{dosyaTuru}/{id}")
 	@ResponseBody
-	public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") Long id) throws IOException {
+	public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") Integer id, @PathVariable(value = "dosyaTuru") DosyaTuru dosyaTuru) throws IOException {
+		BaseEntity baseEntity;
 
-		Path path=storageService.load(id.toString(),DosyaTuru.OGRETMEN);
+		if(dosyaTuru==DosyaTuru.OGRETMEN)
+			baseEntity = ogretmenRepository.findById(id)
+					.orElseThrow(() -> new IllegalArgumentException("Hatalı Id:" + id));
+		else if(dosyaTuru==DosyaTuru.OGRENCI)
+			baseEntity = ogrenciRepository.findById(id)
+					.orElseThrow(() -> new IllegalArgumentException("Hatalı Id:" + id));
+		else if(dosyaTuru==DosyaTuru.FIRMA)
+			baseEntity = firmaRepository.findById(id)
+					.orElseThrow(() -> new IllegalArgumentException("Hatalı Id:" + id));
+		else return null;
+
+		Path path=storageService.load(baseEntity.getResimUrl(),dosyaTuru);
 
 		File serverFile = new File(path.toString());
 

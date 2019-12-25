@@ -14,7 +14,7 @@
 			<h2>Sistemde Kayıtlı Firmalar</h2>
 
 			<p class="my-5">
-				<a class="btn btn-primary" th:href="@{/firma}"><i class="fa fa-plus"> Firma Ekle</i></a>
+				<a class="btn btn-success" th:href="@{/firma}"><i class="fa fa-plus"> Firma Ekle</i></a>
 			</p>
 			<br>
 			<table id="table" class="table table-hover table-bordered">
@@ -35,7 +35,11 @@
 				<tbody>
 				<tr th:each="firma: ${firmalar}" >
 					<td th:text="${firma.id}"></td>
-					<td></td>
+					<td>
+						<div th:if="${firma}">
+							<img id="output" src="#" alt="image" height="160" width="120" th:src="@{/upload/{dosyaTuru}/{id}(id=${firma.id},dosyaTuru='FIRMA')}"/>
+						</div>
+					</td>
 					<td th:text="${firma.adi}"></td>
 					<td th:text="${firma.sicil}"></td>
 					<td th:text="${firma.faaliyetAlanlari}"></td>
@@ -44,7 +48,7 @@
 					<td th:text="${firma.insanKaynaklariSorumlusuTelefonu}"></td>
 					<td>
 						<a th:href="@{/firma/{id}(id=${firma.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2"></i> Düzenle </a>
-						<a th:href="@{/firma/delete/{id}(id=${firma.id})}" class="btn btn-primary"><i class="fa fa-trash"></i> Sil</a>
+						<a th:href="@{/firma/delete/{id}(id=${firma.id})}" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</a>
 					</td>
 				</tr>
 				</tbody>

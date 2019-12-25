@@ -15,10 +15,6 @@ import java.util.Date;
 @Data
 public class Ogrenci extends BaseEntity
 {
-
-	@Column(length = 100)
-	private String soyadi;
-
 	@Column(length = 200)
 	private String email;
 

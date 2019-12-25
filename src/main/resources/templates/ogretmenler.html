@@ -12,7 +12,7 @@
 		<h2>Sistemde Kayıtlı Öğretmenler</h2>
 
 		<p class="my-5">
-			<a class="btn btn-primary" th:href="@{/ogretmen}"><i class="fa fa-plus"> Öğretmen Ekle</i></a>
+			<a class="btn btn-success" th:href="@{/ogretmen}"><i class="fa fa-plus"> Öğretmen Ekle</i></a>
 		</p>
 
 		<div>
@@ -34,16 +34,17 @@
 						<td th:text="${ogretmen.id}"></td>
 						<td>
 							<div th:if="${ogretmen}">
-<!--								<img alt="Image" th:src="@{upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru=T(net.javaguides.springbootsecurity.enums.DosyaTuru).OGRETMEN)}" width="250" height="250"/>-->
+								<img id="output" src="#" alt="image" height="160" width="120" th:src="@{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}"/>
 							</div>
 						</td>
+
 						<td th:text="${ogretmen.adi}"></td>
 						<td th:text="${ogretmen.email}"></td>
 						<td th:text="${ogretmen.telefon}"></td>
 						<td th:text="${ogretmen.okul}"></td>
 						<td>
 							<a th:href="@{/ogretmen/{id}(id=${ogretmen.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2"></i> Düzenle </a>
-							<a th:href="@{/ogretmen/delete/{id}(id=${ogretmen.id})}" class="btn btn-primary"><i class="fa fa-trash"></i> Sil</a>
+							<a th:href="@{/ogretmen/delete/{id}(id=${ogretmen.id})}" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</a>
 						</td>
 					</tr>
 				</tbody>
