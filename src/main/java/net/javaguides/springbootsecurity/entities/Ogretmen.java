@@ -1,12 +1,8 @@
 package net.javaguides.springbootsecurity.entities;
 
 import lombok.Data;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.io.File;
-import java.util.List;
 
 /**
  * @author Salih Efe
@@ -15,11 +11,8 @@ import java.util.List;
 @Entity
 @Table(name="OGRETMEN")
 @Data
-public class Ogretmen  extends BaseEntity
+public class Ogretmen  extends User
 {
-	@Column(length = 100)
-	private String email;
-
 	@Column(length = 100)
 	private String telefon;
 

@@ -10,11 +10,11 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableConfigurationProperties(StorageProperties.class)
-public class SpringbootThymeleafSecurityDemoApplication
+public class OgrenciStajUygulamasi
 {
 	public static void main(String[] args)
 	{
-		SpringApplication.run(SpringbootThymeleafSecurityDemoApplication.class, args);
+		SpringApplication.run(OgrenciStajUygulamasi.class, args);
 	}
 
 	@Bean

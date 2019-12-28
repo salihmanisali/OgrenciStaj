@@ -1,6 +1,7 @@
 package net.javaguides.springbootsecurity.web;
 
 import lombok.var;
+import net.javaguides.springbootsecurity.config.WebSecurityConfig;
 import net.javaguides.springbootsecurity.entities.Firma;
 import net.javaguides.springbootsecurity.entities.Ogrenci;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
@@ -8,6 +9,7 @@ import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +30,10 @@ public class FirmaController {
 
 	@Autowired
 	private StorageService storageService;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
 
 	@GetMapping("/firmalar")
 	public String firmalar(Model model) {
@@ -68,8 +74,8 @@ public class FirmaController {
 	public String saveFirma(Firma firma)
 	{
 		var resim = firma.getResim();
+		firma.setPassword(passwordEncoder.encode(firma.getPassword()));
 		firma = firmaRepository.save(firma);
-
 		firma.setResim(resim);
 
 		if(firma.getResim()!=null && !firma.getResim().getOriginalFilename().isEmpty()) {

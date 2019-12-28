@@ -1,9 +1,10 @@
 package net.javaguides.springbootsecurity.entities;
 
 import lombok.Data;
+import net.javaguides.springbootsecurity.enums.Ilce;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * @author Salih Efe
@@ -12,7 +13,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name="FIRMA")
 @Data
-public class Firma extends BaseEntity
+public class Firma extends User
 {
 	@Column(length = 40)
 	private Long sicil;
@@ -23,10 +24,13 @@ public class Firma extends BaseEntity
 	@Column(length = 300)
 	private String insanKaynaklariSorumlusuAdi;
 
-	@Column(length = 200)
-	private String insanKaynaklariSorumlusuEmail;
-
 	@Column(length = 30)
 	private String insanKaynaklariSorumlusuTelefonu;
 
+	@ManyToMany(mappedBy="firmaList")
+	private List<Ogrenci> ogrenciList;
+
+	@Enumerated(EnumType.STRING)
+	@Column(length = 20)
+	private Ilce ilce;
 }

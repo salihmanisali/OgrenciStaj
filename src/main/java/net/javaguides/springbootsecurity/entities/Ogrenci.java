@@ -5,6 +5,7 @@ import net.javaguides.springbootsecurity.enums.*;
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Salih Efe
@@ -13,10 +14,8 @@ import java.util.Date;
 @Entity
 @Table(name="OGRENCI")
 @Data
-public class Ogrenci extends BaseEntity
+public class Ogrenci extends User
 {
-	@Column(length = 200)
-	private String email;
 
 	@Column(length = 11)
 	private Long tcKimlikNo;
@@ -274,4 +273,11 @@ public class Ogrenci extends BaseEntity
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_okul")
 	private Okul okul;
+
+	@ManyToMany(cascade=CascadeType.MERGE)
+	@JoinTable(
+			name="ogrenci_firma",
+			joinColumns={@JoinColumn(name="id_ogrenci", referencedColumnName="ID")},
+			inverseJoinColumns={@JoinColumn(name="id_firma", referencedColumnName="ID")})
+	private List<Firma> firmaList;
 }

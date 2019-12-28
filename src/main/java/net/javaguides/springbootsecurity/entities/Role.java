@@ -1,7 +1,6 @@
 package net.javaguides.springbootsecurity.entities;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,14 +12,8 @@ import java.util.List;
 @Entity
 @Table(name="roles")
 @Data
-public class Role
+public class Role extends BaseEntity
 {
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
-	@Column(nullable=false, unique=true)
-	@NotEmpty
-	private String name;
-		
 	@ManyToMany(mappedBy="roles")
 	private List<User> users;
 }

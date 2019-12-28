@@ -51,6 +51,13 @@ public class OgrenciController
 		return "ogrenci";
 	}
 
+	@GetMapping("/ogrencihome")
+	public String ogrencihome(Model model)	{
+		Integer id = 1;
+
+		return ogrenciById(model,id);
+	}
+
 	@GetMapping("/ogrenci/delete/{id}")
 	public String deleteOgrenci(@PathVariable("id") Integer id, Model model) {
 		Ogrenci ogrenci = ogrenciRepository.findById(id)

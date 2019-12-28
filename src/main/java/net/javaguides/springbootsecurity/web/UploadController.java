@@ -1,6 +1,7 @@
 package net.javaguides.springbootsecurity.web;
 
 import net.javaguides.springbootsecurity.entities.BaseEntity;
+import net.javaguides.springbootsecurity.entities.User;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageFileNotFoundException;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
@@ -78,7 +79,7 @@ public class UploadController {
 	@RequestMapping(value = "/upload/{dosyaTuru}/{id}")
 	@ResponseBody
 	public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") Integer id, @PathVariable(value = "dosyaTuru") DosyaTuru dosyaTuru) throws IOException {
-		BaseEntity baseEntity;
+		User baseEntity;
 
 		if(dosyaTuru==DosyaTuru.OGRETMEN)
 			baseEntity = ogretmenRepository.findById(id)

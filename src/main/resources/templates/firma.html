@@ -33,6 +33,18 @@
 
                             <div class="form-row">
                                 <div class="form-group">
+                                    <label for="email"> Email :</label>
+                                    <input type="email" name="email" id="email" th:value="${firma.email}" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Şifre (En az 4 karekter):</label>
+                                    <input type="password" name="password" id="password" th:value="${firma.password}" th:unless="${firma.password}"/>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
                                     <label for="sicil">Sicil :</label>
                                     <input type="number" name="sicil" id="sicil" th:value="${firma.sicil}" />
                                 </div>
@@ -46,6 +58,26 @@
                                     <label for="faaliyetAlanlari">Faaliyet Alanları :</label>
                                     <input type="text" name="faaliyetAlanlari" id="faaliyetAlanlari" th:value="${firma.faaliyetAlanlari}" />
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="ilce">İlçe :</label>
+                                    <select name="ilce" id="ilce" th:value="${firma.ilce}">
+                                        <option disabled selected value> İlçe Seçin </option>
+                                        <option value="IZMIT"      th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).IZMIT}">İzmit</option>
+                                        <option value="BASISKELE"  th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).BASISKELE}">Başiskele</option>
+                                        <option value="CAYIROVA"   th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).CAYIROVA}">Çayırova</option>
+                                        <option value="DARICA"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DARICA}">Darıca</option>
+                                        <option value="DERINCE"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DERINCE}">Derince</option>
+                                        <option value="DILOVASI"   th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DILOVASI}">Dilovası</option>
+                                        <option value="GEBZE"      th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GEBZE}">Gebze</option>
+                                        <option value="GOLCUK"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GOLCUK}">Gölcük</option>
+                                        <option value="KANDIRA"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KANDIRA}">Kandıra</option>
+                                        <option value="KARAMURSEL" th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARAMURSEL}">Karamürsel</option>
+                                        <option value="KARTEPE"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARTEPE}">Kartepe</option>
+                                        <option value="KORFEZ"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KORFEZ}">Körfez</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
                             </div>
                             <h4>Firmanın İnsan Kaynakları Sorumlusu</h4>
                             <div class="form-row">
@@ -54,10 +86,6 @@
                                     <input type="text" name="insanKaynaklariSorumlusuAdi" id="insanKaynaklariSorumlusuAdi" th:value="${firma.insanKaynaklariSorumlusuAdi}" />
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="insanKaynaklariSorumlusuEmail"> Email :</label>
-                                    <input type="email" name="insanKaynaklariSorumlusuEmail" id="insanKaynaklariSorumlusuEmail" th:value="${firma.insanKaynaklariSorumlusuEmail}" />
-                                </div>
 
                                 <div class="form-group">
                                     <label for="insanKaynaklariSorumlusuTelefonu">Telefonu :</label>
@@ -72,6 +100,8 @@
                         </div>
 
                         <input type="hidden" name="id" id="id" th:value="${firma.id}"/>
+
+
                     </form>
                 </div>
             </div>
