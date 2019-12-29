@@ -14,6 +14,7 @@ import java.util.List;
 @Data
 public class Role extends BaseEntity
 {
+
 	@ManyToMany(mappedBy="roles")
 	private List<User> users;
 }

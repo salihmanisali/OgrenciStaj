@@ -1,6 +1,9 @@
 package net.javaguides.springbootsecurity.security;
 
+import lombok.Getter;
+import net.javaguides.springbootsecurity.entities.Role;
 import net.javaguides.springbootsecurity.entities.User;
+import net.javaguides.springbootsecurity.repositories.RoleRepository;
 import net.javaguides.springbootsecurity.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -24,6 +27,9 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Autowired
 	private UserRepository userRepository;
 
+	@Autowired
+	private RoleRepository roleRepository;
+
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 		User user = userRepository.findByEmail(userName)
@@ -36,5 +42,34 @@ public class CustomUserDetailsService implements UserDetailsService {
 		String[] userRoles = user.getRoles().stream().map((role) -> role.getAdi()).toArray(String[]::new);
 		Collection<GrantedAuthority> authorities = AuthorityUtils.createAuthorityList(userRoles);
 		return authorities;
+	}
+
+	private Role ogrenciRole;
+
+	private Role ogretmenRole;
+
+	private Role firmaRole;
+
+	private Role adminRole;
+
+
+	public Role getOgrenciRole() {
+		if(ogrenciRole==null) ogrenciRole=roleRepository.findById(5).get();
+		return ogrenciRole;
+	}
+
+	public Role getOgretmenRole() {
+		if(ogretmenRole==null) ogretmenRole=roleRepository.findById(4).get();
+		return ogretmenRole;
+	}
+
+	public Role getFirmaRole() {
+		if(firmaRole==null) firmaRole=roleRepository.findById(3).get();
+		return firmaRole;
+	}
+
+	public Role getAdminRole() {
+		if(adminRole==null) adminRole=roleRepository.findById(1).get();
+		return adminRole;
 	}
 }

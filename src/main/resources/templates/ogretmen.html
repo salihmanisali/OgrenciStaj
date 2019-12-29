@@ -34,13 +34,20 @@
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="adi">Adı Soyadı:</label>
-                                    <input type="text" name="adi" id="adi" th:value="${ogretmen.adi}"/>
+                                    <label for="email"> Email :</label>
+                                    <input type="email" name="email" id="email" th:value="${ogretmen.email}" />
                                 </div>
 
+                                <div class="form-group"  th:unless="${ogretmen.password}">
+                                    <label for="password">Şifre (En az 4 karekter):</label>
+                                    <input type="password" name="password" id="password" th:value="${ogretmen.password}"/>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
                                 <div class="form-group">
-                                    <label for="email"> Email :</label>
-                                    <input type="email" name="email" id="email"  th:value="${ogretmen.email}"/>
+                                    <label for="adi">Adı Soyadı:</label>
+                                    <input type="text" name="adi" id="adi" th:value="${ogretmen.adi}"/>
                                 </div>
 
                                 <div class="form-group">

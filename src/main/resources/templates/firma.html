@@ -14,7 +14,7 @@
         <div class="container">
             <div>
                 <div>
-                    <form  th:action="@{/firma}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
+                    <form th:action="${firmauser} ? @{/firmahome} : @{/firma}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
                         <div>
                             <h2>Firma Kayıt Formu</h2>
 
@@ -37,9 +37,9 @@
                                     <input type="email" name="email" id="email" th:value="${firma.email}" />
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" th:unless="${firma.password}">
                                     <label for="password">Şifre (En az 4 karekter):</label>
-                                    <input type="password" name="password" id="password" th:value="${firma.password}" th:unless="${firma.password}"/>
+                                    <input type="password" name="password" id="password" th:value="${firma.password}" />
                                 </div>
                             </div>
 
@@ -50,7 +50,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="adi">Adı :</label>
+                                    <label for="adi">Firmanın Adı :</label>
                                     <input type="text" name="adi" id="adi" th:value="${firma.adi}" />
                                 </div>
 

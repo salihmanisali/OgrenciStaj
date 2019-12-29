@@ -32,17 +32,26 @@
 		</button>
 	<div class="collapse navbar-collapse" id="navbarsExample02">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item" sec:authorize="isAuthenticated()">
+			<li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
 				<a class="nav-link" th:href="@{/ogrenciler}">Öğrenciler</a>
 			</li>
-			<li class="nav-item"  sec:authorize="isAuthenticated()">
+			<li class="nav-item"  sec:authorize="hasRole('ROLE_ADMIN')">
 				<a class="nav-link" th:href="@{/ogretmenler}">Öğretmenler</a>
 			</li>
-			<li class="nav-item"  sec:authorize="isAuthenticated()">
+			<li class="nav-item"  sec:authorize="hasRole('ROLE_ADMIN')">
 				<a class="nav-link" th:href="@{/firmalar}">Firmalar</a>
 			</li>
-			<li class="nav-item"  sec:authorize="isAuthenticated()">
+			<li class="nav-item"  sec:authorize="hasRole('ROLE_ADMIN')">
 				<a class="nav-link" th:href="@{/okullar}">Okullar</a>
+			</li>
+			<li class="nav-item"  sec:authorize="hasRole('ROLE_OGRETMEN')">
+				<a class="nav-link" th:href="@{/ogretmenhome}">Öğretmen Profilim</a>
+			</li>
+			<li class="nav-item"  sec:authorize="hasRole('ROLE_OGRENCI')">
+				<a class="nav-link" th:href="@{/ogrencihome}">Öğrenci Profilim</a>
+			</li>
+			<li class="nav-item"  sec:authorize="hasRole('ROLE_FIRMA')">
+				<a class="nav-link" th:href="@{/firmahome}">Firma Profilim</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" th:href="@{/about}">Hakkında</a>

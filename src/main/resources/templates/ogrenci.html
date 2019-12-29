@@ -31,6 +31,17 @@
                                         output.src = URL.createObjectURL(event.target.files[0]);
                                     };
                                 </script>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email"> Email :</label>
+                                        <input type="email" name="email" id="email" th:value="${ogrenci.email}" />
+                                    </div>
+
+                                    <div class="form-group" th:unless="${ogrenci.password}">
+                                        <label for="password">Şifre (En az 4 karekter):</label>
+                                        <input type="password" name="password" id="password" th:value="${ogrenci.password}" />
+                                    </div>
+                                </div>
 
                                 <div class="form-row">
                                     <div class="form-group">
@@ -205,10 +216,6 @@
                                     <div class="form-group">
                                         <label for="referansOgretmenTelefon">Telefonu :</label>
                                         <input type="number" name="referansOgretmenTelefon" id="referansOgretmenTelefon" th:value="${ogrenci.referansOgretmenTelefon}"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="referansOgretmenEmail">Email :</label>
-                                        <input type="email" name="referansOgretmenEmail" id="referansOgretmenEmail" th:value="${ogrenci.referansOgretmenEmail}"/>
                                     </div>
                                 </div>
 

@@ -20,7 +20,6 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name="users")
-//@MappedSuperclass
 @Data
 public class User
 {
@@ -57,4 +56,11 @@ public class User
 			joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="ID")},
 			inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
 	private List<Role> roles;
+
+	public User(@NotNull String adi) {
+		this.adi = adi;
+	}
+
+	public User() {
+	}
 }
