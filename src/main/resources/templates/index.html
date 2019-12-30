@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:th="http://www.thymeleaf.org"
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
-      layout:decorator="layout">
-      
-      <head>
-        <title>Home</title>
-    </head>
-    <body>
-    	<div layout:fragment="content">
+	  layout:decorator="layout">
 
-		     <p sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></p>
-	         <p style="margin-top: 100px;"><a th:href="@{/home}">User Home</a></p>
-		     <p><a th:href="@{/admin/home}">Admin Home</a></p>
-			 <p><a th:href="@{/ogrenciler}">Öğrenciler</a></p>
-			 <p><a th:href="@{/ogretmenler}">Öğretmenler</a></p>
-			 <p><a th:href="@{/firmalar}">Firmalar</a></p>
-			<p><a th:href="@{/okullar}">Okullar</a></p>
-		     <p sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></p>
+<head>
+	<title>Hakkında</title>
+</head>
+<body>
+<div layout:fragment="content">
+	<div class="main">
+		<div class="container">
+			<div class = "container">
+				<h1>Öğrenci Staj Uygulaması</h1>
+				<p class = "text-success">
+					The below text is justified by using the class "text-justify"
+				</p>
+				<p class = "text-justify">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					Lorem Ipsum has been the industry's standard dummy text ever since the
+					1500s, when an unknown printer took a galley of type and scrambled it to
+					make a type specimen book. It has survived not only five centuries, but
+					also the leap into electronic typesetting, remaining essentially unchanged.
+					It was popularised in the 1960s with the release of Letraset sheets
+					containing Lorem Ipsum passages, and more recently with desktop publishing
+					software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+
+				<h3>Text alignment: Left, Right, Center </h3>
+				<p class = "text-left">Text is aligned on Left side by using class "text-left"</p>
+				<p class = "text-center">Text is aligned at Center by using class "text-center"</p>
+				<p class = "text-right">Text is aligned on Right side by using class "text-right"</p>
+			</div>
     	</div>
-
+	</div>
+</div>
     </body>
 
 </html>

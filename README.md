@@ -2,9 +2,11 @@
 Kullanılan Teknolojiler
 
 *Java 8
-*SpringBoot
-*Thymeleaf
-*Spring Security
+*SpringBoot 2
+*Spring Sequrity 4
+*Thymeleaf 2
+*jQuery Datatables
+*Bootstrap 4
 
 
 http://localhost:8080/
