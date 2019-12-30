@@ -12,5 +12,5 @@ import java.util.Optional;
  *
  */
 public interface FirmaRepository extends JpaRepository<Firma, Integer>{
-    Optional<User> findByEmail(String email);
+    Optional<Firma> findByEmail(String email);
 }

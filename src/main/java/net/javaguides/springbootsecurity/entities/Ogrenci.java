@@ -280,4 +280,7 @@ public class Ogrenci extends User
 			joinColumns={@JoinColumn(name="id_ogrenci", referencedColumnName="ID")},
 			inverseJoinColumns={@JoinColumn(name="id_firma", referencedColumnName="ID")})
 	private List<Firma> firmaList;
+
+	@Transient
+	private Boolean favori;
 }

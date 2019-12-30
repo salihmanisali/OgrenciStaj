@@ -2,29 +2,394 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5111e5e-6e54-4e8e-b04e-18991baad1cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/FirmaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/FirmaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/firma.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/firma.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/21880c0ffe15753a53f8402e9f64e1077e071510/style.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/2af427b2894d1e78c5806e231aa35d00838a84e0/style.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/extend.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/fonts.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/global.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/minxi.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/variables.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/extend.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/fonts.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/global.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/minxi.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/variables.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/643489b018602f15119d8f44aeb7fc79468873a9/main.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/643489b018602f15119d8f44aeb7fc79468873a9/responsive.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/extend.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/fonts.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/global.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/minxi.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/variables.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/8d060da290f1e90ae74e56e843d8749396294ac1/main.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/8d060da290f1e90ae74e56e843d8749396294ac1/responsive.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/e17f2ac53a8b63135158793a481cf8f239449aec/style.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/f49285f1317a1cafa93ab4f5de346f92bbc40d58/main.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/.sass-cache/f49285f1317a1cafa93ab4f5de346f92bbc40d58/responsive.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.5.0/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/material-icon/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/material-icon/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/montserrat-v12-latin-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/montserrat-v12-latin-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/montserrat-v12-latin-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/montserrat-v12-latin-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/montserrat/montserrat-v12-latin-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-300italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-500italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-600.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-600.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-600.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-600.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-600.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-700italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-800italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/poppins-v5-latin-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/burc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/ogretmen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/signup-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/common/extend.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/common/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/common/global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/common/minxi.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/common/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/layouts/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/layouts/responsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/scss/style.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/okullar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/okullar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Firma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Firma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogrenci.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogrenci.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/repositories/FirmaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/repositories/FirmaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/security/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/security/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/21880c0ffe15753a53f8402e9f64e1077e071510/style.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/2af427b2894d1e78c5806e231aa35d00838a84e0/style.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/extend.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/fonts.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/global.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/minxi.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/5b5e4638a1b65395d974dddfa3d03b7a86b84808/variables.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/extend.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/fonts.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/global.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/minxi.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/632f5d1dd893d2e8764de51b8ca4120e25043113/variables.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/643489b018602f15119d8f44aeb7fc79468873a9/main.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/643489b018602f15119d8f44aeb7fc79468873a9/responsive.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/extend.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/fonts.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/global.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/minxi.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/variables.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/8d060da290f1e90ae74e56e843d8749396294ac1/main.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/8d060da290f1e90ae74e56e843d8749396294ac1/responsive.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/e17f2ac53a8b63135158793a481cf8f239449aec/style.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/f49285f1317a1cafa93ab4f5de346f92bbc40d58/main.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/.sass-cache/f49285f1317a1cafa93ab4f5de346f92bbc40d58/responsive.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/font-awesome-4.5.0/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/material-icon/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/material-icon/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/montserrat-v12-latin-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/montserrat-v12-latin-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/montserrat-v12-latin-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/montserrat-v12-latin-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/montserrat/montserrat-v12-latin-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-300italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-500italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-600.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-600.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-600.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-600.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-600.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-700italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-800italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/poppins-v5-latin-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-700italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/fonts/poppins/roboto-condensed-v16-latin-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/images/signup-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/common/extend.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/common/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/common/global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/common/minxi.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/common/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/layouts/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/layouts/responsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/scss/style.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ogrenci.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ogrenci.html" afterDir="false" />
     </list>
@@ -57,14 +422,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="250">
+              <caret line="165" column="37" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firmalar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/okullar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -81,9 +527,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>becer</find>
-      <find>az</find>
-      <find>Dil</find>
       <find>dil2</find>
       <find>telefon</find>
       <find>&gt;</find>
@@ -111,6 +554,9 @@
       <find>mail</find>
       <find>save</find>
       <find>saveFirma</find>
+      <find>email</find>
+      <find>roles</find>
+      <find>ogrencilist</find>
     </findStrings>
     <replaceStrings>
       <replace>@NotNull</replace>
@@ -147,7 +593,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/GlobalExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/uploadForm.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FileUploadController.java" />
@@ -165,39 +610,40 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/helpers/storage/FileSystemStorageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/helpers/storage/StorageService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/helpers/storage/StorageProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/okullar.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/OgrenciStajUygulamasi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ogrencihome.html" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/KullaniciTuru.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Okul.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/BaseUserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/UploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/FirmaRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/firma.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/layout.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/RoleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/FirmaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/okullar.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layout.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" />
       </list>
     </option>
   </component>
@@ -209,8 +655,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="755" />
-    <option name="y" value="510" />
+    <option name="x" value="905" />
+    <option name="y" value="22" />
     <option name="width" value="980" />
     <option name="height" value="1050" />
   </component>
@@ -222,7 +668,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,6 +700,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="springbootsecurity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
@@ -296,6 +759,43 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OgrenciStaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OgrenciStaj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -303,6 +803,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,12 +825,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\java\net\javaguides\springbootsecurity\helpers" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\js" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\js" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\css" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\images" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\scss\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.javaguides.springbootsecurity.repositories" />
@@ -337,12 +838,12 @@
       <recent name="net.javaguides.springbootsecurity.entities" />
       <recent name="net.javaguides.springbootsecurity.web" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\java\net\javaguides\springbootsecurity\helpers" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\css" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\js" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\js" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\scss\common" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\css" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -467,7 +968,10 @@
       <workItem from="1577481494885" duration="1535000" />
       <workItem from="1577558932847" duration="11434000" />
       <workItem from="1577572501076" duration="249000" />
-      <workItem from="1577620122367" duration="4955000" />
+      <workItem from="1577620122367" duration="9323000" />
+      <workItem from="1577640087481" duration="601000" />
+      <workItem from="1577688243836" duration="867000" />
+      <workItem from="1577740746718" duration="4424000" />
     </task>
     <task id="LOCAL-00001" summary="ilk komit">
       <created>1576066439890</created>
@@ -560,11 +1064,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577565286179</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Firma User">
+      <created>1577625366104</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1577625366104</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170050000" />
+    <option name="totallyTimeSpent" value="180310000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -579,7 +1090,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.40524194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20833333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -603,7 +1114,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49798387" weight="0.32892805" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.5227606" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.51835537" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -718,7 +1229,8 @@
     <MESSAGE value="BASE ENTİTY" />
     <MESSAGE value="Upload image" />
     <MESSAGE value="User Base entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Base entity" />
+    <MESSAGE value="Firma User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Firma User" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -736,24 +1248,16 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java</url>
-          <line>107</line>
+          <line>148</line>
           <properties />
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java</url>
-          <line>41</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -791,64 +1295,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adminhome.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/OgrenciStajUygulamasi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrencihome.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/DosyaTuru.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/enums/KullaniciTuru.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Okul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/AuthenticatedUser.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -861,16 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="35" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,13 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -919,27 +1348,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -957,55 +1369,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenci.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="79" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
-          <folding>
-            <element signature="n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/FirmaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firma.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="52" column="61" lean-forward="true" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firmalar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -1044,41 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="120" selection-start-line="120" selection-end-line="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,10 +1486,200 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="239">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="35" column="75" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/FirmaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenci.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="42" column="42" selection-start-line="39" selection-start-column="36" selection-end-line="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="506" selection-start-line="506" selection-end-line="506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="436" selection-start-line="436" selection-end-line="436" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="488" selection-start-line="488" selection-end-line="488" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Firma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firma.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="277" column="15" lean-forward="true" selection-start-line="277" selection-start-column="15" selection-end-line="277" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="165" column="37" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/okullar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firmalar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

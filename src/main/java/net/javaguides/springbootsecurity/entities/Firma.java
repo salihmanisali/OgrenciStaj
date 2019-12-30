@@ -27,10 +27,13 @@ public class Firma extends User
 	@Column(length = 30)
 	private String insanKaynaklariSorumlusuTelefonu;
 
-	@ManyToMany(mappedBy="firmaList")
-	private List<Ogrenci> ogrenciList;
+
 
 	@Enumerated(EnumType.STRING)
 	@Column(length = 20)
 	private Ilce ilce;
+
+	@ManyToMany(mappedBy="firmaList")
+	private List<Ogrenci> ogrenciList;
+
 }

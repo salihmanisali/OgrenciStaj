@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -32,6 +33,9 @@ import java.util.LinkedList;
 public class FirmaController {
 	@Autowired
 	private FirmaRepository firmaRepository;
+
+	@Autowired
+	private OgrenciRepository ogrenciRepository;
 
 	@Autowired
 	private StorageService storageService;
@@ -91,15 +95,13 @@ public class FirmaController {
 	}
 
 	@PostMapping("/firmahome")
-	public String saveFirmaHome(Firma firma)
-	{
+	public String saveFirmaHome(Firma firma){
 		persistFirma(firma);
 		return "redirect:/firmahome";
 	}
 
 	@PostMapping("/firma")
-	public String saveFirma(Firma firma)
-	{
+	public String saveFirma(Firma firma){
 		persistFirma(firma);
 		return "redirect:/firmalar";
 	}
@@ -141,5 +143,28 @@ public class FirmaController {
 	private String getExtension(String filename) {
 		return filename.substring(filename.lastIndexOf(".") + 1);
 	}
+
+	@PostMapping("/favori/{id}")
+	public String addtofavoriById(Model model, @PathVariable Integer id, Principal principal) {
+		var firma = firmaRepository.findByEmail(principal.getName())
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + principal.getName()));
+
+		var ogrenci = ogrenciRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + id));
+
+		if(ogrenci.getFirmaList()==null){
+			ArrayList<Firma> list = new ArrayList<>();
+			list.add(firma);
+			ogrenci.setFirmaList(list);
+		}else if(!ogrenci.getFirmaList().contains(firma))
+		{
+			ogrenci.getFirmaList().add(firma);
+		}
+
+		ogrenciRepository.save(ogrenci);
+
+		return "redirect:/ogrencilist";
+	}
+
 
 }

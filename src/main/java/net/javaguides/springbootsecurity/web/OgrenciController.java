@@ -34,6 +34,13 @@ public class OgrenciController
 		return "ogrenciler";
 	}
 
+	@GetMapping("/ogrencilist")
+	public String ogrencilist(Model model)
+	{
+		model.addAttribute("ogrenciler", ogrenciRepository.findAll());
+		return "ogrencilist";
+	}
+
 	@GetMapping("/ogrenci")
 	public String ogrenci(Model model)	{
 		Ogrenci ogrenci=new Ogrenci();

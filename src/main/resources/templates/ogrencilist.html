@@ -11,10 +11,6 @@
 	<div layout:fragment="content">
 		<h2>Sistemde Kayıtlı Öğrenciler</h2>
 
-		<p class="my-5">
-			<a class="btn btn-success" th:href="@{/ogrenci}"><i class="fa fa-plus"> Öğrenci Ekle</i></a>
-		</p>
-
 		<div>
 		<br>
 			<table id="table" class="table table-hover table-striped compact" style="width:100%">
@@ -44,8 +40,9 @@
 					<td th:text="${ogrenci.okulAdi}"></td>
 					<td th:text="${ogrenci.okulAlani}"></td>
 					<td>
-						<a th:href="@{/ogrenci/{id}(id=${ogrenci.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2"></i> Düzenle </a>
-						<a th:href="@{/ogrenci/delete/{id}(id=${ogrenci.id})}" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</a>
+						<form method="POST" th:action="@{/favori/{id} (id=${ogrenci.id})}">
+                        <button type="submit" name="submit">Favori</button>
+                    </form>
 					</td>
 				</tr>
 				</tbody>
