@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.file.Path;
-import java.util.stream.Stream;
 
 @Repository
 public interface StorageService {

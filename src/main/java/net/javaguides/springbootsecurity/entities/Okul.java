@@ -4,7 +4,6 @@ import lombok.Data;
 import net.javaguides.springbootsecurity.enums.Ilce;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 /**
  * @author Salih Efe

@@ -1,8 +1,6 @@
 package net.javaguides.springbootsecurity.entities;
 
 import lombok.Data;
-import net.javaguides.springbootsecurity.enums.Ilce;
-import net.javaguides.springbootsecurity.enums.KullaniciTuru;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;

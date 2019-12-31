@@ -22,9 +22,19 @@
 
                                 <div class="custom-file">
                                     <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
-                                    <label class="custom-file-label" for="resim">Dosya Seçin</label>
+                                    <label class="custom-file-label" for="resim">Resim Yükle</label>
                                 </div>
                                 <input type="hidden" name="resimUrl" id="resimUrl" th:value="${ogrenci.resimUrl}"/>
+
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                                <a href="#" ><i class="fa fa-user-o"> Özgeçmiş indir</i></a>
+
+                                <div class="custom-file">
+                                    <input class="custom-file-input" type="file" name="cv" id="cv" accept="pdf"/>
+                                    <label class="custom-file-label" for="cv">Özgeçmiş yükle</label>
+                                </div>
 
                                 <script>
                                     var loadFile = function(event) {
@@ -91,8 +101,53 @@
                             <label lass="form-check-label" for="KADIN">Kadın</label>
                         </div>
                     </div>
+
+                    <div class="col ">
+                        <label for="askerlikDurumu">Askerlik Durumu :</label>
+                        <div class="select-list">
+                            <select class="custom-select"  name="askerlikDurumu" id="askerlikDurumu">
+                                <option disabled selected value> Askerlik Durumu Seçin </option>
+                                <option value="TECIL"   th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).TECIL}">Tecil</option>
+                                <option value="YAPTI"   th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).YAPTI}">Yaptı</option>
+                                <option value="YAPMADI" th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).YAPMADI}">Yapmadı</option>
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="form-row">
+                    <div class="col ">
+                        <label for="veliAdi">Veli Adı :</label>
+                        <input class="form-control" type="text" name="veliAdi" id="veliAdi" th:value="${ogrenci.veliAdi}"/>
+                    </div>
+                    <div class="col ">
+                        <label for="veliCepTelefonu">Veli Telefonu :</label>
+                        <input class="form-control" type="number" name="veliCepTelefonu" id="veliCepTelefonu" th:value="${ogrenci.veliCepTelefonu}"/>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col ">
+                        <label for="ehliyet">Ehliyet :</label>
+                        <input class="form-control" type="text" name="ehliyet" id="ehliyet" th:value="${ogrenci.ehliyet}"/>
+                    </div>
+
+                    <div class="col ">
+                        <label for="stajYapacagiGun">Staj Yapacağı Gün :</label>
+                        <div class="select-list">
+                            <select class="custom-select"  name="stajYapacagiGun" id="stajYapacagiGun">
+                                <option disabled selected value> Staj Yapacağı Günü Seçin </option>
+                                <option value="PAZARTESI_SALI_CARSAMBA" th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).PAZARTESI_SALI_CARSAMBA}">Pazartesi-Salı-Carşamba</option>
+                                <option value="CARSAMBA_PERSEMBE_CUMA"  th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).CARSAMBA_PERSEMBE_CUMA}">Carşamba-Perşembe-Cuma</option>
+                                <option value="YAZ_STAJI_4_HAFTA"       th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).YAZ_STAJI_4_HAFTA}">Yaz Stajı 4 Hafta</option>
+                                <option value="YAZ_STAJI_3_HAFTA"       th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).YAZ_STAJI_3_HAFTA}">Yaz Stajı 3 Hafta</option>
+                                <option value="DIGER">Diğer</option>
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </div>
                 <br>
                 <h3>Adres Bilgileri</h3>
 
@@ -126,53 +181,6 @@
                     <div class="col ">
                         <label for="adres">Adres :</label>
                         <textarea class="form-control" id="adres" name="adres" cols="80" rows="5" th:value="${ogrenci.adres}"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="col ">
-                        <label for="veliAdi">Veli Adı :</label>
-                        <input class="form-control" type="text" name="veliAdi" id="veliAdi" th:value="${ogrenci.veliAdi}"/>
-                    </div>
-                    <div class="col ">
-                        <label for="veliCepTelefonu">Veli Telefonu :</label>
-                        <input class="form-control" type="number" name="veliCepTelefonu" id="veliCepTelefonu" th:value="${ogrenci.veliCepTelefonu}"/>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="col ">
-                        <label for="ehliyet">Ehliyet :</label>
-                        <input class="form-control" type="text" name="ehliyet" id="ehliyet" th:value="${ogrenci.ehliyet}"/>
-                    </div>
-
-                    <div class="col ">
-                        <label for="askerlikDurumu">Askerlik Durumu :</label>
-                        <div class="select-list">
-                            <select class="custom-select"  name="askerlikDurumu" id="askerlikDurumu">
-                                <option disabled selected value> Askerlik Durumu Seçin </option>
-                                <option value="TECIL"   th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).TECIL}">Tecil</option>
-                                <option value="YAPTI"   th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).YAPTI}">Yaptı</option>
-                                <option value="YAPMADI" th:selected="${ogrenci.askerlikDurumu==T(net.javaguides.springbootsecurity.enums.AskerlikDurumu).YAPMADI}">Yapmadı</option>
-                            </select>
-                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
-                        </div>
-                    </div>
-
-
-                    <div class="col ">
-                        <label for="stajYapacagiGun">Staj Yapacağı Gün :</label>
-                        <div class="select-list">
-                            <select class="custom-select"  name="stajYapacagiGun" id="stajYapacagiGun">
-                                <option disabled selected value> Staj Yapacağı Günü Seçin </option>
-                                <option value="PAZARTESI_SALI_CARSAMBA" th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).PAZARTESI_SALI_CARSAMBA}">Pazartesi-Salı-Carşamba</option>
-                                <option value="CARSAMBA_PERSEMBE_CUMA"  th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).CARSAMBA_PERSEMBE_CUMA}">Carşamba-Perşembe-Cuma</option>
-                                <option value="YAZ_STAJI_4_HAFTA"       th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).YAZ_STAJI_4_HAFTA}">Yaz Stajı 4 Hafta</option>
-                                <option value="YAZ_STAJI_3_HAFTA"       th:selected="${ogrenci.stajYapacagiGun==T(net.javaguides.springbootsecurity.enums.StajYapacagiGun).YAZ_STAJI_3_HAFTA}">Yaz Stajı 3 Hafta</option>
-                                <option value="DIGER">Diğer</option>
-                            </select>
-                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
-                        </div>
                     </div>
                 </div>
             </div>

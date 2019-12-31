@@ -1,27 +1,23 @@
 package net.javaguides.springbootsecurity.web;
 
 import lombok.var;
-import net.javaguides.springbootsecurity.entities.BaseEntity;
-import net.javaguides.springbootsecurity.entities.Ogretmen;
 import net.javaguides.springbootsecurity.entities.Ogretmen;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
-import net.javaguides.springbootsecurity.repositories.FirmaRepository;
-import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
 import net.javaguides.springbootsecurity.repositories.OkulRepository;
+import net.javaguides.springbootsecurity.security.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Optional;
+import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * @author Salih Efe
@@ -38,6 +34,12 @@ public class OgretmenController
 
 	@Autowired
 	private StorageService storageService;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	@Autowired
+	private CustomUserDetailsService customUserDetailsService;
 
 
 	@GetMapping("/ogretmenler")
@@ -82,13 +84,42 @@ public class OgretmenController
 		return "/ogretmenler";
 	}
 
+	@PostMapping("/ogretmenhome")
+	public String saveOgretmenHome(Ogretmen ogretmen){
+		persistOgretmen(ogretmen);
+		return "redirect:/ogretmenhome";
+	}
 
 	@PostMapping("/ogretmen")
-	public String saveOgretmen(Ogretmen ogretmen)
-	{
-		var resim = ogretmen.getResim();
-		ogretmen = ogretmenRepository.save(ogretmen);
+	public String saveOgretmen(Ogretmen ogretmen){
+		persistOgretmen(ogretmen);
+		return "redirect:/ogretmenler";
+	}
 
+	private void persistOgretmen(Ogretmen ogretmen) {
+		var resim = ogretmen.getResim();
+
+		Ogretmen ogretmenEski = null;
+
+		if(ogretmen.getId()!=null)
+			ogretmenEski = ogretmenRepository.findById(ogretmen.getId()).orElse(null);
+
+		if(ogretmenEski!=null) {
+			var password = ogretmenEski.getPassword();
+			var roles = ogretmenEski.getRoles();
+
+			ogretmen.setPassword(password);
+			ogretmen.setRoles(roles);
+
+		}else{
+			ogretmen.setPassword(passwordEncoder.encode(ogretmen.getPassword()));
+
+			if(ogretmen.getRoles()==null) {
+				ogretmen.setRoles(new LinkedList<>(Arrays.asList(customUserDetailsService.getOgretmenRole())));
+			}
+		}
+
+		ogretmen = ogretmenRepository.save(ogretmen);
 		ogretmen.setResim(resim);
 
 		if(ogretmen.getResim()!=null && !ogretmen.getResim().getOriginalFilename().isEmpty()) {
@@ -97,8 +128,8 @@ public class OgretmenController
 			ogretmen.setResimUrl(path.toString());
 			ogretmenRepository.save(ogretmen);
 		}
-		return "redirect:/ogretmenler";
 	}
+
 
 	public String getExtension(String filename) {
 		return filename.substring(filename.lastIndexOf(".") + 1);

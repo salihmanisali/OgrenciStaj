@@ -5,7 +5,13 @@
 	layout:decorator="layout">
 
 <head>
-<title>User Home</title>
+<title>Öğrenciler</title>
+	<style>
+		.container {
+			max-width: 90%;
+		}
+
+	</style>
 </head>
 <body>
 	<div layout:fragment="content">
@@ -17,7 +23,7 @@
 
 		<div>
 		<br>
-			<table id="table" class="table table-hover table-striped compact" style="width:100%">
+			<table id="table" class="table table-hover table-striped" style="width:100%">
 				<thead>
 				<tr>
 					<th scope="col">Id</th>
@@ -49,6 +55,18 @@
 					</td>
 				</tr>
 				</tbody>
+				<tfoot>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Resim</th>
+					<th scope="col">Adı Soyadı</th>
+					<th scope="col">TC Kimlik No</th>
+					<th scope="col">İlçe</th>
+					<th scope="col">Okul Adı</th>
+					<th scope="col">Okul Alanı</th>
+					<th scope="col"></th>
+				</tr>
+				</tfoot>
 			</table>
 		</div>
 	</div>

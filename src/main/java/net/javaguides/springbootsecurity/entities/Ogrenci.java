@@ -3,6 +3,8 @@ package net.javaguides.springbootsecurity.entities;
 import lombok.Data;
 import net.javaguides.springbootsecurity.enums.*;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -283,4 +285,10 @@ public class Ogrenci extends User
 
 	@Transient
 	private Boolean favori;
+
+	@Transient
+	private MultipartFile cv;
+
+	@Column(length = 300)
+	private String cvUrl;
 }

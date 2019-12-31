@@ -1,7 +1,6 @@
 package net.javaguides.springbootsecurity.entities;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;

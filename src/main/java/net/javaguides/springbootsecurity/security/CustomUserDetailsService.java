@@ -1,6 +1,5 @@
 package net.javaguides.springbootsecurity.security;
 
-import lombok.Getter;
 import net.javaguides.springbootsecurity.entities.Role;
 import net.javaguides.springbootsecurity.entities.User;
 import net.javaguides.springbootsecurity.repositories.RoleRepository;

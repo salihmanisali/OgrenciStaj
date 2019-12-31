@@ -1,10 +1,7 @@
 package net.javaguides.springbootsecurity.web;
 
 import lombok.var;
-import net.javaguides.springbootsecurity.config.WebSecurityConfig;
 import net.javaguides.springbootsecurity.entities.Firma;
-import net.javaguides.springbootsecurity.entities.Ogrenci;
-import net.javaguides.springbootsecurity.entities.Role;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
@@ -14,11 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.Principal;
 import java.util.ArrayList;
