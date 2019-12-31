@@ -9,106 +9,110 @@
     <title>Firma Kayıt Formu</title>
 </head>
 <body>
-<div layout:fragment="content">
-    <div class="main">
-        <div class="container">
+    <div layout:fragment="content">
+        <form th:action="${firmauser} ? @{/firmahome} : @{/firma}" method="POST" enctype="multipart/form-data">
             <div>
-                <div>
-                    <form th:action="${firmauser} ? @{/firmahome} : @{/firma}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
-                        <div>
-                            <h2>Firma Kayıt Formu</h2>
+                <h2>Firma Kayıt Formu</h2>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="@{/upload/{dosyaTuru}/{id}(id=${firma.id},dosyaTuru='FIRMA')}"/>
 
-                            <img id="output" src="#" alt="image" height="320" width="240" th:src="@{/upload/{dosyaTuru}/{id}(id=${firma.id},dosyaTuru='FIRMA')}"/>
-
-                            <input type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
-
-                            <input type="hidden" name="resimUrl" id="resimUrl" th:value="${firma.resimUrl}"/>
-
-                            <script>
-                                var loadFile = function(event) {
-                                    var output = document.getElementById('output');
-                                    output.src = URL.createObjectURL(event.target.files[0]);
-                                };
-                            </script>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email"> Email :</label>
-                                    <input type="email" name="email" id="email" th:value="${firma.email}" />
-                                </div>
-
-                                <div class="form-group" th:unless="${firma.password}">
-                                    <label for="password">Şifre (En az 4 karekter):</label>
-                                    <input type="password" name="password" id="password" th:value="${firma.password}" />
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="sicil">Sicil :</label>
-                                    <input type="number" name="sicil" id="sicil" th:value="${firma.sicil}" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="adi">Firmanın Adı :</label>
-                                    <input type="text" name="adi" id="adi" th:value="${firma.adi}" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="faaliyetAlanlari">Faaliyet Alanları :</label>
-                                    <input type="text" name="faaliyetAlanlari" id="faaliyetAlanlari" th:value="${firma.faaliyetAlanlari}" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="ilce">İlçe :</label>
-                                    <select name="ilce" id="ilce" th:value="${firma.ilce}">
-                                        <option disabled selected value> İlçe Seçin </option>
-                                        <option value="IZMIT"      th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).IZMIT}">İzmit</option>
-                                        <option value="BASISKELE"  th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).BASISKELE}">Başiskele</option>
-                                        <option value="CAYIROVA"   th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).CAYIROVA}">Çayırova</option>
-                                        <option value="DARICA"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DARICA}">Darıca</option>
-                                        <option value="DERINCE"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DERINCE}">Derince</option>
-                                        <option value="DILOVASI"   th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DILOVASI}">Dilovası</option>
-                                        <option value="GEBZE"      th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GEBZE}">Gebze</option>
-                                        <option value="GOLCUK"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GOLCUK}">Gölcük</option>
-                                        <option value="KANDIRA"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KANDIRA}">Kandıra</option>
-                                        <option value="KARAMURSEL" th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARAMURSEL}">Karamürsel</option>
-                                        <option value="KARTEPE"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARTEPE}">Kartepe</option>
-                                        <option value="KORFEZ"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KORFEZ}">Körfez</option>
-                                    </select>
-                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
-                                </div>
-                            </div>
-                            <h4>Firmanın İnsan Kaynakları Sorumlusu</h4>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="insanKaynaklariSorumlusuAdi">Adı :</label>
-                                    <input type="text" name="insanKaynaklariSorumlusuAdi" id="insanKaynaklariSorumlusuAdi" th:value="${firma.insanKaynaklariSorumlusuAdi}" />
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="insanKaynaklariSorumlusuTelefonu">Telefonu :</label>
-                                    <input type="number" name="insanKaynaklariSorumlusuTelefonu" id="insanKaynaklariSorumlusuTelefonu" th:value="${firma.insanKaynaklariSorumlusuTelefonu}" />
-                                </div>
-                            </div>
+                        <div class="custom-file">
+                            <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
+                            <label class="custom-file-label" for="resim">Dosya Seçin</label>
                         </div>
+                        <input type="hidden" name="resimUrl" id="resimUrl" th:value="${firma.resimUrl}"/>
 
-                        <div class="form-submit">
-                            <input type="reset" value="Temizle" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Kaydet" class="submit" name="submit" id="submit" />
-                        </div>
+                        <script>
+                            var loadFile = function(event) {
+                                var output = document.getElementById('output');
+                                output.src = URL.createObjectURL(event.target.files[0]);
+                            };
 
-                        <input type="hidden" name="id" id="id" th:value="${firma.id}"/>
+                            $(".custom-file-input").on("change", function() {
+                                var fileName = $(this).val().split("\\").pop();
+                                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                            });
+                        </script>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="email"> Email :</label>
+                        <input class="form-control" type="email" name="email" id="email" th:value="${firma.email}">
+                    </div>
+
+                    <div class="col" th:unless="${firma.password}">
+                        <label for="password">Şifre (En az 4 karekter):</label>
+                        <input class="form-control" type="password" name="password" id="password" th:value="${firma.password}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col ">
+                        <label for="sicil">Sicil :</label>
+                        <input class="form-control" type="number" name="sicil" id="sicil" th:value="${firma.sicil}" />
+                    </div>
+
+                    <div class="col ">
+                        <label for="adi">Firmanın Adı :</label>
+                        <input class="form-control" type="text" name="adi" id="adi" th:value="${firma.adi}" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col ">
+                        <label for="ilce">İlçe :</label>
+                        <select  class="custom-select" name="ilce" id="ilce" th:value="${firma.ilce}">
+                            <option disabled selected value> İlçe Seçin </option>
+                            <option value="IZMIT"      th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).IZMIT}">İzmit</option>
+                            <option value="BASISKELE"  th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).BASISKELE}">Başiskele</option>
+                            <option value="CAYIROVA"   th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).CAYIROVA}">Çayırova</option>
+                            <option value="DARICA"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DARICA}">Darıca</option>
+                            <option value="DERINCE"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DERINCE}">Derince</option>
+                            <option value="DILOVASI"   th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DILOVASI}">Dilovası</option>
+                            <option value="GEBZE"      th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GEBZE}">Gebze</option>
+                            <option value="GOLCUK"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GOLCUK}">Gölcük</option>
+                            <option value="KANDIRA"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KANDIRA}">Kandıra</option>
+                            <option value="KARAMURSEL" th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARAMURSEL}">Karamürsel</option>
+                            <option value="KARTEPE"    th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARTEPE}">Kartepe</option>
+                            <option value="KORFEZ"     th:selected="${firma.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KORFEZ}">Körfez</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col ">
+                        <label for="faaliyetAlanlari">Faaliyet Alanları :</label>
+                        <textarea class="form-control" type="text" name="faaliyetAlanlari" id="faaliyetAlanlari" th:value="${firma.faaliyetAlanlari}"></textarea>
+                    </div>
+                </div>
+                <br>
+                <h4>Firmanın İnsan Kaynakları Sorumlusu</h4>
+                <div class="form-row">
+                    <div class="col ">
+                        <label for="insanKaynaklariSorumlusuAdi">Adı :</label>
+                        <input class="form-control" type="text" name="insanKaynaklariSorumlusuAdi" id="insanKaynaklariSorumlusuAdi" th:value="${firma.insanKaynaklariSorumlusuAdi}">
+                    </div>
 
 
-                    </form>
+                    <div class="col ">
+                        <label for="insanKaynaklariSorumlusuTelefonu">Telefonu :</label>
+                        <input class="form-control" type="number" name="insanKaynaklariSorumlusuTelefonu" id="insanKaynaklariSorumlusuTelefonu" th:value="${firma.insanKaynaklariSorumlusuTelefonu}">
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <br>
+            <div class="col text-right">
+                <input type="reset" value="Temizle" class="btn btn-secondary" name="reset" id="reset">
+                <input type="submit" value="Kaydet" class="btn btn-primary" name="submit" id="submit">
+            </div>
+
+            <input type="hidden" name="id" id="id" th:value="${firma.id}">
+        </form>
     </div>
-</div>
 
 </body>
 </html>

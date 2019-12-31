@@ -6,39 +6,49 @@
       layout:decorator="layout">
 
 <head>
-    <title>Firma Kayıt Formu</title>
+    <title>okul  Kayıt Formu</title>
 </head>
 <body>
 <div layout:fragment="content">
-    <div class="main">
-        <div class="container">
-            <div>
-                <div>
-                    <form  th:action="@{/okul}" method="POST" class="register-form" id="register-form">
-                        <div>
-                            <h2>Okul Kayıt Formu</h2>
-                            <div class="form-row">
 
-                                <div class="form-group">
+                    <form  th:action="@{/okul}" method="POST" class="register-form" id="register-form">
+
+                            <h2>Okul Kayıt Formu</h2>
+
+                            <div class="form-row">
+                                <div class="col">
                                     <label for="adi">Adı :</label>
-                                    <input type="text" name="adi" id="adi" th:value="${okul.adi}" />
+                                    <input class="form-control" type="text" name="adi" id="adi" th:value="${okul.adi}" />
+                                </div>
+
+                                <div class="col ">
+                                    <label for="ilce">İlçe :</label>
+                                    <select  class="custom-select" name="ilce" id="ilce" th:value="${okul .ilce}">
+                                        <option disabled selected value> İlçe Seçin </option>
+                                        <option value="IZMIT"      th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).IZMIT}">İzmit</option>
+                                        <option value="BASISKELE"  th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).BASISKELE}">Başiskele</option>
+                                        <option value="CAYIROVA"   th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).CAYIROVA}">Çayırova</option>
+                                        <option value="DARICA"     th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DARICA}">Darıca</option>
+                                        <option value="DERINCE"    th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DERINCE}">Derince</option>
+                                        <option value="DILOVASI"   th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).DILOVASI}">Dilovası</option>
+                                        <option value="GEBZE"      th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GEBZE}">Gebze</option>
+                                        <option value="GOLCUK"     th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).GOLCUK}">Gölcük</option>
+                                        <option value="KANDIRA"    th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KANDIRA}">Kandıra</option>
+                                        <option value="KARAMURSEL" th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARAMURSEL}">Karamürsel</option>
+                                        <option value="KARTEPE"    th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KARTEPE}">Kartepe</option>
+                                        <option value="KORFEZ"     th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).KORFEZ}">Körfez</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="form-submit">
-                            <input type="reset" value="Temizle" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Kaydet" class="submit" name="submit" id="submit" />
+                        <br>
+                        <div class="col text-right">
+                            <input type="reset" value="Temizle" class="btn btn-secondary" name="reset" id="reset">
+                            <input type="submit" value="Kaydet" class="btn btn-primary" name="submit" id="submit">
                         </div>
 
                         <input type="hidden" name="id" id="id" th:value="${okul.id}"/>
                     </form>
-                </div>
-            </div>
-        </div>
 
-    </div>
-</div>
 
 </body>
 </html>
