@@ -1,6 +1,6 @@
 package net.javaguides.springbootsecurity.web;
 
-import lombok.var;
+
 import net.javaguides.springbootsecurity.entities.Ogrenci;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;

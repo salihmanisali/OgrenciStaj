@@ -31,4 +31,3 @@ insert into user_role(user_id, role_id) values
 (-3,3),
 (-4,4),
 (-5,5);
-

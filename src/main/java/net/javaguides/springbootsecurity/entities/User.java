@@ -17,8 +17,8 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name="users")
 @Data
+@Table(name="users",uniqueConstraints={@UniqueConstraint(columnNames={"email"})})
 public class User
 {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
@@ -41,11 +41,12 @@ public class User
 	@Column(nullable=false, unique=true)
 	@NotEmpty
 	@Email(message="{errors.invalid_email}")
+	@Size(min=3,max = 50)
 	private String email;
 
 	@Column(nullable=false)
 	@NotEmpty
-	@Size(min=4)
+	@Size(min=4,max = 100)
 	private String password;
 
 	@ManyToMany(cascade=CascadeType.MERGE)

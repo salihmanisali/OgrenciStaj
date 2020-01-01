@@ -1,6 +1,5 @@
 package net.javaguides.springbootsecurity.web;
 
-import lombok.var;
 import net.javaguides.springbootsecurity.entities.Okul;
 import net.javaguides.springbootsecurity.repositories.OkulRepository;
 import org.springframework.beans.factory.annotation.Autowired;
