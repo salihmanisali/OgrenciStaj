@@ -54,19 +54,19 @@
                 <div class="form-row">
                     <div class="col ">
                         <label for="email"> Email :</label>
-                        <input class="form-control" type="email" name="email" id="email" th:value="${ogrenci.email}" />
+                        <input class="form-control" type="email" name="email" id="email" placeholder="E-mail" th:value="${ogrenci.email}" />
                     </div>
 
                     <div class="col " th:unless="${ogrenci.password}">
                         <label for="password">Şifre (En az 4 karekter):</label>
-                        <input class="form-control" type="password" name="password" id="password" th:value="${ogrenci.password}" />
+                        <input class="form-control" type="password" name="password" id="password" placeholder="Şifre"  th:value="${ogrenci.password}" />
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col ">
                         <label for="tcKimlikNo">TC Kimlik No :</label>
-                        <input class="form-control" type="number" name="tcKimlikNo" id="tcKimlikNo" th:value="${ogrenci.tcKimlikNo}"/>
+                        <input class="form-control" type="number" name="tcKimlikNo" id="tcKimlikNo" placeholder="TC Kimlik No" required="true" th:value="${ogrenci.tcKimlikNo}"/>
                     </div>
                     <div class="col ">
                         <label for="adi">Adı Soyadı :</label>
@@ -91,14 +91,14 @@
 
                 <div class="form-row">
                     <div class="col ">
-                        <label for="ERKEK">Cinsiyet :</label>
-                        <div class="form-check form-check-inline">
+                        <label for="CINSIYET">Cinsiyet :</label><br>
+                        <div class="form-check form-check-inline" id="CINSIYET">
                             <input class="form-check-input" type="radio" name="cinsiyet" id="ERKEK" value="ERKEK" th:checked="${ogrenci.cinsiyet==T(net.javaguides.springbootsecurity.enums.Cinsiyet).ERKEK}" />
                             <label class="form-check-label" for="ERKEK">Erkek</label>
                         </div>
                         <div  class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="cinsiyet" id="KADIN" value="KADIN" th:checked="${ogrenci.cinsiyet==T(net.javaguides.springbootsecurity.enums.Cinsiyet).KADIN}" />
-                            <label lass="form-check-label" for="KADIN">Kadın</label>
+                            <label class="form-check-label" for="KADIN">Kadın</label>
                         </div>
                     </div>
 
@@ -448,14 +448,17 @@
             </div>
 
                 <br>
-                <div class="col text-right">
+            <div class="col text-right btngroup ">
                     <input type="reset" value="Temizle" class="btn btn-secondary" name="reset" id="reset">
                     <input type="submit" value="Kaydet" class="btn btn-primary" name="submit" id="submit">
-                </div>
 
+            </div>
             <input  type="hidden" name="id" id="id" th:value="${ogrenci.id}"/>
         </div>
-
+        <br>
+        <br>
+        <br>
+        <br>
     </form>
 </div>
 
