@@ -111,11 +111,11 @@ public class OgrenciController
 			ogrenciEski = ogrenciRepository.findById(ogrenci.getId()).orElse(null);
 
 		if(ogrenciEski!=null) {
-			var password = ogrenciEski.getPassword();
-			var roles = ogrenciEski.getRoles();
 
-			ogrenci.setPassword(password);
-			ogrenci.setRoles(roles);
+			ogrenci.setPassword(ogrenciEski.getPassword());
+			ogrenci.setRoles(ogrenciEski.getRoles());
+			ogrenci.setCvUrl(ogrenciEski.getCvUrl());
+			ogrenci.setResimUrl(ogrenciEski.getResimUrl());
 
 		}else{
 			ogrenci.setPassword(passwordEncoder.encode(ogrenci.getPassword()));

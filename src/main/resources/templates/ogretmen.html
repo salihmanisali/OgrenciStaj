@@ -20,7 +20,7 @@
                             <br>
                             <div class="form-row">
                                 <div class="col-md-4">
-                                    <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="@{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}"/>
+                                    <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="(${ogretmen.id}!=null) ? @{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}:@{/assets/images/user.png}"/>
 
                                     <div class="custom-file">
                                         <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>

@@ -18,9 +18,9 @@
                 <br>
                 <div class="form-row">
                     <div class="col-md-4">
-                                <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="@{/upload/{dosyaTuru}/{id}(id=${ogrenci.id},dosyaTuru='OGRENCI')}"/>
+                        <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="(${ogrenci.resimUrl}!=null) ? @{/upload/{dosyaTuru}/{id}(id=${ogrenci.id},dosyaTuru='OGRENCI')}:@{/assets/images/user.png}"/>
 
-                                <div class="custom-file">
+                        <div class="custom-file">
                                     <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
                                     <label class="custom-file-label" for="resim">Resim Yükle</label>
                                 </div>
@@ -29,7 +29,8 @@
                     </div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                                <a href="#" ><i class="fa fa-user-o"> Özgeçmiş indir</i></a>
+                                <a href="#" th:attr="download=${ogrenci.id}+'.cv.pdf'" th:if="${ogrenci.cvUrl}" th:href="@{/upload/{dosyaTuru}/{id}(id=${ogrenci.id},dosyaTuru='CV')}" > <i class="fa fa-user-o"> Özgeçmiş indir</i></a>
+
 
                                 <div class="custom-file">
                                     <input class="custom-file-input" type="file" name="cv" id="cv" accept="pdf"/>
