@@ -28,6 +28,7 @@ public class WebConfig implements WebMvcConfigurer
 		registry.addViewController("/").setViewName("index");
 		registry.addViewController("/about").setViewName("about");
         registry.addViewController("/login").setViewName("login");
+        registry.addViewController("/users").setViewName("users");
 
         registry.addViewController("/ogrenci").setViewName("ogrenci");
         registry.addViewController("/ogrenciler").setViewName("ogrenciler");
@@ -49,7 +50,7 @@ public class WebConfig implements WebMvcConfigurer
         factory.setValidationMessageSource(messageSource);
         return factory;
     }
-	
+
     @Bean
 	public SpringSecurityDialect securityDialect() {
 	    return new SpringSecurityDialect();

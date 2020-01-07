@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
       layout:decorator="layout">
 
 <head>
@@ -18,12 +17,12 @@
                             <div class="form-row">
                                 <div class="col">
                                     <label for="adi">Adı :</label>
-                                    <input class="form-control" type="text" name="adi" id="adi" th:value="${okul.adi}" />
+                                    <input class="form-control" type="text" name="adi" id="adi" th:value="${okul.adi}" required="true"/>
                                 </div>
 
                                 <div class="col ">
                                     <label for="ilce">İlçe :</label>
-                                    <select  class="custom-select" name="ilce" id="ilce" th:value="${okul .ilce}">
+                                    <select  class="custom-select" name="ilce" id="ilce" th:value="${okul .ilce}" required="true">
                                         <option disabled selected value> İlçe Seçin </option>
                                         <option value="IZMIT"      th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).IZMIT}">İzmit</option>
                                         <option value="BASISKELE"  th:selected="${okul .ilce==T(net.javaguides.springbootsecurity.enums.Ilce).BASISKELE}">Başiskele</option>

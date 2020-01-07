@@ -5,7 +5,7 @@
 	layout:decorator="layout">
 
 <head>
-<title>User Home</title>
+<title>Okullar</title>
 </head>
 <body>
 	<div layout:fragment="content">
@@ -30,9 +30,11 @@
 					<td th:text="${okul.id}"></td>
 					<td th:text="${okul.adi}"></td>
 					<td th:text="${okul.ilce}"></td>
-					<td>
-						<a th:href="@{/okul/{id}(id=${okul.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2"></i> Düzenle </a>
-						<a th:href="@{/okul/delete/{id}(id=${okul.id})}" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</a>
+					<td  align="right">
+						<div class="btn-group" role="group">
+							<a th:href="@{/okul/delete/{id}(id=${okul.id})}" class="btn btn-danger"><i class="fa fa-trash">&nbsp;Sil</i> </a>
+							<a th:href="@{/okul/{id}(id=${okul.id})}" class="btn btn-primary"><i class="fa fa-edit ml-2">&nbsp;Düzenle</i>  </a>
+						</div>
 					</td>
 				</tr>
 				</tbody>

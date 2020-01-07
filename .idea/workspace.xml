@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5111e5e-6e54-4e8e-b04e-18991baad1cc" name="Default Changelist" comment="java 13">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/building.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d5111e5e-6e54-4e8e-b04e-18991baad1cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sorular" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogretmen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/OgrenciRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/OgrenciRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/OgretmenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/OgretmenRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/firma.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/firma.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/firmalar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrenciler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmenler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/okul.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/okul.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/okullar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/okullar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogretmen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogretmen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/repositories/OgrenciRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/repositories/OgrenciRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/repositories/OgretmenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/repositories/OgretmenRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ogrenci.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ogrenci.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ogrenciler.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ogrenciler.html" afterDir="false" />
@@ -84,25 +94,26 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\images" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\images" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\java\net\javaguides\springbootsecurity\helpers" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\js" />
     </key>
@@ -186,6 +197,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -286,7 +302,9 @@
       <workItem from="1578340225604" duration="7034000" />
       <workItem from="1578397487240" duration="7817000" />
       <workItem from="1578406646465" duration="288000" />
-      <workItem from="1578406954465" duration="243000" />
+      <workItem from="1578406954465" duration="1152000" />
+      <workItem from="1578417320839" duration="6852000" />
+      <workItem from="1578424894059" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="ilk komit">
       <created>1576066439890</created>
@@ -428,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578348722294</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="img default">
+      <created>1578407467572</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1578407467572</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -496,7 +521,8 @@
     <MESSAGE value="lüzumsuz dosyaların çıkarılması" />
     <MESSAGE value="style çalışması" />
     <MESSAGE value="java 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="java 13" />
+    <MESSAGE value="img default" />
+    <option name="LAST_COMMIT_MESSAGE" value="img default" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="70" key="#Notifications" timestamp="1578397508024">
@@ -511,82 +537,94 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="222" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1578406166718" />
-    <state x="392" y="6" key="CommitChangelistDialog2" timestamp="1578348799304">
+    <state x="533" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578421035420">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="392" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578348799304" />
-    <state width="414" height="466" key="DebuggerActiveHint" timestamp="1578405170380">
+    <state x="533" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1578421035420" />
+    <state x="392" y="6" key="CommitChangelistDialog2" timestamp="1578407466119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="414" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1578405170380" />
+    <state x="392" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578407466119" />
+    <state width="426" height="466" key="DebuggerActiveHint" timestamp="1578421622703">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="426" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1578421622703" />
     <state x="146" y="69" key="DiffContextDialog" timestamp="1578348784930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="146" y="69" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1578348784930" />
-    <state width="1023" height="378" key="GridCell.Tab.0.bottom" timestamp="1578407209590">
+    <state width="1023" height="378" key="GridCell.Tab.0.bottom" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578407209590" />
-    <state width="1023" height="378" key="GridCell.Tab.0.center" timestamp="1578407209589">
+    <state width="1023" height="378" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.0.center" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578407209589" />
-    <state width="1023" height="378" key="GridCell.Tab.0.left" timestamp="1578407209589">
+    <state width="1023" height="378" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.0.left" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578407209589" />
-    <state width="1023" height="378" key="GridCell.Tab.0.right" timestamp="1578407209590">
+    <state width="1023" height="378" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.0.right" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578407209590" />
-    <state width="1491" height="255" key="GridCell.Tab.1.bottom" timestamp="1578406627262">
+    <state width="1023" height="378" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.1.bottom" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="255" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578406627262" />
-    <state width="1491" height="255" key="GridCell.Tab.1.center" timestamp="1578406627262">
+    <state width="1023" height="378" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.1.center" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="255" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1578406627262" />
-    <state width="1491" height="255" key="GridCell.Tab.1.left" timestamp="1578406627262">
+    <state width="1023" height="378" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.1.left" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="255" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1578406627262" />
-    <state width="1491" height="255" key="GridCell.Tab.1.right" timestamp="1578406627262">
+    <state width="1023" height="378" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.1.right" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="255" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1578406627262" />
-    <state width="1023" height="378" key="GridCell.Tab.2.bottom" timestamp="1578406627258">
+    <state width="1023" height="378" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.2.bottom" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578406627258" />
-    <state width="1023" height="378" key="GridCell.Tab.2.center" timestamp="1578406627258">
+    <state width="1023" height="378" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.2.center" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1578406627258" />
-    <state width="1023" height="378" key="GridCell.Tab.2.left" timestamp="1578406627258">
+    <state width="1023" height="378" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.2.left" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1578406627258" />
-    <state width="1023" height="378" key="GridCell.Tab.2.right" timestamp="1578406627258">
+    <state width="1023" height="378" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
+    <state width="1023" height="378" key="GridCell.Tab.2.right" timestamp="1578425386461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1578406627258" />
+    <state width="1023" height="378" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1578425386461" />
     <state x="548" y="123" key="RollbackChangesDialog" timestamp="1578406715384">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578406715384" />
-    <state x="244" y="0" key="SettingsEditor" timestamp="1578407196512">
+    <state x="244" y="0" key="SettingsEditor" timestamp="1578424874559">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="244" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578407196512" />
+    <state x="244" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578424874559" />
     <state x="329" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1578402469120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="329" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1578402469120" />
-    <state x="449" y="144" width="638" height="536" key="find.popup" timestamp="1578406103001">
+    <state x="449" y="144" width="638" height="536" key="find.popup" timestamp="1578423868626">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="144" width="638" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578406103001" />
+    <state x="449" y="144" width="638" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578423868626" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="ogretmenRepository.findById(5)" language="JAVA" />
+        <watch expression="ogretmen.getId()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OgrenciStaj$SpringbootThymeleafSecurityDemoApplication.ic" NAME="SpringbootThymeleafSecurityDemoApplication Coverage Results" MODIFIED="1576843891678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

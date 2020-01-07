@@ -67,6 +67,16 @@ public class FirmaController {
 		return "firma";
 	}
 
+	@GetMapping("/firma/delete/{id}")
+	public String deleteFirma(@PathVariable("id") Integer id, Model model) {
+		Firma firma = firmaRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + id));
+
+		firmaRepository.delete(firma);
+		model.addAttribute("firmalar", firmaRepository.findAll());
+		return "/firmalar";
+	}
+
 	@GetMapping("/firmahome")
 	public String firmahome(Model model, Principal principal) {
 		var firma = firmaRepository.findByEmail(principal.getName())
@@ -80,15 +90,6 @@ public class FirmaController {
 	}
 
 
-	@GetMapping("/firma/delete/{id}")
-	public String deleteFirma(@PathVariable("id") Integer id, Model model) {
-		Firma firma = firmaRepository.findById(id)
-				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + id));
-
-		firmaRepository.delete(firma);
-		model.addAttribute("firmalar", firmaRepository.findAll());
-		return "/firmalar";
-	}
 
 	@PostMapping("/firmahome")
 	public String saveFirmaHome(Firma firma){
@@ -111,11 +112,9 @@ public class FirmaController {
 			firmaEski = firmaRepository.findById(firma.getId()).orElse(null);
 
 		if(firmaEski!=null) {
-			var password = firmaEski.getPassword();
-			var roles = firmaEski.getRoles();
-
-			firma.setPassword(password);
-			firma.setRoles(roles);
+			firma.setPassword(firmaEski.getPassword());
+			firma.setRoles(firmaEski.getRoles());
+			firma.setResimUrl(firmaEski.getResimUrl());
 
 		}else{
 			firma.setPassword(passwordEncoder.encode(firma.getPassword()));

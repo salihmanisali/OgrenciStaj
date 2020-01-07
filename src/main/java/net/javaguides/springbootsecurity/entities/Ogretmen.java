@@ -3,6 +3,7 @@ package net.javaguides.springbootsecurity.entities;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author Salih Efe
@@ -18,6 +19,7 @@ public class Ogretmen  extends User
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_okul")
+	@NotNull
 	private Okul okul;
 
 }

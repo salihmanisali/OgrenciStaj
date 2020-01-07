@@ -2,102 +2,91 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
       layout:decorator="layout">
 
 <head>
     <title>Öğretmen Kayıt Formu</title>
 </head>
 <body>
-<div layout:fragment="content">
-    <div class="main">
+    <div layout:fragment="content">
+        <div class="main">
+            <form  th:action="${ogretmenuser} ? @{/ogretmenhome} : @{/ogretmen}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
 
-                    <form  th:action="@{/ogretmen}" th:object="${ogretmen}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
-                        <div>
+                            <div>
 
-                            <h2>Öğretmen Kayıt Formu</h2>
+                                <h2>Öğretmen Kayıt Formu</h2>
 
-                            <br>
-                            <div class="form-row">
-                                <div class="col-md-4">
-                                    <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="(${ogretmen.id}!=null) ? @{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}:@{/assets/images/user.png}"/>
+                                <br>
+                                <div class="form-row">
+                                    <div class="col-md-9">
 
-                                    <div class="custom-file">
-                                        <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
-                                        <label class="custom-file-label" for="resim">Dosya Seçin</label>
+                                            <div class="col ">
+                                                <label for="email"> Email :</label>
+                                                <input class="form-control" type="email" name="email" id="email" th:value="${ogretmen.email}" required="true"/>
+                                            </div>
+                                            <div class="col "  th:unless="${ogretmen.password}">
+                                                <label for="password">Şifre (En az 4 karekter):</label>
+                                                <input class="form-control" type="password" name="password" id="password" th:value="${ogretmen.password}" required="true"/>
+                                            </div>
+                                            <div class="col ">
+                                                <label for="adi">Adı Soyadı:</label>
+                                                <input class="form-control" type="text" name="adi" id="adi" th:value="${ogretmen.adi}" required="true"/>
+                                            </div>
+                                            <div class="col ">
+                                                <label for="telefon">Telefonu :</label>
+                                                <input class="form-control" type="number" name="telefon" id="telefon"  th:value="${ogretmen.telefon}"/>
+                                            </div>
+                                            <div class="col ">
+                                                <label for="okul">Okulu :</label>
+                                                <div class="select-list">
+                                                    <select class="custom-select" name="okul" id="okul" required="true">
+                                                        <option disabled selected value> Okul Seçin </option>
+                                                        <option
+                                                                th:each="okul: ${okullar}"
+                                                                th:value="${okul.id}"
+                                                                th:text="${okul.adi}"
+                                                                th:selected="${ogretmen.okul == null? null : okul.id==ogretmen.okul.id}"
+                                                        >okul</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                     </div>
-                                    <input type="hidden" name="resimUrl" id="resimUrl" th:value="${ogretmen.resimUrl}"/>
 
-                                    <script>
-                                        var loadFile = function(event) {
-                                            var output = document.getElementById('output');
-                                            output.src = URL.createObjectURL(event.target.files[0]);
-                                        };
+                                    <div class="col-md-3">
+                                        <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="(${ogretmen.id}!=null) ? @{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}:@{/assets/images/user.png}"/>
 
-                                        $(".custom-file-input").on("change", function() {
-                                            var fileName = $(this).val().split("\\").pop();
-                                            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-                                        });
-                                    </script>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
+                                        <div class="custom-file">
+                                            <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
+                                            <label class="custom-file-label" for="resim">Dosya Seçin</label>
+                                        </div>
+                                        <input type="hidden" name="resimUrl" id="resimUrl" th:value="${ogretmen.resimUrl}"/>
 
-                            <div class="form-row">
-                                <div class="col ">
-                                    <label for="email"> Email :</label>
-                                    <input class="form-control" type="email" name="email" id="email" th:value="${ogretmen.email}" />
-                                </div>
+                                        <script>
+                                            var loadFile = function(event) {
+                                                var output = document.getElementById('output');
+                                                output.src = URL.createObjectURL(event.target.files[0]);
+                                            };
 
-                                <div class="col "  th:unless="${ogretmen.password}">
-                                    <label for="password">Şifre (En az 4 karekter):</label>
-                                    <input class="form-control" type="password" name="password" id="password" th:value="${ogretmen.password}"/>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col ">
-                                    <label for="adi">Adı Soyadı:</label>
-                                    <input class="form-control" type="text" name="adi" id="adi" th:value="${ogretmen.adi}"/>
-                                </div>
-
-                                <div class="col ">
-                                    <label for="telefon">Telefonu :</label>
-                                    <input class="form-control" type="number" name="telefon" id="telefon"  th:value="${ogretmen.telefon}"/>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col ">
-                                    <label for="okul">Okulu :</label>
-                                    <div class="select-list">
-                                        <select class="custom-select" name="okul" id="okul">
-                                            <option disabled selected value> Okul Seçin </option>
-                                            <option
-                                                    th:each="okul: ${okullar}"
-                                                    th:value="${okul.id}"
-                                                    th:text="${okul.adi}"
-                                                    th:selected="${ogretmen.okul == null? null : okul.id==ogretmen.okul.id}"
-                                            >okul</option>
-                                        </select>
+                                            $(".custom-file-input").on("change", function() {
+                                                var fileName = $(this).val().split("\\").pop();
+                                                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                                            });
+                                        </script>
                                     </div>
                                 </div>
+                            <br>
+                            <div class="col text-right btngroup">
+                                <input type="reset" value="Temizle" class="btn btn-secondary" name="reset" id="reset">
+                                <input type="submit" value="Kaydet" class="btn btn-primary" name="submit" id="submit">
                             </div>
-                        </div>
 
-                        <br>
-                        <div class="col text-right btngroup">
-                            <input type="reset" value="Temizle" class="btn btn-secondary" name="reset" id="reset">
-                            <input type="submit" value="Kaydet" class="btn btn-primary" name="submit" id="submit">
-                        </div>
-
-                        <input type="hidden" name="id" id="id" th:value="${ogretmen.id}"/>
-                    </form>
+                            <input type="hidden" name="id" id="id" th:value="${ogretmen.id}"/>
+                        </form>
 
 
 
+        </div>
     </div>
-</div>
 
 </body>
 </html>

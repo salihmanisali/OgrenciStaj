@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.nio.file.Path;
+import java.security.Principal;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -82,6 +83,18 @@ public class OgretmenController
 		model.addAttribute("ogretmenler", ogretmenRepository.findAll());
 		return "/ogretmenler";
 	}
+	@GetMapping("/ogretmenhome")
+	public String ogretmenhome(Model model, Principal principal) {
+		var ogretmen = ogretmenRepository.findByEmail(principal.getName())
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + principal.getName()));
+
+		if (ogretmen != null)
+			model.addAttribute("ogretmen", ogretmen);
+
+		model.addAttribute("okullar", okulRepository.findAll());
+		model.addAttribute("ogretmenuser",true);
+		return "ogretmen";
+	}
 
 	@PostMapping("/ogretmenhome")
 	public String saveOgretmenHome(Ogretmen ogretmen){
@@ -104,13 +117,12 @@ public class OgretmenController
 			ogretmenEski = ogretmenRepository.findById(ogretmen.getId()).orElse(null);
 
 		if(ogretmenEski!=null) {
-			var password = ogretmenEski.getPassword();
-			var roles = ogretmenEski.getRoles();
 
-			ogretmen.setPassword(password);
-			ogretmen.setRoles(roles);
-
-		}else{
+			ogretmen.setPassword(ogretmenEski.getPassword());
+			ogretmen.setRoles(ogretmenEski.getRoles());
+			ogretmen.setResimUrl(ogretmenEski.getResimUrl());
+		}
+		else{
 			ogretmen.setPassword(passwordEncoder.encode(ogretmen.getPassword()));
 
 			if(ogretmen.getRoles()==null) {

@@ -10,7 +10,7 @@
 <body>
 <div layout:fragment="content">
 
-    <form  th:action="@{/ogrenci}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
+    <form  th:action="${ogrenciuser} ? @{/ogrencihome} : @{/ogrenci}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
         <div class="col -row">
             <div>
                 <h2>Öğrenci Kayıt Formu</h2>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col ">
                         <label for="adi">Adı Soyadı :</label>
-                        <input class="form-control" type="text" name="adi" id="adi"th:value="${ogrenci.adi}"/>
+                        <input class="form-control" type="text" name="adi" id="adi"th:value="${ogrenci.adi}" placeholder="Adı Soyadı" required="true"/>
                     </div>
                 </div>
 

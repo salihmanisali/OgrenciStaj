@@ -1,6 +1,5 @@
 package net.javaguides.springbootsecurity.web;
 
-
 import net.javaguides.springbootsecurity.entities.Ogrenci;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.nio.file.Path;
+import java.security.Principal;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -71,13 +71,6 @@ public class OgrenciController
 		return "ogrenci";
 	}
 
-	@GetMapping("/ogrencihome")
-	public String ogrencihome(Model model)	{
-		Integer id = 1;
-
-		return ogrenciById(model,id);
-	}
-
 	@GetMapping("/ogrenci/delete/{id}")
 	public String deleteOgrenci(@PathVariable("id") Integer id, Model model) {
 		Ogrenci ogrenci = ogrenciRepository.findById(id)
@@ -87,6 +80,19 @@ public class OgrenciController
 		model.addAttribute("ogrenciler", ogrenciRepository.findAll());
 		return "/ogrenciler";
 	}
+
+	@GetMapping("/ogrencihome")
+	public String ogrencihome(Model model, Principal principal) {
+		var ogrenci = ogrenciRepository.findByEmail(principal.getName())
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + principal.getName()));
+
+		if (ogrenci != null)
+			model.addAttribute("ogrenci", ogrenci);
+
+		model.addAttribute("ogrenciuser",true);
+		return "ogrenci";
+	}
+
 
 	@PostMapping("/ogrencihome")
 	public String saveOgrenciHome(Ogrenci ogrenci){
