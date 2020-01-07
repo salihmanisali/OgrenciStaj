@@ -18,6 +18,28 @@
 
                                 <br>
                                 <div class="form-row">
+                                    <div class="col-md-3">
+                                        <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="(${ogretmen.id}!=null) ? @{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}:@{/assets/images/user.png}"/>
+
+                                        <div class="custom-file">
+                                            <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
+                                            <label class="custom-file-label" for="resim">Dosya Seçin</label>
+                                        </div>
+                                        <input type="hidden" name="resimUrl" id="resimUrl" th:value="${ogretmen.resimUrl}"/>
+
+                                        <script>
+                                            var loadFile = function(event) {
+                                                var output = document.getElementById('output');
+                                                output.src = URL.createObjectURL(event.target.files[0]);
+                                            };
+
+                                            $(".custom-file-input").on("change", function() {
+                                                var fileName = $(this).val().split("\\").pop();
+                                                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                                            });
+                                        </script>
+                                    </div>
+
                                     <div class="col-md-9">
 
                                             <div class="col ">
@@ -52,27 +74,6 @@
                                             </div>
                                     </div>
 
-                                    <div class="col-md-3">
-                                        <img  class="img-thumbnail rounded float-left" id="output" src="#" alt="image"  th:src="(${ogretmen.id}!=null) ? @{/upload/{dosyaTuru}/{id}(id=${ogretmen.id},dosyaTuru='OGRETMEN')}:@{/assets/images/user.png}"/>
-
-                                        <div class="custom-file">
-                                            <input class="custom-file-input" type="file" name="resim" id="resim" accept="image/*" onchange="loadFile(event)"/>
-                                            <label class="custom-file-label" for="resim">Dosya Seçin</label>
-                                        </div>
-                                        <input type="hidden" name="resimUrl" id="resimUrl" th:value="${ogretmen.resimUrl}"/>
-
-                                        <script>
-                                            var loadFile = function(event) {
-                                                var output = document.getElementById('output');
-                                                output.src = URL.createObjectURL(event.target.files[0]);
-                                            };
-
-                                            $(".custom-file-input").on("change", function() {
-                                                var fileName = $(this).val().split("\\").pop();
-                                                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-                                            });
-                                        </script>
-                                    </div>
                                 </div>
                             <br>
                             <div class="col text-right btngroup">

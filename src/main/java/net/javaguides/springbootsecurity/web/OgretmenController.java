@@ -52,10 +52,6 @@ public class OgretmenController
 	@GetMapping("/ogretmen")
 	public String ogretmen(Model model)	{
 		Ogretmen ogretmen = new Ogretmen();
-//		ogretmen.setAdi("Salih");
-//		ogretmen.setEmail("ff");
-//		ogretmen = ogretmenRepository.save(ogretmen);
-
 		model.addAttribute("ogretmen",ogretmen);
 		model.addAttribute("okullar", okulRepository.findAll());
 		return "ogretmen";
