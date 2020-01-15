@@ -93,7 +93,7 @@
 					<a class="nav-link" th:href="@{/ogrencilist}"><i class="fa fa-graduation-cap">&nbsp;Öğrenciler</i></a>
 				</li>
 				<li class="nav-item"  sec:authorize="hasRole('ROLE_FIRMA')">
-					<a class="nav-link" th:href="@{/ogrenciFirmaHome}"><i class="fa fa-star">&nbsp;Favoriler</i></a>
+					<a class="nav-link" th:href="@{/ogrenciByFirma}"><i class="fa fa-star">&nbsp;Favoriler</i></a>
 				</li>
 
 				<!---------------------------------------------------------------------------------->
@@ -125,12 +125,30 @@
 	<script>
 		$(document).ready( function () {
 			$('#table').DataTable({
+				stateSave: true,
 						"language": {
 							"url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Turkish.json"
 						}
 					}
 			);
 		} );
+
+		$(document).ready(function () {
+			$("form[id^='favori']").on('submit', function(e) {
+				e.preventDefault();
+				$.ajax({
+					url : $(this).attr('action') || window.location.pathname,
+					type: "POST",
+					data: $(this).serialize(),
+					success: function (data) {
+						$("#row"+data).css({"background-color":"gray"})
+					},
+					error: function (jXHR, textStatus, errorThrown) {
+						alert(errorThrown);
+					}
+				});
+			});
+		});
 	</script>
 </body>
 </html>

@@ -18,7 +18,6 @@ import java.util.List;
 @Data
 public class Ogrenci extends User
 {
-
 	@Column(length = 11)
 	private Long tcKimlikNo;
 
@@ -291,4 +290,6 @@ public class Ogrenci extends User
 
 	@Column(length = 300)
 	private String cvUrl;
+
+
 }

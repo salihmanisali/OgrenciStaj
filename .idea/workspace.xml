@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5111e5e-6e54-4e8e-b04e-18991baad1cc" name="Default Changelist" comment="sayfa düzenlemeleri">
+    <list default="true" id="d5111e5e-6e54-4e8e-b04e-18991baad1cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/helpers/FakeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgretmenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/firma.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/firma.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogretmen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/OgrenciStajUygulamasi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/OgrenciStajUygulamasi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/entities/Ogrenci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/OgrenciRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/repositories/OgrenciRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/FirmaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/OgrenciController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springbootsecurity/web/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrenci.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ogrencilist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogrenci.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/entities/Ogrenci.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/security/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/security/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springbootsecurity/web/OgrenciController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,25 +101,26 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\images" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\images" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\java\net\javaguides\springbootsecurity\helpers" />
-      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\js" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="net.javaguides.springbootsecurity.repositories" />
-      <recent name="net.javaguides.springbootsecurity.enums" />
-      <recent name="net.javaguides.springbootsecurity.entities" />
-      <recent name="net.javaguides.springbootsecurity.web" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\css" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\images" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static}assets" />
       <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\js" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.javaguides.springbootsecurity.helpers" />
+      <recent name="net.javaguides.springbootsecurity.repositories" />
+      <recent name="net.javaguides.springbootsecurity.enums" />
+      <recent name="net.javaguides.springbootsecurity.entities" />
+      <recent name="net.javaguides.springbootsecurity.web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\templates" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\images" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\images" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\java\net\javaguides\springbootsecurity\helpers" />
+      <recent name="C:\Users\Salih Efe\Desktop\OgrenciStaj\src\main\resources\static\assets\bootstrap\js" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -277,7 +296,13 @@
       <workItem from="1578406646465" duration="288000" />
       <workItem from="1578406954465" duration="1152000" />
       <workItem from="1578417320839" duration="6852000" />
-      <workItem from="1578424894059" duration="2872000" />
+      <workItem from="1578424894059" duration="2890000" />
+      <workItem from="1578467406321" duration="1867000" />
+      <workItem from="1578481315397" duration="1634000" />
+      <workItem from="1578486363359" duration="6483000" />
+      <workItem from="1578838019396" duration="2094000" />
+      <workItem from="1578900860714" duration="596000" />
+      <workItem from="1579089638874" duration="4961000" />
     </task>
     <task id="LOCAL-00001" summary="ilk komit">
       <created>1576066439890</created>
@@ -433,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578425582449</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="sayfa düzenlemeleri">
+      <created>1578428870281</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1578428870281</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -524,10 +556,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="533" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1578421035420" />
-    <state x="392" y="6" key="CommitChangelistDialog2" timestamp="1578428856923">
+    <state x="573" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1578499396832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="392" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578428856923" />
+    <state x="573" y="128" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499396832" />
+    <state x="392" y="6" key="CommitChangelistDialog2" timestamp="1578428869563">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="392" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578428869563" />
     <state width="426" height="466" key="DebuggerActiveHint" timestamp="1578421622703">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -536,54 +572,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="146" y="69" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1578348784930" />
-    <state width="1023" height="378" key="GridCell.Tab.0.bottom" timestamp="1578427921733">
+    <state width="500" height="275" key="GridCell.Tab.0.bottom" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.0.center" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.0.bottom/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.0.center" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.0.left" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.0.center/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.0.left" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.0.right" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.0.left/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.0.right" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.1.bottom" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.0.right/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.1.bottom" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.1.center" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.1.bottom/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.1.center" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.1.left" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.1.center/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.1.left" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.1.right" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.1.left/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.1.right" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.2.bottom" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.1.right/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.2.bottom" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.2.center" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.2.bottom/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.2.center" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.2.left" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.2.center/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.2.left" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
-    <state width="1023" height="378" key="GridCell.Tab.2.right" timestamp="1578427921733">
+    <state width="1023" height="378" key="GridCell.Tab.2.left/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
+    <state width="500" height="275" key="GridCell.Tab.2.right" timestamp="1579097080439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1023" height="378" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1578427921733" />
+    <state width="1023" height="378" key="GridCell.Tab.2.right/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578499667813" />
+    <state width="500" height="275" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1579097080439" />
     <state x="548" y="123" key="RollbackChangesDialog" timestamp="1578406715384">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -596,10 +644,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="329" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1578402469120" />
-    <state x="449" y="144" width="638" height="536" key="find.popup" timestamp="1578423868626">
+    <state x="449" y="144" width="638" height="536" key="find.popup" timestamp="1578838666172">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="144" width="638" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578423868626" />
+    <state x="449" y="144" width="638" height="536" key="find.popup/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1578495103290" />
+    <state x="449" y="144" width="638" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578838666172" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1578838176454">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1578838176454" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1579096487062">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579096487062" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

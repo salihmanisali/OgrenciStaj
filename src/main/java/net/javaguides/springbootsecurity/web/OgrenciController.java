@@ -1,8 +1,11 @@
 package net.javaguides.springbootsecurity.web;
 
+import lombok.extern.log4j.Log4j2;
+import net.javaguides.springbootsecurity.entities.Firma;
 import net.javaguides.springbootsecurity.entities.Ogrenci;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
+import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import net.javaguides.springbootsecurity.security.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +26,14 @@ import java.util.LinkedList;
  *
  */
 @Controller
+@Log4j2
 public class OgrenciController
 {
 	@Autowired
 	private OgrenciRepository ogrenciRepository;
+
+	@Autowired
+	private FirmaRepository firmaRepository;
 
 	@Autowired
 	private StorageService storageService;
@@ -46,6 +53,17 @@ public class OgrenciController
 		return "ogrenciler";
 	}
 
+	@GetMapping("/ogrenciByFirma")
+	public String ogrenciByFirma(Model model,Principal principal)
+	{
+
+		Firma firma = firmaRepository.findByEmail(principal.getName())
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma"));
+
+		model.addAttribute("ogrenciler", firma.getOgrenciList());
+		return "ogrencilist";
+	}
+
 	@GetMapping("/ogrencilist")
 	public String ogrencilist(Model model)
 	{
@@ -53,8 +71,10 @@ public class OgrenciController
 		return "ogrencilist";
 	}
 
+
 	@GetMapping("/ogrenci")
 	public String ogrenci(Model model)	{
+
 		Ogrenci ogrenci=new Ogrenci();
 		model.addAttribute("ogrenci", ogrenci);
 		return "ogrenci";
@@ -62,6 +82,7 @@ public class OgrenciController
 
 	@GetMapping("/ogrenci/{id}")
 	public String ogrenciById(Model model, @PathVariable Integer id)	{
+
 		Ogrenci ogrenci = ogrenciRepository.findById(id)
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + id));
 

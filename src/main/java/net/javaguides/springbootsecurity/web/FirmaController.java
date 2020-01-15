@@ -8,6 +8,7 @@ import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import net.javaguides.springbootsecurity.security.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -140,7 +141,7 @@ public class FirmaController {
 	}
 
 	@PostMapping("/favori/{id}")
-	public String addtofavoriById(Model model, @PathVariable Integer id, Principal principal) {
+	public ResponseEntity addtofavoriById(Model model, @PathVariable Integer id, Principal principal) {
 		var firma = firmaRepository.findByEmail(principal.getName())
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + principal.getName()));
 
@@ -158,7 +159,7 @@ public class FirmaController {
 
 		ogrenciRepository.save(ogrenci);
 
-		return "redirect:/ogrencilist";
+		return ResponseEntity.ok().body(ogrenci.getId().toString());
 	}
 
 

@@ -1,5 +1,6 @@
 package net.javaguides.springbootsecurity.security;
 
+import lombok.extern.log4j.Log4j2;
 import net.javaguides.springbootsecurity.entities.Role;
 import net.javaguides.springbootsecurity.entities.User;
 import net.javaguides.springbootsecurity.repositories.RoleRepository;
@@ -21,6 +22,7 @@ import java.util.Collection;
  */
 @Service
 @Transactional
+@Log4j2
 public class CustomUserDetailsService implements UserDetailsService {
 
 	@Autowired
@@ -31,6 +33,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+		log.info(userName+" - loadUserByUsername");
 		User user = userRepository.findByEmail(userName)
 				.orElseThrow(() -> new UsernameNotFoundException("Email " + userName + " not found"));
 		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),

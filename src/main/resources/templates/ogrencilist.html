@@ -27,12 +27,12 @@
 				</tr>
 				</thead>
 				<tbody>
-				<tr th:each="ogrenci: ${ogrenciler}"  >
+				<tr th:each="ogrenci: ${ogrenciler}"  th:attr="id='row'+${ogrenci.id}">
 					<td th:text="${ogrenci.id}"></td>
 					<td>
-						<div th:if="${ogrenci}">
-							<img id="output" src="#" alt="image" height="160" width="120" th:src="@{/upload/{dosyaTuru}/{id}(id=${ogrenci.id},dosyaTuru='OGRENCI')}"/>
-						</div>
+						<a th:href="@{/ogrenci/{id}(id=${ogrenci.id})}" th:target="_blank">
+							<img id="output" src="#" alt="image" height="80" width="60" th:src="@{/upload/{dosyaTuru}/{id}(id=${ogrenci.id},dosyaTuru='OGRENCI')}"/>
+						</a>
 					</td>
 					<td th:text="${ogrenci.adi}"></td>
 					<td th:text="${ogrenci.tcKimlikNo}"></td>
@@ -40,7 +40,8 @@
 					<td th:text="${ogrenci.okulAdi}"></td>
 					<td th:text="${ogrenci.okulAlani}"></td>
 					<td  align="right">
-						<form method="POST" th:action="@{/favori/{id} (id=${ogrenci.id})}">
+
+						<form method="POST" th:attr="id='favori'+${ogrenci.id}" th:action="@{/favori/{id} (id=${ogrenci.id})}">
                         <button type="submit" name="submit">Favori</button>
                     </form>
 					</td>
@@ -49,6 +50,7 @@
 			</table>
 		</div>
 	</div>
+
 </body>
 
 </html>

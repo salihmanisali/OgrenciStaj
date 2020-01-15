@@ -1,7 +1,9 @@
 package net.javaguides.springbootsecurity;
 
+import net.javaguides.springbootsecurity.helpers.FakeService;
 import net.javaguides.springbootsecurity.helpers.storage.StorageProperties;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +14,9 @@ import org.springframework.context.annotation.Bean;
 @EnableConfigurationProperties(StorageProperties.class)
 public class OgrenciStajUygulamasi
 {
+	@Autowired
+	FakeService fakeService;
+
 	public static void main(String[] args)
 	{
 		SpringApplication.run(OgrenciStajUygulamasi.class, args);
@@ -22,6 +27,9 @@ public class OgrenciStajUygulamasi
 		return (args) -> {
 //			storageService.deleteAll();
 			storageService.init();
+
+//			fakeService.start();
 		};
 	}
+
 }

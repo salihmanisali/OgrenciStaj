@@ -8,9 +8,7 @@ import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
 import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
-import org.hibernate.engine.jdbc.StreamUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -22,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.Principal;
 
 @Controller
 public class UploadController {
@@ -106,4 +105,41 @@ public class UploadController {
 
 		return  ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(image);
 	}
+
+
+	@RequestMapping(value = "/upload/{dosyaTuru}")
+	@ResponseBody
+	public ResponseEntity<byte[]> getImageByEmail(@PathVariable(value = "dosyaTuru") DosyaTuru dosyaTuru, Principal principal) throws IOException {
+		User baseEntity;
+
+		if(dosyaTuru==DosyaTuru.CV) {
+			Ogrenci ogrenci = ogrenciRepository.findByEmail(principal.getName())
+					.orElseThrow(() -> new IllegalArgumentException("Hatalı Email:" + principal.getName()));
+
+			Path path=storageService.load(ogrenci.getCvUrl(),dosyaTuru);
+			File serverFile = new File(path.toString());
+			byte[] image =  Files.readAllBytes(serverFile.toPath());
+			return ResponseEntity.ok().contentType(MediaType.APPLICATION_PDF).body(image);
+		}
+		else if(dosyaTuru==DosyaTuru.OGRETMEN)
+			baseEntity = ogretmenRepository.findByEmail(principal.getName())
+					.orElseThrow(() -> new IllegalArgumentException("Hatalı Email:" + principal.getName()));
+		else if(dosyaTuru==DosyaTuru.OGRENCI)
+			baseEntity = ogrenciRepository.findByEmail(principal.getName())
+					.orElseThrow(() -> new IllegalArgumentException("Hatalı Email:" + principal.getName()));
+		else if(dosyaTuru==DosyaTuru.FIRMA)
+			baseEntity = firmaRepository.findByEmail(principal.getName())
+					.orElseThrow(() -> new IllegalArgumentException("Hatalı Email:" + principal.getName()));
+		else  return null;
+
+		Path path=storageService.load(baseEntity.getResimUrl(),dosyaTuru);
+
+		File serverFile = new File(path.toString());
+
+		byte[] image =  Files.readAllBytes(serverFile.toPath());
+
+		return  ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(image);
+	}
+
 }
+
