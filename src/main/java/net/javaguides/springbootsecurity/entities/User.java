@@ -19,7 +19,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Data
 @Table(name="users",uniqueConstraints={@UniqueConstraint(columnNames={"email"})})
-public class User
+public class User extends Auditable<String>
 {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
