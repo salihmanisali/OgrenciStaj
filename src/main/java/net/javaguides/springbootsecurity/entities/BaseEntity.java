@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @MappedSuperclass
 @Data
-public class BaseEntity
+public class BaseEntity extends Auditable<String>
 {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
