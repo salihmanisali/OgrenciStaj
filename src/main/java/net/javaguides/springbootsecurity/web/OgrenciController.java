@@ -7,6 +7,7 @@ import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
+import net.javaguides.springbootsecurity.repositories.OkulRepository;
 import net.javaguides.springbootsecurity.security.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -34,6 +35,9 @@ public class OgrenciController
 
 	@Autowired
 	private FirmaRepository firmaRepository;
+
+	@Autowired
+	private OkulRepository okulRepository;
 
 	@Autowired
 	private StorageService storageService;
@@ -77,6 +81,7 @@ public class OgrenciController
 
 		Ogrenci ogrenci=new Ogrenci();
 		model.addAttribute("ogrenci", ogrenci);
+		model.addAttribute("okullar", okulRepository.findAll());
 		return "ogrenci";
 	}
 
@@ -86,7 +91,7 @@ public class OgrenciController
 		Ogrenci ogrenci = ogrenciRepository.findById(id)
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + id));
 
-
+		model.addAttribute("okullar", okulRepository.findAll());
 		if(ogrenci!=null)
 			model.addAttribute("ogrenci", ogrenci);
 		return "ogrenci";
@@ -175,4 +180,5 @@ public class OgrenciController
 		return filename.substring(filename.lastIndexOf(".") + 1);
 	}
 
+	//TODO: Okul seçimi admin - ogretmen - ogrenci için ayrı ayrı
 }

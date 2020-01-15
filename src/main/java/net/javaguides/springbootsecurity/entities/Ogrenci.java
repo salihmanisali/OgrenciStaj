@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
 
@@ -61,10 +62,6 @@ public class Ogrenci extends User
 	private StajYapacagiGun stajYapacagiGun;
 
 	////Okul
-
-	@Column(length = 300)
-
-	private String okulAdi;
 
 	@Column(length = 300)
 	private String okulAlani;
@@ -265,12 +262,11 @@ public class Ogrenci extends User
 	private String projedekiGorevi5;
 	//endregion
 
-	// Relations
-
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_ogretmen")
 	private Ogretmen sorumluOgretmen;
 
+	@NotNull
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_okul")
 	private Okul okul;

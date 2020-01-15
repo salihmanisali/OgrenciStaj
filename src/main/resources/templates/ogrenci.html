@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
       layout:decorator="layout">
 
 <head>
@@ -10,7 +11,7 @@
 <body>
 <div layout:fragment="content">
 
-    <form  th:action="${ogrenciuser} ? @{/ogrencihome} : @{/ogrenci}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
+    <form  th:action="${ogrenciuser} ? @{/ogrencihome}: @{/ogrenci}" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
         <div class="col -row">
             <div>
                 <h2>Öğrenci Kayıt Formu</h2>
@@ -57,7 +58,7 @@
                 <br>
                 <div class="form-row">
                     <div class="col ">
-                        <label for="email"> Email :</label>
+                        <label for="email"> Email:</label>
                         <input class="form-control" type="email" name="email" id="email" placeholder="E-mail" th:value="${ogrenci.email}" />
                     </div>
 
@@ -69,25 +70,25 @@
 
                 <div class="form-row">
                     <div class="col ">
-                        <label for="tcKimlikNo">TC Kimlik No :</label>
+                        <label for="tcKimlikNo">TC Kimlik No:</label>
                         <input class="form-control" type="number" name="tcKimlikNo" id="tcKimlikNo" placeholder="TC Kimlik No" required="true" th:value="${ogrenci.tcKimlikNo}"/>
                     </div>
                     <div class="col ">
-                        <label for="adi">Adı Soyadı :</label>
+                        <label for="adi">Adı Soyadı:</label>
                         <input class="form-control" type="text" name="adi" id="adi"th:value="${ogrenci.adi}" placeholder="Adı Soyadı" required="true"/>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col ">
-                        <label for="dogumTarihi">Doğum Tarihi :</label>
+                        <label for="dogumTarihi">Doğum Tarihi:</label>
                         <input class="form-control" type="date" name="dogumTarihi" id="dogumTarihi" th:value="${ogrenci.dogumTarihi}" />
                     </div>
 
 
 
                     <div class="col ">
-                        <label for="cepTelefonu">Cep Telefonu :</label>
+                        <label for="cepTelefonu">Cep Telefonu:</label>
                         <input class="form-control" type="number" name="cepTelefonu" id="cepTelefonu" th:value="${ogrenci.cepTelefonu}" />
                     </div>
 
@@ -95,7 +96,7 @@
 
                 <div class="form-row">
                     <div class="col ">
-                        <label for="CINSIYET">Cinsiyet :</label><br>
+                        <label for="CINSIYET">Cinsiyet:</label><br>
                         <div class="form-check form-check-inline" id="CINSIYET">
                             <input class="form-check-input" type="radio" name="cinsiyet" id="ERKEK" value="ERKEK" th:checked="${ogrenci.cinsiyet==T(net.javaguides.springbootsecurity.enums.Cinsiyet).ERKEK}" />
                             <label class="form-check-label" for="ERKEK">Erkek</label>
@@ -107,7 +108,7 @@
                     </div>
 
                     <div class="col ">
-                        <label for="askerlikDurumu">Askerlik Durumu :</label>
+                        <label for="askerlikDurumu">Askerlik Durumu:</label>
                         <div class="select-list">
                             <select class="custom-select"  name="askerlikDurumu" id="askerlikDurumu">
                                 <option disabled selected value> Askerlik Durumu Seçin </option>
@@ -122,23 +123,23 @@
 
                 <div class="form-row">
                     <div class="col ">
-                        <label for="veliAdi">Veli Adı :</label>
+                        <label for="veliAdi">Veli Adı:</label>
                         <input class="form-control" type="text" name="veliAdi" id="veliAdi" th:value="${ogrenci.veliAdi}"/>
                     </div>
                     <div class="col ">
-                        <label for="veliCepTelefonu">Veli Telefonu :</label>
+                        <label for="veliCepTelefonu">Veli Telefonu:</label>
                         <input class="form-control" type="number" name="veliCepTelefonu" id="veliCepTelefonu" th:value="${ogrenci.veliCepTelefonu}"/>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col ">
-                        <label for="ehliyet">Ehliyet :</label>
+                        <label for="ehliyet">Ehliyet:</label>
                         <input class="form-control" type="text" name="ehliyet" id="ehliyet" th:value="${ogrenci.ehliyet}"/>
                     </div>
 
                     <div class="col ">
-                        <label for="stajYapacagiGun">Staj Yapacağı Gün :</label>
+                        <label for="stajYapacagiGun">Staj Yapacağı Gün:</label>
                         <div class="select-list">
                             <select class="custom-select"  name="stajYapacagiGun" id="stajYapacagiGun">
                                 <option disabled selected value> Staj Yapacağı Günü Seçin </option>
@@ -157,7 +158,7 @@
 
                 <div class="form-row">
                     <div class="col ">
-                        <label for="ilce">İlçe :</label>
+                        <label for="ilce">İlçe:</label>
                         <select class="custom-select"  name="ilce" id="ilce" th:value="${ogrenci.ilce}">
                             <option disabled selected value> İlçe Seçin </option>
                             <option value="IZMIT"      th:selected="${ogrenci.ilce==T(net.javaguides.springbootsecurity.enums.Ilce).IZMIT}">İzmit</option>
@@ -177,13 +178,13 @@
                     </div>
 
                     <div class="col ">
-                        <label for="semt">Semt/Mahalle :</label>
+                        <label for="semt">Semt/Mahalle:</label>
                         <input class="form-control" type="text" name="semt" id="semt" th:value="${ogrenci.semt}"/>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col ">
-                        <label for="adres">Adres :</label>
+                        <label for="adres">Adres:</label>
                         <textarea class="form-control" id="adres" name="adres" cols="80" rows="5" th:value="${ogrenci.adres}"></textarea>
                     </div>
                 </div>
@@ -194,23 +195,38 @@
                 <h3>Okul Bilgileri</h3>
 
                 <div class="form-row">
-                    <div class="col ">
-                        <label for="okulAdi">Okul Adı :</label>
-                        <input class="form-control" type="text" name="okulAdi" id="okulAdi" th:value="${ogrenci.okulAdi}"/>
+                    <div class="col " sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_OGRETMEN')">
+                        <label for="okul">Okulu:</label>
+                        <div class="select-list">
+                            <select class="custom-select" name="okul" id="okul" required="true">
+                                <option disabled selected value> Okul Seçin </option>
+                                <option
+                                        th:each="okul: ${okullar}"
+                                        th:value="${okul.id}"
+                                        th:text="${okul.adi}"
+                                        th:selected="${ogrenci.okul == null? null: okul.id==ogrenci.okul.id}"
+                                >okul</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col " sec:authorize="hasRole('ROLE_OGRENCI')">
+                        <label for="okul">Okulu:</label>
+                        <input class="form-control" type="hidden" name="okul" id="okulx" th:value="${ogrenci.okul.id}"/>
+                        <input class="form-control" type="text" id="okuly" th:value="${ogrenci.okul.adi}" readonly/>
                     </div>
 
                     <div class="col ">
-                        <label for="okulAlani">Alanı :</label>
+                        <label for="okulAlani">Alanı:</label>
                         <input class="form-control" type="text" name="okulAlani" id="okulAlani" th:value="${ogrenci.okulAlani}"/>
                     </div>
 
                     <div class="col ">
-                        <label for="okulDali">Dalı :</label>
+                        <label for="okulDali">Dalı:</label>
                         <input class="form-control" type="text" name="okulDali" id="okulDali" th:value="${ogrenci.okulDali}"/>
                     </div>
 
                     <div class="col ">
-                        <label for="notOrtalamasi">Not Ortalaması :</label>
+                        <label for="notOrtalamasi">Not Ortalaması:</label>
                         <input class="form-control" type="number" name="notOrtalamasi" id="notOrtalamasi" th:value="${ogrenci.notOrtalamasi}"/>
                     </div>
 
@@ -226,7 +242,7 @@
                 </div>
                 <div class="form-row">
                     <div class="col ">
-                        <label for="gorevAldigiEtkinlikler">Görev Aldığı Etkinliker :</label>
+                        <label for="gorevAldigiEtkinlikler">Görev Aldığı Etkinliker:</label>
                         <textarea class="form-control" type="text" name="gorevAldigiEtkinlikler" id="gorevAldigiEtkinlikler" th:value="${ogrenci.gorevAldigiEtkinlikler}"></textarea>
                     </div>
                 </div>
@@ -235,11 +251,11 @@
                 <h3>Referans Öğretmen </h3>
                 <div class="form-row">
                     <div class="col ">
-                        <label for="referansOgretmenAdi"> Adı Soyadı :</label>
+                        <label for="referansOgretmenAdi"> Adı Soyadı:</label>
                         <input class="form-control" type="text" name="referansOgretmenAdi" id="referansOgretmenAdi" th:value="${ogrenci.referansOgretmenAdi}"/>
                     </div>
                     <div class="col ">
-                        <label for="referansOgretmenTelefon">Telefonu :</label>
+                        <label for="referansOgretmenTelefon">Telefonu:</label>
                         <input class="form-control" type="number" name="referansOgretmenTelefon" id="referansOgretmenTelefon" th:value="${ogrenci.referansOgretmenTelefon}"/>
                     </div>
                 </div>
@@ -249,7 +265,7 @@
                 <div class="form-row">
 
                     <div class="col ">
-                        <label for="lisansTuru">Lisans Türü :</label>
+                        <label for="lisansTuru">Lisans Türü:</label>
                         <div class="select-list">
                             <select class="custom-select"  name="lisansTuru" id="lisansTuru" >
                                 <option disabled selected value> Lisans Türü Seçin </option>
@@ -261,12 +277,12 @@
                     </div>
 
                     <div class="col ">
-                        <label for="lisansTarihi">Lisans Tarihi :</label>
+                        <label for="lisansTarihi">Lisans Tarihi:</label>
                         <input class="form-control" type="date" name="lisansTarihi" id="lisansTarihi" th:value="${ogrenci.lisansTarihi}" />
                     </div>
 
                     <div class="col ">
-                        <label for="lisansDerecesi">Lisans Derecesi :</label>
+                        <label for="lisansDerecesi">Lisans Derecesi:</label>
                         <input class="form-control" type="number" name="lisansDerecesi" id="lisansDerecesi" th:value="${ogrenci.lisansDerecesi}"/>
                     </div>
                 </div>
@@ -432,19 +448,19 @@
                 <h3>Diğer </h3>
                 <div class="form-row">
                     <div class="col ">
-                        <label for="digerBeceriler"> Diğer Beceriler :</label>
+                        <label for="digerBeceriler"> Diğer Beceriler:</label>
                         <textarea class="form-control" type="number" name="digerBeceriler" id="digerBeceriler" th:value="${ogrenci.digerBeceriler}"></textarea>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col ">
-                        <label for="isIleIlgiliBeceriler">İşle İlgili Beceriler :</label>
+                        <label for="isIleIlgiliBeceriler">İşle İlgili Beceriler:</label>
                         <textarea class="form-control" type="text" name="isIleIlgiliBeceriler" id="isIleIlgiliBeceriler" th:value="${ogrenci.isIleIlgiliBeceriler}"></textarea>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col ">
-                        <label for="OrganizasyonelBeceriler">Organizasyonel Beceriler :</label>
+                        <label for="OrganizasyonelBeceriler">Organizasyonel Beceriler:</label>
                         <textarea class="form-control" type="text" name="OrganizasyonelBeceriler" id="OrganizasyonelBeceriler" th:value="${ogrenci.organizasyonelBeceriler}" ></textarea>
                     </div>
                 </div>
