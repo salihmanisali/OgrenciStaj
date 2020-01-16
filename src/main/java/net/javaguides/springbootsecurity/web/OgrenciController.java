@@ -3,10 +3,13 @@ package net.javaguides.springbootsecurity.web;
 import lombok.extern.log4j.Log4j2;
 import net.javaguides.springbootsecurity.entities.Firma;
 import net.javaguides.springbootsecurity.entities.Ogrenci;
+import net.javaguides.springbootsecurity.entities.Ogretmen;
+import net.javaguides.springbootsecurity.entities.Okul;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
 import net.javaguides.springbootsecurity.repositories.OgrenciRepository;
+import net.javaguides.springbootsecurity.repositories.OgretmenRepository;
 import net.javaguides.springbootsecurity.repositories.OkulRepository;
 import net.javaguides.springbootsecurity.security.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +35,9 @@ public class OgrenciController
 {
 	@Autowired
 	private OgrenciRepository ogrenciRepository;
+
+	@Autowired
+	OgretmenRepository ogretmenRepository;
 
 	@Autowired
 	private FirmaRepository firmaRepository;
@@ -65,6 +71,19 @@ public class OgrenciController
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma"));
 
 		model.addAttribute("ogrenciler", firma.getOgrenciList());
+		return "ogrencilist";
+	}
+
+	@GetMapping("/ogrencilerByOkul")
+	public String ogrencilerByOkul(Model model,Principal principal)
+	{
+
+		Ogretmen ogretmen = ogretmenRepository.findByEmail(principal.getName())
+				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma"));
+
+		Okul okul=ogretmen.getOkul();
+		model.addAttribute("Okul",okul);
+		model.addAttribute("ogrenciler", ogrenciRepository.findAllByOkul(okul));
 		return "ogrencilist";
 	}
 

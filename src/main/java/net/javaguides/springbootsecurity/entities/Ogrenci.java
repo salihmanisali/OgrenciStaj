@@ -89,9 +89,6 @@ public class Ogrenci extends User
 
 	////// Mezuniyet
 
-	@Column(length = 300)
-	private String MezunOkulAdi1;
-
 	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	@Column
 	@Temporal(TemporalType.DATE)

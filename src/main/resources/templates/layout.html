@@ -78,7 +78,7 @@
 					<a class="nav-link" th:href="@{/ogretmenhome}"><i class="fa fa-user">&nbsp;Profilim</i></a>
 				</li>
 				<li class="nav-item"  sec:authorize="hasRole('ROLE_OGRETMEN')">
-					<a class="nav-link" th:href="@{/ogrencilistByOkul}"><i class="fa fa-graduation-cap">&nbsp;Öğrenciler</i></a>
+					<a class="nav-link" th:href="@{/ogrencilerByOkul}"><i class="fa fa-graduation-cap">&nbsp;Öğrenciler</i></a>
 				</li>
 				<li class="nav-item"  sec:authorize="hasRole('ROLE_OGRETMEN')">
 					<a class="nav-link" th:href="@{/ogrenciFirma}"><i class="fa fa-building">&nbsp;Firma - Öğrenci</i></a>
