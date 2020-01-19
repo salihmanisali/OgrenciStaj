@@ -84,7 +84,7 @@ public class OgrenciController
 		Okul okul=ogretmen.getOkul();
 		model.addAttribute("Okul",okul);
 		model.addAttribute("ogrenciler", ogrenciRepository.findAllByOkul(okul));
-		return "ogrencilist";
+		return "ogrenciler";
 	}
 
 	@GetMapping("/ogrencilist")
