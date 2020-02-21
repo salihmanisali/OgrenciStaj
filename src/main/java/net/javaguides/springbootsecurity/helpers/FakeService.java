@@ -13,7 +13,7 @@ public class FakeService {
 
 	public void start() {
 		for (Integer i = 0; i < 1000; i++) {
-			var ogrenci=new Ogrenci();
+			Ogrenci ogrenci=new Ogrenci();
 			String text=RandomStringUtils.randomAlphanumeric(10);
 			ogrenci.setAdi(text);
 			ogrenci.setPassword(text);

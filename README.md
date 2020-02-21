@@ -1,6 +1,6 @@
 # Öğrenci Staj Bilgi Sistemi
 ## Kullanılan Teknolojiler
-	-Java 13  
+	-Java 8  
 	-SpringBoot 2.2.2  
 	-Spring Sequrity  
 	-Thymeleaf 3  

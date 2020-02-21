@@ -22,6 +22,7 @@ public class OgrenciStajUygulamasi
 		SpringApplication.run(OgrenciStajUygulamasi.class, args);
 	}
 
+
 	@Bean
 	CommandLineRunner init(StorageService storageService) {
 		return (args) -> {

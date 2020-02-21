@@ -35,7 +35,7 @@ public class OkulController
 
 	@GetMapping("/okul/{id}")
 	public String okulById(Model model, @PathVariable Integer id)	{
-		var okul = okulRepository.findById(id)
+		Okul okul = okulRepository.findById(id)
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Okul Id:" + id));
 
 		if(okul!=null)

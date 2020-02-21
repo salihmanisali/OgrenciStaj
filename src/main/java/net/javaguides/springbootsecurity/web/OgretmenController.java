@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.file.Path;
 import java.security.Principal;
@@ -81,7 +82,7 @@ public class OgretmenController
 	}
 	@GetMapping("/ogretmenhome")
 	public String ogretmenhome(Model model, Principal principal) {
-		var ogretmen = ogretmenRepository.findByEmail(principal.getName())
+		Ogretmen ogretmen = ogretmenRepository.findByEmail(principal.getName())
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + principal.getName()));
 
 		if (ogretmen != null)
@@ -105,7 +106,7 @@ public class OgretmenController
 	}
 
 	private void persistOgretmen(Ogretmen ogretmen) {
-		var resim = ogretmen.getResim();
+		MultipartFile resim = ogretmen.getResim();
 
 		Ogretmen ogretmenEski = null;
 

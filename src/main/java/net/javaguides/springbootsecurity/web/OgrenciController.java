@@ -19,6 +19,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.file.Path;
 import java.security.Principal;
@@ -128,7 +129,7 @@ public class OgrenciController
 
 	@GetMapping("/ogrencihome")
 	public String ogrencihome(Model model, Principal principal) {
-		var ogrenci = ogrenciRepository.findByEmail(principal.getName())
+		Ogrenci ogrenci = ogrenciRepository.findByEmail(principal.getName())
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + principal.getName()));
 
 		if (ogrenci != null)
@@ -153,8 +154,8 @@ public class OgrenciController
 
 
 	private void persistOgrenci(Ogrenci ogrenci) {
-		var resim = ogrenci.getResim();
-		var cv = ogrenci.getCv();
+		MultipartFile resim = ogrenci.getResim();
+		MultipartFile cv = ogrenci.getCv();
 
 		Ogrenci ogrenciEski = null;
 

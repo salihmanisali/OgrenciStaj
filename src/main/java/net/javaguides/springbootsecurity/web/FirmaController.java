@@ -2,6 +2,7 @@ package net.javaguides.springbootsecurity.web;
 
 
 import net.javaguides.springbootsecurity.entities.Firma;
+import net.javaguides.springbootsecurity.entities.Ogrenci;
 import net.javaguides.springbootsecurity.enums.DosyaTuru;
 import net.javaguides.springbootsecurity.helpers.storage.StorageService;
 import net.javaguides.springbootsecurity.repositories.FirmaRepository;
@@ -15,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.file.Path;
 import java.security.Principal;
@@ -60,7 +62,7 @@ public class FirmaController {
 
 	@GetMapping("/firma/{id}")
 	public String firmaById(Model model, @PathVariable Integer id) {
-		var firma = firmaRepository.findById(id)
+		Firma firma = firmaRepository.findById(id)
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + id));
 
 		if (firma != null)
@@ -80,7 +82,7 @@ public class FirmaController {
 
 	@GetMapping("/firmahome")
 	public String firmahome(Model model, Principal principal) {
-		var firma = firmaRepository.findByEmail(principal.getName())
+		Firma firma = firmaRepository.findByEmail(principal.getName())
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + principal.getName()));
 
 		if (firma != null)
@@ -105,7 +107,7 @@ public class FirmaController {
 	}
 
 	private void persistFirma(Firma firma) {
-		var resim = firma.getResim();
+		MultipartFile resim = firma.getResim();
 
 		Firma firmaEski = null;
 
@@ -142,10 +144,10 @@ public class FirmaController {
 
 	@PostMapping("/favori/{id}")
 	public ResponseEntity addtofavoriById(Model model, @PathVariable Integer id, Principal principal) {
-		var firma = firmaRepository.findByEmail(principal.getName())
+		Firma firma = firmaRepository.findByEmail(principal.getName())
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Firma Id:" + principal.getName()));
 
-		var ogrenci = ogrenciRepository.findById(id)
+		Ogrenci ogrenci = ogrenciRepository.findById(id)
 				.orElseThrow(() -> new IllegalArgumentException("Hatalı Öğrenci Id:" + id));
 
 		if(ogrenci.getFirmaList()==null){
